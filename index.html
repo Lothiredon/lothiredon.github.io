@@ -1,0 +1,233 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+	
+	<meta charset="utf-8">
+	<title>Examenfuif 5.0</title>
+	<meta name="description" content="Examenfuif">
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	
+	<!-- SMOOTH SCROLL START-->
+	<script>
+		$(document).ready(function(){
+			$('a[href^="#"]').on('click',function (e) {
+				e.preventDefault();
+
+				var target = this.hash;
+				var $target = $(target);
+
+				$('html, body').stop().animate({
+					'scrollTop': $target.offset().top+15
+				}, 1000, 'swing',);
+			});
+		});
+	</script>
+	<!-- SMOOTH SCROLL END -->
+	
+	<script>
+		$(document).ready(function() {
+			$("ul.menu li").click(function() {
+				$("ul.menu li").removeClass("active"); //This is important to make only one link active at a time
+				// Try without using above line and note the difference
+
+				$(this).addClass("active"); // Add 'active' class to currently clicked element
+			});    
+		});
+    </script>
+	
+	<script>
+		$(function() {
+		  $('.centerdiv').hover(function() {
+		  $('.backgroundvideo').css('filter', 'grayscale(0%)');
+		}, function() {
+		// on mouseout, reset the scale
+		  $('.backgroundvideo').css('filter', 'grayscale(100%)');
+		  });
+		});
+	</script>
+</head>
+
+<body>
+
+	<div class="section1">
+		<a id="sec1" class="smooth"></a>
+			
+		<div class="menudiv">
+			<ul class="menu">
+				<li id="menubutton"><a href="#sec1">Home</a></li>
+				<li id="menubutton"><a href="#sec2">Evenement</a></li>
+				<li id="menubutton"><a href="#sec3">Vorige edities</a></li>
+				<li id="menubutton"><a href="#sec4">Contact</a></li>
+			</ul>
+		</div>
+		
+		<div class="backgroundvideo"></div>
+		
+		<a class="centerdivlink" href="#sec2">
+		<div class="centerdiv" <!--onclick="location.href='#sec2'-->">
+			<p class="centerdivtext">Examenfuif 5.0</p>
+			<div class="overlay"></div>
+		</div>
+		</a>
+		
+	</div>
+	
+	<!--SECTION 2 START-->
+	<div class="section2">
+		<a id="sec2" class="smooth"></a>
+		
+			<div class="currenteventbanner">
+				<p>Examenfuif 5.0</p>
+			</div>
+			
+			<div class="eventinfo">
+			
+				<!--<ul class="infosquares">
+					<li class="infosquare1">
+						<div class="infosquare1content">
+						
+							<div class="infosquare1bg"></div>
+						
+							<p>7 Juli, 20:30PM</p>
+						</div>
+					</li>
+					<li class="infosquare2">
+						<div class="infosquare2content">
+						
+							<div class="infosquare2bg"></div>
+						
+							<p>Rieterweg 6</p>
+						</div>
+					</li>
+					<li class="infosquare3">
+						<div class="infosquare3content">
+						
+							<div class="infosquare3bg"></div>
+						
+							<p>Entree: €15,-</p>
+						</div>
+					</li>
+				</ul>-->
+				
+				<div class="lineupwrapper">
+				
+				<div class="tablewrapper">
+	
+		<table>
+			<tr class="tr1">
+			<!--TABLE CELL 1-->
+			  <td>
+			  <div class="hovergraphic1">
+				<div class="tableoverlay1">
+				  <div class="td1text">
+				    <h3>3Pulse</h3>
+					<p>NIEUW BIJ EXAMENFUIF, 3PULSE GAAT ZIJN <br>DRAAIKUNSTEN BEWIJZEN IN DE KUNTJES BUNKER!</p>
+				      <div class="tablespacer1"></div>
+				  </div>
+				</div>
+			  </div>
+			  </td>
+			<!--TABLE CELL 2-->
+			  <td>
+			  <div class="hovergraphic2">
+				<div class="tableoverlay2">
+				  <div class="td2text">
+				    <h3>Jake Waltz</h3>
+					<p>INMIDDELS AL ZIJN TWEEDE EDITIE, JELLE GAAT ERVOOR<br>ZORGEN DAT IEDEREEN LEKKER LOS KOMT!</p>
+				      <div class="tablespacer2"></div>
+				  </div>
+				</div>
+			  </div>
+			  </td>
+			  
+			</tr>
+
+			<tr class="tr2">
+			<!--TABLE CELL 3-->
+			  <td>
+			  <div class="hovergraphic3">
+				<div class="tableoverlay3">
+				  <div class="td3text">
+				    <h3>Housebreakerz</h3>
+					<p>IN PRINCIPE ONZE RESIDENT DJ, THE HOUSEBREAKERZ ZAL<br>DE TENT (EN TWEEDE STAGE!) WEER OP ZIJN KOP ZETTEN</p>
+				      <div class="tablespacer3"></div>
+				  </div>
+				</div>
+			  </div>
+			  </td>
+			<!--TABLE CELL 4-->
+			  <td>
+			  <div class="hovergraphic4">
+				<div class="tableoverlay4">
+				  <div class="td4text">
+				    <h3>YORICK MOISON</h3>
+					<p>ONZE AFSLUITER VOOR DE AVOND; INCLUSIEF MC KROEZIEWOESIE<br>GAAN ER EEN MEGADIKKE PUNT ACHTER ZETTEN!</p>
+				      <div class="tablespacer4"></div>
+				  </div>
+				</div>
+			  </div>
+			  </td>
+			</tr>
+			
+			
+			<tr class="tr3">
+			<!--TABLE CELL 5-->
+			  <td>
+			  <div class="hovergraphic5">
+				<div class="tableoverlay5">
+				  <div class="td5text">
+				    <h3>Skoften Sloopservice</h3>
+					<p>YES! INMIDDELS WELBEKEND DOOR HET HELE LAND,<br>ALLES GAAT KAPOT MET SKOFTEN SLOOPSERVICE!</p>
+				      <div class="tablespacer5"></div>
+				  </div>
+				</div>
+			  </div>
+			  </td>
+			<!--TABLE CELL 6-->
+			  <td>
+			  <div class="hovergraphic6">
+				<div class="tableoverlay6">
+				  <div class="td6text">
+				    <h3>EF5.0</h3>
+					<p>VERDERE INFO VOLGT!</p>
+				      <div class="tablespacer6"></div>
+				  </div>
+				</div>
+			  </div>
+			  </td>
+			</tr>
+		
+		</table>
+		
+				</div>
+				
+				</div>
+			
+			</div>
+		
+		</div>
+
+	
+	<!--SECTION 3 START-->
+	<div class="section3">
+		<a id="sec3" class="smooth"></a>
+			
+			<div class="sitemapWrapper">
+			
+				<div class="entranceDiv">
+					<p class="entranceText">INGANG</p>
+					<p class="entranceDesc">DE WELBEFAAMDE BALLONNENPORTAAL, DEZE ZUL JE MAAR 1 KEER NUCHTER ZIEN!</P>
+				</div>
+			
+			</div>
+			
+	</div>
+	
+</body>
+</html>
