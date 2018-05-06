@@ -172,7 +172,6 @@ body {
     }
 }
 
-/* If the screen size is 601px or less*/
 @media only screen and (max-width: 600px) {
     .overlay {
 		height: 40vw;
@@ -180,7 +179,6 @@ body {
     }
 }
 
-/* If the screen size is 601px or less*/
 @media only screen and (max-width: 600px) {
     .centerdiv:hover > .overlay {
 		top: -40vw;
@@ -223,7 +221,6 @@ body {
 
 .currenteventbanner p {
 	font-family: Bebas;
-	font-size: 5vw;
 	color: white;
 	padding: 0;
 	margin: 0;
@@ -236,6 +233,19 @@ body {
 .eventinfo {
 	height: auto;
 	position: relative;
+}
+
+/* If the screen size is 601px or less*/
+@media only screen and (max-width: 600px) {
+    .currenteventbanner {
+	line-height: 12vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .currenteventbanner p {
+	font-size: 12vw;
+    }
 }
 
 /*==================================TABLE======================================*/
@@ -262,6 +272,20 @@ body {
 	margin: 0;
 	overflow: hidden;
 	border-bottom: solid 2px #cccccc;
+}
+
+/* If the screen size is 601px or less*/
+@media only screen and (max-width: 600px) {
+    .tablewrapper table {
+	border-spacing: 10px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .tablewrapper td {
+	height: 31.23vw;
+	width: 46.23vw;
+    }
 }
 
 /*TABLE ROW 1*/
@@ -405,6 +429,49 @@ body {
   opacity: 1;
 }
 
+/* If the screen size is 601px or less*/
+
+@media only screen and (max-width: 600px) {
+    .hovergraphic1::before {
+	display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .td1text {
+	height: 31.23vw;
+	width: 46.23vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+	.td1text h3 {
+	font-size: 6vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .td1text p {
+	font-size: 2vw;
+	margin-right: 4vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .tableoverlay1 {
+	margin-top: 3.4vw;
+	margin-left: -3.4vw;
+	height: 31.23vw;
+	width: 46.23vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .tablespacer1 {
+	height: 10.7vw;
+    }
+}
+
 /*--------------------TABLE CELL 2 START--------------------*/
 .hovergraphic2 {
 	margin-top: -10%;
@@ -544,7 +611,48 @@ body {
   opacity: 1;
 }
 
-/*TABLE ROW 2*/
+/* If the screen size is 601px or less*/
+
+@media only screen and (max-width: 600px) {
+    .hovergraphic2::before {
+	display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .td2text {
+	height: 31.23vw;
+	width: 46.23vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+	.td2text h3 {
+	font-size: 6vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .td2text p {
+	font-size: 2vw;
+	margin-right: 4vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .tableoverlay2 {
+	margin-top: 3.4vw;
+	margin-left: -3.4vw;
+	height: 31.23vw;
+	width: 46.23vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .tablespacer2 {
+	height: 10.7vw;
+    }
+}
 
 /*--------------------TABLE CELL 3 START--------------------*/
 .hovergraphic3 {
@@ -683,6 +791,49 @@ body {
 
 .hovergraphic3:hover > .tableoverlay3 .tablespacer3 {
   opacity: 1;
+}
+
+/* If the screen size is 601px or less*/
+
+@media only screen and (max-width: 600px) {
+    .hovergraphic3:before {
+	display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .td3text {
+	height: 31.23vw;
+	width: 46.23vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+	.td3text h3 {
+	font-size: 6vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .td3text p {
+	font-size: 2vw;
+	margin-right: 4vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .tableoverlay3 {
+	margin-top: 3.4vw;
+	margin-left: -3.4vw;
+	height: 31.23vw;
+	width: 46.23vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .tablespacer3	{
+	height: 10.7vw;
+    }
 }
 
 /*--------------------TABLE CELL 4 START--------------------*/
@@ -824,7 +975,48 @@ body {
   opacity: 1;
 }
 
-/*TABLE ROW 3*/
+/* If the screen size is 601px or less*/
+
+@media only screen and (max-width: 600px) {
+    .hovergraphic4::before {
+	display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .td4text {
+	height: 31.23vw;
+	width: 46.23vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+	.td4text h3 {
+	font-size: 6vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .td4text p {
+	font-size: 2vw;
+	margin-right: 4vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .tableoverlay4 {
+	margin-top: 3.4vw;
+	margin-left: -3.4vw;
+	height: 31.23vw;
+	width: 46.23vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .tablespacer4 {
+	height: 10.7vw;
+    }
+}
 
 /*--------------------TABLE CELL 5 START--------------------*/
 .hovergraphic5 {
@@ -963,6 +1155,49 @@ body {
 
 .hovergraphic5:hover > .tableoverlay5 .tablespacer5 {
   opacity: 1;
+}
+
+/* If the screen size is 601px or less*/
+
+@media only screen and (max-width: 600px) {
+    .hovergraphic5::before {
+	display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .td5text {
+	height: 31.23vw;
+	width: 46.23vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+	.td5text h3 {
+	font-size: 6vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .td5text p {
+	font-size: 2vw;
+	margin-right: 4vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .tableoverlay5 {
+	margin-top: 3.4vw;
+	margin-left: -3.4vw;
+	height: 31.23vw;
+	width: 46.23vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .tablespacer5 {
+	height: 10.7vw;
+    }
 }
 
 /*--------------------TABLE CELL 6 START--------------------*/
@@ -1104,7 +1339,54 @@ body {
   opacity: 1;
 }
 
-/*=============================SECTION 3 START=======================================*/
+/* If the screen size is 601px or less*/
+
+@media only screen and (max-width: 600px) {
+    .hovergraphic6::before {
+	display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .td6text {
+	height: 31.23vw;
+	width: 46.23vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+	.td6text h3 {
+	font-size: 6vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .td6text p {
+	font-size: 2vw;
+	margin-left: 20vw;
+	margin-top: 25vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .tableoverlay6 {
+	margin-top: 3.4vw;
+	margin-left: -3.4vw;
+	height: 31.23vw;
+	width: 46.23vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .tablespacer6 {
+	height: 2.5vw;
+	margin-top: 25vw;
+    }
+}
+
+/*===================================================================================*/
+/*                             SECTION 3 START                                       */
+/*===================================================================================*/
 
 .section3 {
 	height: 100vh;
@@ -1118,12 +1400,12 @@ body {
 }
 
 .sitemapWrapper {
-	height: 100% !important;
-	width: 100% !important;
+	height: 100%;
+	width: 100%;
 	overflow-x: hidden;
 	background-color: #dddddd;
 	position: absolute;
-	background-size: cover;
+	background-size: 100%;
 	background-image: url("Sitemap.png");
 	background-position: center;
 	background-repeat: no-repeat;
