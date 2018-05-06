@@ -358,7 +358,7 @@ body {
 .td1text h3 {
 	font-family: Bebas;
 	font-size: 2vw;
-	color: rgb(255, 221, 68);
+	color: rgb(250, 188, 13);
 	float: left;
 	position: relative;
 	margin-top: 1vw;
@@ -540,7 +540,7 @@ body {
 .td2text h3 {
 	font-family: Bebas;
 	font-size: 2vw;
-	color: rgb(255, 221, 68);
+	color: rgb(250, 188, 13);
 	float: left;
 	position: relative;
 	margin-top: 1vw;
@@ -722,7 +722,7 @@ body {
 .td3text h3 {
 	font-family: Bebas;
 	font-size: 2vw;
-	color: rgb(255, 221, 68);
+	color: rgb(250, 188, 13);
 	float: left;
 	position: relative;
 	margin-top: 1vw;
@@ -839,7 +839,7 @@ body {
 /*--------------------TABLE CELL 4 START--------------------*/
 .hovergraphic4 {
 	margin-top: -10%;
-	background-color: rgb(255, 221, 68)
+	background-color: rgb(250, 188, 13)
 	position: relative;
 	overflow: visible;
 	height: 100%;
@@ -904,7 +904,7 @@ body {
 .td4text h3 {
 	font-family: Bebas;
 	font-size: 2vw;
-	color: rgb(255, 221, 68);
+	color: rgb(250, 188, 13);
 	float: left;
 	position: relative;
 	margin-top: 1vw;
@@ -1086,7 +1086,7 @@ body {
 .td5text h3 {
 	font-family: Bebas;
 	font-size: 2vw;
-	color: rgb(255, 221, 68);
+	color: rgb(250, 188, 13);
 	float: left;
 	position: relative;
 	margin-top: 1vw;
@@ -1268,7 +1268,7 @@ body {
 .td6text h3 {
 	font-family: Bebas;
 	font-size: 2vw;
-	color: rgb(255, 221, 68);
+	color: rgb(250, 188, 13);
 	float: left;
 	position: relative;
 	margin-top: 1vw;
@@ -1420,6 +1420,7 @@ body {
 }
 
 .sitemapRotateScreen {
+	pointer-events: none;
 	height: 40vw;
 	width: 40vw;
 	position: absolute;
@@ -1454,11 +1455,19 @@ body {
     }
 }
 
-.entranceDiv {
+@media only screen and (max-width: 600px) {
+    .sitemapWrapper div {
+		visibility: hidden;
+    }
+}
+
+
+/*Duplicate from here*/
+
+/*===============DIV CSS WRAP FOR ALL POINTS OF INTEREST===============*/
+.sitemapWrapper div {
 	height: 4vw;
 	width: 4vw;
-	top: 63.7vh;
-	left: 9.8vw;
 	z-index: 60;
 	position: absolute;
 	cursor: pointer;
@@ -1467,6 +1476,12 @@ body {
 	-ms-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
 	-webkit-transition: all 0.3s ease-in-out;
+}
+/*===========================DIV CSS WRAP END===========================*/
+
+.entranceDiv {
+	top: 63.7vh;
+	left: 9.8vw;
 }
 
 .entranceDiv:hover > .entranceText {
@@ -1505,13 +1520,63 @@ body {
 }
 
 .entranceDesc {
+	pointer-events: none;
 	font-family: Lato;
-	font-size: 1vw;
-	top: 27.5vh;
-	left: 57.5vw;
+	font-size: 2vw;
+	top: 20vh;
+	left: 26vw;
 	text-align: right;
-	width: 30vw;
-	height: 3vw;
+	width: 60vw;
+	height: 6vw;
+	color: white;
+	position: absolute;
+	z-index: 50;
+	padding-right: 5vw;
+	padding-top: 1vw;
+	padding-bottom: 0;
+	margin: 0;
+	opacity: 0;
+	background-color: rgba(0, 0, 0, 0.3);
+	border-bottom: solid 2px #aaaaaa;
+	transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+}
+
+/*Stop duplication here*/
+
+/*Duplicate from here*/
+
+.barDiv {
+	top: 26.6vh;
+	left: 37.5vw;
+}
+
+.barDiv:hover > .barText {
+	opacity: 100;
+	transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+}
+
+.barDiv:hover > .barDesc {
+	opacity: 100;
+	transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+}
+
+.barText {
+	font-family: Lato;
+	font-size: 2vw;
+	top: -8vh;
+	left: 0vw;
 	color: white;
 	position: absolute;
 	z-index: 50;
@@ -1523,3 +1588,103 @@ body {
 	-o-transition: all 0.3s ease-in-out;
 	-webkit-transition: all 0.3s ease-in-out;
 }
+
+.barDesc {
+	pointer-events: none;
+	font-family: Lato;
+	font-size: 2vw;
+	top: 57.1vh;
+	left: 13.3vw;
+	text-align: right;
+	width: 45vw;
+	height: 6vw;
+	color: white;
+	position: absolute;
+	z-index: 50;
+	padding-left: -10vw;
+	padding-right: 5vw;
+	padding-top: 1vw;
+	padding-bottom: 0;
+	margin: 0;
+	opacity: 0;
+	background-color: rgba(0, 0, 0, 0.3);
+	border-bottom: solid 2px #aaaaaa;
+	transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+}
+
+/*Stop duplication here*/
+
+/*Duplicate from here*/
+
+.toiletDiv {
+	top: 38.3vh;
+	left: 63.7vw;
+}
+
+.toiletDiv:hover > .toiletText {
+	opacity: 100;
+	transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+}
+
+.toiletDiv:hover > .toiletDesc {
+	opacity: 100;
+	transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+}
+
+.toiletText {
+	font-family: Lato;
+	font-size: 2vw;
+	top: -8vh;
+	left: 0.25vw;
+	color: white;
+	position: absolute;
+	z-index: 50;
+	padding: 0;
+	opacity: 0;
+	transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+}
+
+.toiletDesc {
+	pointer-events: none;
+	font-family: Lato;
+	font-size: 2vw;
+	top: 45.6vh;
+	left: -14.9vw;
+	text-align: right;
+	width: 47vw;
+	height: 6vw;
+	color: white;
+	position: absolute;
+	z-index: 50;
+	padding-left: 0;
+	padding-right: 5vw;
+	padding-top: 1vw;
+	padding-bottom: 0;
+	margin: 0;
+	opacity: 0;
+	background-color: rgba(0, 0, 0, 0.3);
+	border-bottom: solid 2px #aaaaaa;
+	transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+}
+
+/*Stop duplication here*/
