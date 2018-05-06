@@ -8,20 +8,6 @@
 	src: url('Lato-Black.ttf');
 }
 
-/* If the screen size is 601px or more, set the font-size of <div> to 80px */
-@media only screen and (min-width: 601px) {
-  p {
-    font-size: 80px;
-  }
-}
-
-/* If the screen size is 600px or less, set the font-size of <div> to 30px */
-@media only screen and (max-width: 600px) {
-  p {
-    font-size: 30px;
-  }
-}
-
 body {
 	margin: 0px;
 	overflow-y: auto;
@@ -78,6 +64,13 @@ body {
 	font-family: Bebas;
 	font-size: 2vw;
 	padding: 0;
+}
+
+/* If the screen size is 601px or less*/
+@media only screen and (max-width: 600px) {
+    .menu li a {
+		font-size: 4vw;
+    }
 }
 
 .section1 {
@@ -168,6 +161,40 @@ body {
 	font-size: 3.5vw;
 	word-wrap: none;
 	z-index: 30;
+}
+
+/* If the screen size is 601px or less*/
+@media only screen and (max-width: 600px) {
+    .centerdiv {
+		height: 40vw;
+		width: 40vw;
+		line-height: 40vw;
+    }
+}
+
+/* If the screen size is 601px or less*/
+@media only screen and (max-width: 600px) {
+    .overlay {
+		height: 40vw;
+		width: 40vw;
+    }
+}
+
+/* If the screen size is 601px or less*/
+@media only screen and (max-width: 600px) {
+    .centerdiv:hover > .overlay {
+		top: -40vw;
+    }
+}
+
+
+/* If the screen size is 601px or less*/
+@media only screen and (max-width: 600px) {
+    .centerdivtext {
+	font-size: 6vw;
+	vertical-align: middle;
+	text-align: center;
+    }
 }
 
 /*=============================SECTION 2 START=======================================*/
