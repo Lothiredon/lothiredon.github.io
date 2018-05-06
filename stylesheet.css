@@ -1405,11 +1405,53 @@ body {
 	overflow-x: hidden;
 	background-color: #dddddd;
 	position: absolute;
+	filter: blur(5px);
+	z-index: 50;
 	background-size: 100%;
 	background-image: url("Sitemap.png");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-attachment: scroll;
+ 	transition: all 2s ease-in-out;
+	-moz-transition: all 2s ease-in-out;
+	-ms-transition: all 2s ease-in-out;
+	-o-transition: all 2s ease-in-out;
+	-webkit-transition: all 2s ease-in-out;
+}
+
+.sitemapRotateScreen {
+	height: 40vw;
+	width: 40vw;
+	position: absolute;
+	z-index: 80;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 1;
+	background-size: 100%;
+	background-image: url("Rotate.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+ 	transition: opacity 2s ease-in-out;
+	-moz-transition: opacity 2s ease-in-out;
+	-ms-transition: opacity 2s ease-in-out;
+	-o-transition: opacity 2s ease-in-out;
+	-webkit-transition: opacity 2s ease-in-out;
+}
+
+/*Remove Rotate.png when device is in landscape mode, also remove blur*/
+@media only screen and (orientation: landscape) {
+    .sitemapRotateScreen {
+        opacity: 0;
+    }
+}
+
+/*Remove Rotate.png when device is in landscape mode, also remove blur*/
+@media only screen and (orientation: landscape) {
+    .sitemapWrapper {
+		filter: blur(0px);
+    }
 }
 
 .entranceDiv {
@@ -1465,8 +1507,8 @@ body {
 .entranceDesc {
 	font-family: Lato;
 	font-size: 1vw;
-	top: 10vh;
-	left: 10vw;
+	top: 27.5vh;
+	left: 57.5vw;
 	text-align: right;
 	width: 30vw;
 	height: 3vw;
