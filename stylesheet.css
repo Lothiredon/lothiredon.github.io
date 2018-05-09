@@ -1486,7 +1486,7 @@ body {
 	left: 10%;
 }
 
-.entranceDiv:hover > .entranceText {
+.entranceDiv:hover .entranceDiv:active > .entranceText {
 	opacity: 100;
 	transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
@@ -1495,7 +1495,7 @@ body {
 	-webkit-transition: all 0.3s ease-in-out;
 }
 
-.entranceDiv:hover > .entranceDesc {
+.entranceDiv:hover .entranceDiv:active > .entranceDesc {
 	opacity: 100;
 	transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
@@ -1556,7 +1556,7 @@ body {
 	left: 37.8%;
 }
 
-.barDiv:hover > .barText {
+.barDiv:hover .barDiv:active > .barText {
 	opacity: 100;
 	transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
@@ -1565,7 +1565,7 @@ body {
 	-webkit-transition: all 0.3s ease-in-out;
 }
 
-.barDiv:hover > .barDesc {
+.barDiv:hover .barDiv:active > .barDesc {
 	opacity: 100;
 	transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
@@ -1627,7 +1627,7 @@ body {
 	left: 64.5%;
 }
 
-.toiletDiv:hover > .toiletText {
+.toiletDiv:hover .toiletDiv:active > .toiletText {
 	opacity: 100;
 	transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
@@ -1636,7 +1636,7 @@ body {
 	-webkit-transition: all 0.3s ease-in-out;
 }
 
-.toiletDiv:hover > .toiletDesc {
+.toiletDiv:hover .toiletDiv:active > .toiletDesc {
 	opacity: 100;
 	transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
