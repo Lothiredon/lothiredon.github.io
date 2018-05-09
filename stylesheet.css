@@ -1389,10 +1389,10 @@ body {
 /*===================================================================================*/
 
 .section3 {
-	height: 100vh;
+	padding-top: 56.25%;
 	width: 100% !important;
 	overflow-x: hidden;
-	overflow-y: auto;
+	overflow-y: hidden;
 	background-color: #eeeeff;
 	border-top: 2px solid #cccccc;
 	position: absolute;
@@ -1400,16 +1400,18 @@ body {
 }
 
 .sitemapWrapper {
-	height: 100%;
 	width: 100%;
+	height: 100%;
+	top: 0;
 	overflow-x: hidden;
+	overflow-y: hidden;
 	background-color: #dddddd;
 	position: absolute;
 	filter: blur(5px);
 	z-index: 50;
 	background-size: 100%;
 	background-image: url("Sitemap.png");
-	background-position: center;
+	background-position: top;
 	background-repeat: no-repeat;
 	background-attachment: scroll;
  	transition: all 2s ease-in-out;
@@ -1481,8 +1483,8 @@ body {
 /*===========================DIV CSS WRAP END===========================*/
 
 .entranceDiv {
-	top: 63.7vh;
-	left: 9.8vw;
+	top: 62.5%;
+	left: 10%;
 }
 
 .entranceDiv:hover > .entranceText {
@@ -1506,8 +1508,8 @@ body {
 .entranceText {
 	font-family: Lato;
 	font-size: 2vw;
-	top: -8vh;
-	left: -2vw;
+	top: -110%;
+	left: -50%;
 	color: white;
 	position: absolute;
 	z-index: 50;
@@ -1524,7 +1526,7 @@ body {
 	pointer-events: none;
 	font-family: Lato;
 	font-size: 2vw;
-	top: 20vh;
+	top: 300%;
 	left: 26vw;
 	text-align: right;
 	width: 60vw;
@@ -1551,8 +1553,8 @@ body {
 /*Duplicate from here*/
 
 .barDiv {
-	top: 26.6vh;
-	left: 37.5vw;
+	top: 28.5%;
+	left: 37.8%;
 }
 
 .barDiv:hover > .barText {
@@ -1576,8 +1578,8 @@ body {
 .barText {
 	font-family: Lato;
 	font-size: 2vw;
-	top: -8vh;
-	left: 0vw;
+	top: -110%;
+	left: 0%;
 	color: white;
 	position: absolute;
 	z-index: 50;
@@ -1594,7 +1596,7 @@ body {
 	pointer-events: none;
 	font-family: Lato;
 	font-size: 2vw;
-	top: 57.1vh;
+	top: 770%;
 	left: 13.3vw;
 	text-align: right;
 	width: 45vw;
@@ -1622,8 +1624,8 @@ body {
 /*Duplicate from here*/
 
 .toiletDiv {
-	top: 38.3vh;
-	left: 63.7vw;
+	top: 39.3%;
+	left: 64.5%;
 }
 
 .toiletDiv:hover > .toiletText {
@@ -1647,8 +1649,8 @@ body {
 .toiletText {
 	font-family: Lato;
 	font-size: 2vw;
-	top: -8vh;
-	left: 0.25vw;
+	top: -110%;
+	left: 5%;
 	color: white;
 	position: absolute;
 	z-index: 50;
@@ -1665,7 +1667,7 @@ body {
 	pointer-events: none;
 	font-family: Lato;
 	font-size: 2vw;
-	top: 45.6vh;
+	top: 620%;
 	left: -14.9vw;
 	text-align: right;
 	width: 47vw;
