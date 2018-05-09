@@ -54,7 +54,7 @@ body {
 }
 
 .menu li:hover {
-	background-color: #cccccc;
+	background-color: #777777;
 	transition: all 0.2s ease-in-out;
 }
 
@@ -1392,10 +1392,9 @@ body {
 	padding-top: 56.25%;
 	width: 100% !important;
 	overflow-x: hidden;
-	overflow-y: hidden;
 	background-color: #eeeeff;
 	border-top: 2px solid #cccccc;
-	position: absolute;
+	position: relative;
 	z-index: 30;
 }
 
@@ -1526,7 +1525,7 @@ body {
 	pointer-events: none;
 	font-family: Lato;
 	font-size: 2vw;
-	top: 300%;
+	top: 230%;
 	left: 26vw;
 	text-align: right;
 	width: 60vw;
@@ -1596,7 +1595,7 @@ body {
 	pointer-events: none;
 	font-family: Lato;
 	font-size: 2vw;
-	top: 770%;
+	top: 700%;
 	left: 13.3vw;
 	text-align: right;
 	width: 45vw;
@@ -1667,7 +1666,7 @@ body {
 	pointer-events: none;
 	font-family: Lato;
 	font-size: 2vw;
-	top: 620%;
+	top: 550%;
 	left: -14.9vw;
 	text-align: right;
 	width: 47vw;
@@ -1691,3 +1690,135 @@ body {
 }
 
 /*Stop duplication here*/
+
+/*===================================================================================*/
+/*                             SECTION 4 START                                       */
+/*===================================================================================*/
+
+.section4 {
+	top: 0%;
+	height: 100vh;
+	width: 100% !important;
+	overflow-x: hidden;
+	overflow-y: auto;
+	background-color: #333333;
+	border-top: 2px solid #555555;
+	position: relative;
+	z-index: 20;
+}
+
+/* Slideshow container */
+.slideshowWrapper {
+	top: 10.05vw;
+	max-width: 1920px;
+	position: relative;
+	margin: auto;
+	overflow: hidden;
+}
+
+/* Hide the images by default */
+.Slides {
+    display: none;
+}
+
+.Slides img {
+	filter: blur(5px);
+	margin: -5px -10px -10px -5px;
+	transition: 0.6s ease-in-out;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+	color: white;
+	background-color: rgba(255, 255, 255, 0.1);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease-in-out;
+	border-radius: 0 3px 3px 0;
+	-webkit-user-select: none; /* Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none; /* Standard */
+}
+
+/* Position the "next button" to the right */
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Caption text */
+.slideText {
+	color: rgba(255, 221, 68, 1);
+	font-size: 8vw;
+	padding: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	text-align: center;
+	font-family: Lato;
+	cursor: pointer;
+}
+
+.dotWrapper {
+	height: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+	cursor: pointer;
+	height: 0.75vw;
+	width: 0.75vw;
+	margin: 0 2px;
+	background-color: #777777;
+	border-radius: 50%;
+	display: inline-block;
+	top: 20px;
+	position: relative;
+	transition: background-color 0.6s ease-in-out;
+}
+
+.active2, .dot:hover {
+	background-color: rgba(255, 221, 68, 1);
+}
+
+/* Fading animation */
+.fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 600px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+/* On smaller screens, decrease top value .dot */
+@media only screen and (max-width: 600px) {
+  .dot {top: 0px}
+}
