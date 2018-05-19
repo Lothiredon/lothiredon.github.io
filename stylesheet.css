@@ -54,7 +54,7 @@ body {
 }
 
 .menu li:hover {
-	background-color: #cccccc;
+	background-color: #777777;
 	transition: all 0.2s ease-in-out;
 }
 
@@ -1389,27 +1389,30 @@ body {
 /*===================================================================================*/
 
 .section3 {
-	height: 100vh;
+	padding-top: 56.25%;
 	width: 100% !important;
 	overflow-x: hidden;
-	overflow-y: auto;
 	background-color: #eeeeff;
 	border-top: 2px solid #cccccc;
-	position: absolute;
+	position: relative;
 	z-index: 30;
+	visibility: visible;
+	opacity: 1;
 }
 
 .sitemapWrapper {
-	height: 100%;
 	width: 100%;
+	height: 100%;
+	top: 0;
 	overflow-x: hidden;
+	overflow-y: hidden;
 	background-color: #dddddd;
 	position: absolute;
 	filter: blur(5px);
 	z-index: 50;
 	background-size: 100%;
 	background-image: url("Sitemap.png");
-	background-position: center;
+	background-position: top;
 	background-repeat: no-repeat;
 	background-attachment: scroll;
  	transition: all 2s ease-in-out;
@@ -1430,7 +1433,7 @@ body {
 	transform: translate(-50%, -50%);
 	opacity: 1;
 	background-size: 100%;
-	background-image: url("Rotate.png");
+	background-image: url("rotate.png");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-attachment: scroll;
@@ -1455,7 +1458,7 @@ body {
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 400px) {
     .sitemapWrapper div {
 		visibility: hidden;
     }
@@ -1476,15 +1479,16 @@ body {
 	-ms-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
 	-webkit-transition: all 0.3s ease-in-out;
+	border: 1px solid white;
 }
 /*===========================DIV CSS WRAP END===========================*/
 
 .entranceDiv {
-	top: 63.7vh;
-	left: 9.8vw;
+	top: 62.5%;
+	left: 10%;
 }
 
-.entranceDiv:hover > .entranceText {
+.entranceDiv:hover, .entranceDiv:active > .entranceText {
 	opacity: 100;
 	transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
@@ -1493,7 +1497,7 @@ body {
 	-webkit-transition: all 0.3s ease-in-out;
 }
 
-.entranceDiv:hover > .entranceDesc {
+.entranceDiv:hover, .entranceDiv:active > .entranceDesc {
 	opacity: 100;
 	transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
@@ -1505,8 +1509,8 @@ body {
 .entranceText {
 	font-family: Lato;
 	font-size: 2vw;
-	top: -8vh;
-	left: -2vw;
+	top: -110%;
+	left: -50%;
 	color: white;
 	position: absolute;
 	z-index: 50;
@@ -1523,7 +1527,7 @@ body {
 	pointer-events: none;
 	font-family: Lato;
 	font-size: 2vw;
-	top: 20vh;
+	top: 230%;
 	left: 26vw;
 	text-align: right;
 	width: 60vw;
@@ -1550,11 +1554,11 @@ body {
 /*Duplicate from here*/
 
 .barDiv {
-	top: 26.6vh;
-	left: 37.5vw;
+	top: 28.5%;
+	left: 37.8%;
 }
 
-.barDiv:hover > .barText {
+.barDiv:hover, .barDiv:active > .barText {
 	opacity: 100;
 	transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
@@ -1563,7 +1567,7 @@ body {
 	-webkit-transition: all 0.3s ease-in-out;
 }
 
-.barDiv:hover > .barDesc {
+.barDiv:hover, .barDiv:active > .barDesc {
 	opacity: 100;
 	transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
@@ -1575,8 +1579,8 @@ body {
 .barText {
 	font-family: Lato;
 	font-size: 2vw;
-	top: -8vh;
-	left: 0vw;
+	top: -110%;
+	left: 0%;
 	color: white;
 	position: absolute;
 	z-index: 50;
@@ -1593,7 +1597,7 @@ body {
 	pointer-events: none;
 	font-family: Lato;
 	font-size: 2vw;
-	top: 57.1vh;
+	top: 700%;
 	left: 13.3vw;
 	text-align: right;
 	width: 45vw;
@@ -1621,11 +1625,11 @@ body {
 /*Duplicate from here*/
 
 .toiletDiv {
-	top: 38.3vh;
-	left: 63.7vw;
+	top: 39.3%;
+	left: 64.5%;
 }
 
-.toiletDiv:hover > .toiletText {
+.toiletDiv:hover, .toiletDiv:active > .toiletText {
 	opacity: 100;
 	transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
@@ -1634,7 +1638,7 @@ body {
 	-webkit-transition: all 0.3s ease-in-out;
 }
 
-.toiletDiv:hover > .toiletDesc {
+.toiletDiv:hover, .toiletDiv:active > .toiletDesc {
 	opacity: 100;
 	transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
@@ -1646,8 +1650,8 @@ body {
 .toiletText {
 	font-family: Lato;
 	font-size: 2vw;
-	top: -8vh;
-	left: 0.25vw;
+	top: -110%;
+	left: 5%;
 	color: white;
 	position: absolute;
 	z-index: 50;
@@ -1664,7 +1668,7 @@ body {
 	pointer-events: none;
 	font-family: Lato;
 	font-size: 2vw;
-	top: 45.6vh;
+	top: 550%;
 	left: -14.9vw;
 	text-align: right;
 	width: 47vw;
@@ -1688,3 +1692,223 @@ body {
 }
 
 /*Stop duplication here*/
+
+/*===================================================================================*/
+/*                             SECTION 4 START                                       */
+/*===================================================================================*/
+
+.section4 {
+	top: 0%;
+	height: 100vh;
+	width: 100% !important;
+	overflow-x: hidden;
+	overflow-y: auto;
+	background-color: #333333;
+	border-top: 2px solid #555555;
+	position: relative;
+	z-index: 20;
+}
+
+/* Slideshow container */
+.slideshowWrapper {
+	top: 10.05vw;
+	max-width: 1920px;
+	position: relative;
+	margin: auto;
+	overflow: hidden;
+}
+
+/* Hide the images by default */
+.Slides {
+    display: none;
+}
+
+.Slides img {
+	filter: blur(5px);
+	margin: -5px -10px -10px -5px;
+	transition: 0.6s ease-in-out;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+	color: white;
+	background-color: rgba(255, 255, 255, 0.1);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease-in-out;
+	border-radius: 0 3px 3px 0;
+	-webkit-user-select: none; /* Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none; /* Standard */
+}
+
+/* Position the "next button" to the right */
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Caption text */
+.slideText {
+	color: rgba(255, 221, 68, 1);
+	font-size: 8vw;
+	padding: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	text-align: center;
+	font-family: Lato;
+	cursor: pointer;
+}
+
+.dotWrapper {
+	height: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+	cursor: pointer;
+	height: 0.75vw;
+	width: 0.75vw;
+	margin: 0 2px;
+	background-color: #777777;
+	border-radius: 50%;
+	display: inline-block;
+	top: 20px;
+	position: relative;
+	transition: background-color 0.6s ease-in-out;
+}
+
+.active2, .dot:hover {
+	background-color: rgba(255, 221, 68, 1);
+}
+
+/* Fading animation */
+.fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+	from {opacity: .4} 
+	to {opacity: 1}
+}
+
+@keyframes fade {
+	from {opacity: .4} 
+	to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 600px) {
+	.prev, .next,.text {font-size: 11px}
+}
+
+/* On smaller screens, decrease top value .dot */
+@media only screen and (max-width: 600px) {
+	.dot {top: 0px}
+}
+
+/*=====================================================*/
+/*=====================MODAL 1 START=====================*/
+/*=====================================================*/
+
+.modal1Row {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 4px;
+}
+
+.modal1Row img {
+	border: 2px solid #777777;
+	max-width: calc(25% - 4px);
+	height: auto;
+	display: block;
+	background: #ccc;
+	transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+}
+
+.modal1Row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* The Modal wrapper */
+.modal1 {
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	padding-top: 1vw;
+	width: 100%;
+	height: 100% !important;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.9);
+	transition: display 0.6s ease-in-out;
+	z-index: 100;
+}
+
+/* Modal Content */
+.modal1-content {
+	position: relative;
+	background-color: #777777;
+	margin: auto;
+	padding: 0;
+	width: 90%;
+	max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+	color: white;
+	position: fixed;
+	top: 1vw;
+	right: 3%;
+	font-size: 4vw;
+	font-weight: bold;
+	z-index: 100;
+}
+
+.close:hover, .close:focus {
+	color: #999;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/*===========MODAL FOR MOBILE DEVICES=============*/
+
+@media only screen and (max-width: 600px) {
+	.close {
+		font-size: 6vw;
+		right: 5%;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.modal1Row img {max-width: calc(100% - 4px);}
+}
+
+@media only screen and (max-width: 600px) {
+	.modal1Row {padding: 0 1px;}
+}
