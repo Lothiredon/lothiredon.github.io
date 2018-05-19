@@ -1888,12 +1888,22 @@ body {
 	font-size: 4vw;
 	font-weight: bold;
 	z-index: 100;
+	transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
 }
 
 .close:hover, .close:focus {
 	color: #999;
 	text-decoration: none;
 	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
 }
 
 /*===========MODAL FOR MOBILE DEVICES=============*/
