@@ -1481,6 +1481,13 @@ body {
 	-webkit-transition: all 0.3s ease-in-out;
 	border: 1px solid white;
 }
+
+.sitemapWrapper p {
+	-webkit-user-select: none; /* Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none; /* Standard */
+}
 /*===========================DIV CSS WRAP END===========================*/
 
 .entranceDiv {
@@ -1488,7 +1495,7 @@ body {
 	left: 10%;
 }
 
-.entranceDiv:hover, .entranceDiv:active > .entranceText {
+.entranceDiv:hover > .entranceText {
 	opacity: 100;
 	transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
@@ -1497,7 +1504,7 @@ body {
 	-webkit-transition: all 0.3s ease-in-out;
 }
 
-.entranceDiv:hover, .entranceDiv:active > .entranceDesc {
+.entranceDiv:hover > .entranceDesc {
 	opacity: 100;
 	transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
@@ -1558,7 +1565,7 @@ body {
 	left: 37.8%;
 }
 
-.barDiv:hover, .barDiv:active > .barText {
+.barDiv:hover > .barText {
 	opacity: 100;
 	transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
@@ -1567,7 +1574,7 @@ body {
 	-webkit-transition: all 0.3s ease-in-out;
 }
 
-.barDiv:hover, .barDiv:active > .barDesc {
+.barDiv:hover > .barDesc {
 	opacity: 100;
 	transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
@@ -1629,7 +1636,7 @@ body {
 	left: 64.5%;
 }
 
-.toiletDiv:hover, .toiletDiv:active > .toiletText {
+.toiletDiv:hover > .toiletText {
 	opacity: 100;
 	transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
@@ -1638,7 +1645,7 @@ body {
 	-webkit-transition: all 0.3s ease-in-out;
 }
 
-.toiletDiv:hover, .toiletDiv:active > .toiletDesc {
+.toiletDiv:hover > .toiletDesc {
 	opacity: 100;
 	transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
@@ -1692,6 +1699,73 @@ body {
 }
 
 /*Stop duplication here*/
+
+/*Add the :active attribute on mobile devices*/
+@media only screen and (max-width: 400px) {
+	.barDiv:hover, .barDiv:active > .barText {
+		opacity: 100;
+		transition: all 0.3s ease-in-out;
+		-moz-transition: all 0.3s ease-in-out;
+		-ms-transition: all 0.3s ease-in-out;
+		-o-transition: all 0.3s ease-in-out;
+		-webkit-transition: all 0.3s ease-in-out;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.barDiv:hover, .barDiv:active > .barDesc {
+		opacity: 100;
+		transition: all 0.3s ease-in-out;
+		-moz-transition: all 0.3s ease-in-out;
+		-ms-transition: all 0.3s ease-in-out;
+		-o-transition: all 0.3s ease-in-out;
+		-webkit-transition: all 0.3s ease-in-out;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.toiletDiv:hover, .toiletDiv:active > .toiletText {
+		opacity: 100;
+		transition: all 0.3s ease-in-out;
+		-moz-transition: all 0.3s ease-in-out;
+		-ms-transition: all 0.3s ease-in-out;
+		-o-transition: all 0.3s ease-in-out;
+		-webkit-transition: all 0.3s ease-in-out;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.toiletDiv:hover, .toiletDiv:active > .toiletDesc {
+		opacity: 100;
+		transition: all 0.3s ease-in-out;
+		-moz-transition: all 0.3s ease-in-out;
+		-ms-transition: all 0.3s ease-in-out;
+		-o-transition: all 0.3s ease-in-out;
+		-webkit-transition: all 0.3s ease-in-out;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.entranceDiv:hover, .entranceDiv:active > .entranceText {
+		opacity: 100;
+		transition: all 0.3s ease-in-out;
+		-moz-transition: all 0.3s ease-in-out;
+		-ms-transition: all 0.3s ease-in-out;
+		-o-transition: all 0.3s ease-in-out;
+		-webkit-transition: all 0.3s ease-in-out;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.entranceDiv:hover, .entranceDiv:active > .entranceText {
+		opacity: 100;
+		transition: all 0.3s ease-in-out;
+		-moz-transition: all 0.3s ease-in-out;
+		-ms-transition: all 0.3s ease-in-out;
+		-o-transition: all 0.3s ease-in-out;
+		-webkit-transition: all 0.3s ease-in-out;
+	}
+}
 
 /*===================================================================================*/
 /*                             SECTION 4 START                                       */
@@ -1773,6 +1847,27 @@ body {
 	text-align: center;
 	font-family: Lato;
 	cursor: pointer;
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;
+}
+
+.clickMeSlide {
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	font-family: Lato;
+	font-size: 1vw;
+	opacity: 0;
+	transition: opacity 0.6s ease-in-out;
+}
+
+.slideText:hover ~ .clickMeSlide {
+	opacity: 1;
+	transition: opacity 0.6s ease-in-out;
 }
 
 .dotWrapper {
@@ -1825,9 +1920,54 @@ body {
 	.dot {top: 0px}
 }
 
+/* On smaller screens, make .clickMeSlide larger */
+@media only screen and (max-width: 600px) {
+	.clickMeSlide {font-size: 2vw}
+}
+
+/*===========================================================*/
+/*===================MODAL GENERAL START=====================*/
+/*===========================================================*/
+
+/* The Close Button */
+.close {
+	color: white;
+	position: fixed;
+	top: 1vw;
+	right: 3%;
+	font-size: 4vw;
+	font-weight: bold;
+	z-index: 100;
+	transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+}
+
+.close:hover, .close:focus {
+	color: #999;
+	text-decoration: none;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+}
+
+@media only screen and (max-width: 600px) {
+	.close {
+		font-size: 6vw;
+		right: 5%;
+	}
+}
+
 /*=====================================================*/
-/*=====================MODAL 1 START=====================*/
+/*===================MODAL 1 START=====================*/
 /*=====================================================*/
+
+/*Please note that Modal 1 corresponds to EF4.0*/
 
 .modal1Row {
 	display: flex;
@@ -1879,41 +2019,7 @@ body {
 	max-width: 1200px;
 }
 
-/* The Close Button */
-.close {
-	color: white;
-	position: fixed;
-	top: 1vw;
-	right: 3%;
-	font-size: 4vw;
-	font-weight: bold;
-	z-index: 100;
-	transition: all 0.3s ease-in-out;
-	-moz-transition: all 0.3s ease-in-out;
-	-ms-transition: all 0.3s ease-in-out;
-	-o-transition: all 0.3s ease-in-out;
-	-webkit-transition: all 0.3s ease-in-out;
-}
-
-.close:hover, .close:focus {
-	color: #999;
-	text-decoration: none;
-	cursor: pointer;
-	transition: all 0.3s ease-in-out;
-	-moz-transition: all 0.3s ease-in-out;
-	-ms-transition: all 0.3s ease-in-out;
-	-o-transition: all 0.3s ease-in-out;
-	-webkit-transition: all 0.3s ease-in-out;
-}
-
-/*===========MODAL FOR MOBILE DEVICES=============*/
-
-@media only screen and (max-width: 600px) {
-	.close {
-		font-size: 6vw;
-		right: 5%;
-	}
-}
+/*===========MODAL 1 FOR MOBILE DEVICES=============*/
 
 @media only screen and (max-width: 600px) {
 	.modal1Row img {max-width: calc(100% - 4px);}
@@ -1921,4 +2027,202 @@ body {
 
 @media only screen and (max-width: 600px) {
 	.modal1Row {padding: 0 1px;}
+}
+
+/*=====================================================*/
+/*===================MODAL 2 START=====================*/
+/*=====================================================*/
+
+/*Please note that Modal 2 corresponds to EF3.0*/
+
+.modal2Row {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 4px;
+}
+
+.modal2Row img {
+	border: 2px solid #777777;
+	max-width: calc(25% - 4px);
+	height: auto;
+	display: block;
+	background: #ccc;
+	transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+}
+
+.modal2Row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* The Modal wrapper */
+.modal2 {
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	padding-top: 1vw;
+	width: 100%;
+	height: 100% !important;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.9);
+	transition: display 0.6s ease-in-out;
+	z-index: 100;
+}
+
+/* Modal Content */
+.modal2-content {
+	position: relative;
+	background-color: #777777;
+	margin: auto;
+	padding: 0;
+	width: 90%;
+	max-width: 1200px;
+}
+
+/*===========MODAL 2 FOR MOBILE DEVICES=============*/
+
+@media only screen and (max-width: 600px) {
+	.modal2Row img {max-width: calc(100% - 4px);}
+}
+
+@media only screen and (max-width: 600px) {
+	.modal2Row {padding: 0 1px;}
+}
+
+/*=====================================================*/
+/*===================MODAL 3 START=====================*/
+/*=====================================================*/
+
+/*Please note that Modal 3 corresponds to EF2.0*/
+
+.modal3Row {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 4px;
+}
+
+.modal3Row img {
+	border: 2px solid #777777;
+	max-width: calc(25% - 4px);
+	height: auto;
+	display: block;
+	background: #ccc;
+	transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+}
+
+.modal3Row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* The Modal wrapper */
+.modal3 {
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	padding-top: 1vw;
+	width: 100%;
+	height: 100% !important;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.9);
+	transition: display 0.6s ease-in-out;
+	z-index: 100;
+}
+
+/* Modal Content */
+.modal3-content {
+	position: relative;
+	background-color: #777777;
+	margin: auto;
+	padding: 0;
+	width: 90%;
+	max-width: 1200px;
+}
+
+/*===========MODAL 2 FOR MOBILE DEVICES=============*/
+
+@media only screen and (max-width: 600px) {
+	.modal3Row img {max-width: calc(100% - 4px);}
+}
+
+@media only screen and (max-width: 600px) {
+	.modal3Row {padding: 0 1px;}
+}
+
+/*=====================================================*/
+/*===================MODAL 2 START=====================*/
+/*=====================================================*/
+
+/*Please note that Modal 2 corresponds to EF3.0*/
+
+.modal4Row {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 4px;
+}
+
+.modal4Row img {
+	border: 2px solid #777777;
+	max-width: calc(25% - 4px);
+	height: auto;
+	display: block;
+	background: #ccc;
+	transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+}
+
+.modal4Row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* The Modal wrapper */
+.modal4 {
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	padding-top: 1vw;
+	width: 100%;
+	height: 100% !important;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.9);
+	transition: display 0.6s ease-in-out;
+	z-index: 100;
+}
+
+/* Modal Content */
+.modal4-content {
+	position: relative;
+	background-color: #777777;
+	margin: auto;
+	padding: 0;
+	width: 90%;
+	max-width: 1200px;
+}
+
+/*===========MODAL 2 FOR MOBILE DEVICES=============*/
+
+@media only screen and (max-width: 600px) {
+	.modal4Row img {max-width: calc(100% - 4px);}
+}
+
+@media only screen and (max-width: 600px) {
+	.modal4Row {padding: 0 1px;}
 }
