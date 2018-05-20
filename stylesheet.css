@@ -16,6 +16,15 @@ body {
 	font-size: 16px;
 }
 
+@media only screen and (max-width: 600px) {
+	body {
+		-webkit-user-select: none; /* Safari */        
+		-moz-user-select: none; /* Firefox */
+		-ms-user-select: none; /* IE10+/Edge */
+		user-select: none; /* Standard */
+	}
+}
+
 .active {
 	border-bottom: solid 2px #ffdd44;
 }
@@ -80,6 +89,40 @@ body {
     z-index: 30;
 	background-color: #ffffff;
 	position: static;
+}
+
+.backToTop {
+	height: 6vw;
+	width: 6vw;
+	float: right;
+	right: 5%;
+	top: 90%;
+	position: fixed;
+	z-index: 120;
+	border: 1.5px solid white;
+	border-radius: 50%;
+	line-height: 6vw;
+	opacity: 0;
+}
+
+.backToTop p {
+	font-size: 4vw;
+	font-family: Lato;
+	text-align: center;
+	vertical-align: middle;
+	padding: 0;
+	margin: 0;
+	color: white;
+	position: relative;
+	z-index: 140;
+	opacity: 0;
+}
+
+/* If the screen size is 400px or less*/
+@media only screen and (max-width: 400px) {
+    .backToTop, .backToTop p {
+		opacity: 1;
+    }
 }
 
 .backgroundvideo {
@@ -1710,10 +1753,7 @@ body {
 		-o-transition: all 0.3s ease-in-out;
 		-webkit-transition: all 0.3s ease-in-out;
 	}
-}
-
-@media only screen and (max-width: 400px) {
-	.barDiv:hover, .barDiv:active > .barDesc {
+		.barDiv:hover, .barDiv:active > .barDesc {
 		opacity: 100;
 		transition: all 0.3s ease-in-out;
 		-moz-transition: all 0.3s ease-in-out;
@@ -1721,9 +1761,6 @@ body {
 		-o-transition: all 0.3s ease-in-out;
 		-webkit-transition: all 0.3s ease-in-out;
 	}
-}
-
-@media only screen and (max-width: 400px) {
 	.toiletDiv:hover, .toiletDiv:active > .toiletText {
 		opacity: 100;
 		transition: all 0.3s ease-in-out;
@@ -1732,9 +1769,6 @@ body {
 		-o-transition: all 0.3s ease-in-out;
 		-webkit-transition: all 0.3s ease-in-out;
 	}
-}
-
-@media only screen and (max-width: 400px) {
 	.toiletDiv:hover, .toiletDiv:active > .toiletDesc {
 		opacity: 100;
 		transition: all 0.3s ease-in-out;
@@ -1743,9 +1777,6 @@ body {
 		-o-transition: all 0.3s ease-in-out;
 		-webkit-transition: all 0.3s ease-in-out;
 	}
-}
-
-@media only screen and (max-width: 400px) {
 	.entranceDiv:hover, .entranceDiv:active > .entranceText {
 		opacity: 100;
 		transition: all 0.3s ease-in-out;
@@ -1754,9 +1785,6 @@ body {
 		-o-transition: all 0.3s ease-in-out;
 		-webkit-transition: all 0.3s ease-in-out;
 	}
-}
-
-@media only screen and (max-width: 400px) {
 	.entranceDiv:hover, .entranceDiv:active > .entranceText {
 		opacity: 100;
 		transition: all 0.3s ease-in-out;
@@ -1922,7 +1950,10 @@ body {
 
 /* On smaller screens, make .clickMeSlide larger */
 @media only screen and (max-width: 600px) {
-	.clickMeSlide {font-size: 2vw}
+	.clickMeSlide {
+		font-size: 2vw;
+		opacity: 1;
+	}
 }
 
 /*===========================================================*/
