@@ -10,7 +10,7 @@
 
 body {
 	margin: 0px;
-	overflow-y: auto;
+	overflow-y: visible;
 	overflow-x: hidden;
 	-webkit-font-smoothing: antialiased;
 	font-size: 16px;
@@ -94,7 +94,6 @@ body {
 .backToTop {
 	height: 6vw;
 	width: 6vw;
-	float: right;
 	right: 5%;
 	top: 90%;
 	position: fixed;
@@ -1800,23 +1799,44 @@ body {
 /*===================================================================================*/
 
 .section4 {
-	top: 0%;
-	height: 100vh;
-	width: 100% !important;
-	overflow-x: hidden;
-	overflow-y: auto;
+	height: 100%;
+	width: 100%;
 	background-color: #333333;
 	border-top: 2px solid #555555;
 	position: relative;
-	z-index: 20;
+	z-index: 50;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.currenteventbanner2 {
+	width: 100%;
+	height: 10vw;
+	background-color: #333333;
+	padding: 0;
+	margin: 0;
+	line-height: 10vw;
+	border-bottom: 2px solid #555555;
+	position: relative;
+}
+
+.currenteventbanner2 p {
+	font-family: Bebas;
+	color: white;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 8vw;
+	font-style: italic;
 }
 
 /* Slideshow container */
 .slideshowWrapper {
-	top: 10.05vw;
+	top: 0;
 	max-width: 1920px;
 	position: relative;
-	margin: auto;
+	margin: 0;
 	overflow: hidden;
 }
 
@@ -1829,6 +1849,7 @@ body {
 	filter: blur(5px);
 	margin: -5px -10px -10px -5px;
 	transition: 0.6s ease-in-out;
+	position: relative;
 }
 
 /* Next & previous buttons */
@@ -1900,6 +1921,8 @@ body {
 
 .dotWrapper {
 	height: 0;
+	position: relative;
+	top: -10vw;
 }
 
 /* The dots/bullets/indicators */
@@ -2004,12 +2027,14 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	padding: 0 4px;
+	overflow-y: visible;
+	justify-content: center;
 }
 
 .modal1Row img {
 	border: 2px solid #777777;
 	max-width: calc(25% - 4px);
-	height: auto;
+	height: 16vw;
 	display: block;
 	background: #ccc;
 	transition: all 0.3s ease-in-out;
@@ -2033,7 +2058,7 @@ body {
 	top: 0;
 	padding-top: 1vw;
 	width: 100%;
-	height: 100% !important;
+	height: 100%;
 	overflow: auto;
 	background-color: rgba(0, 0, 0, 0.9);
 	transition: display 0.6s ease-in-out;
@@ -2047,13 +2072,17 @@ body {
 	margin: auto;
 	padding: 0;
 	width: 90%;
-	max-width: 1200px;
+	overflow-y: visible;
+	z-index: 80;
 }
 
 /*===========MODAL 1 FOR MOBILE DEVICES=============*/
 
 @media only screen and (max-width: 600px) {
-	.modal1Row img {max-width: calc(100% - 4px);}
+	.modal1Row img {
+		max-width: calc(100% - 4px);
+		height: 27vw;
+	}
 }
 
 @media only screen and (max-width: 600px) {
@@ -2070,12 +2099,14 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	padding: 0 4px;
+	overflow-y: visible;
+	justify-content: center;
 }
 
 .modal2Row img {
 	border: 2px solid #777777;
 	max-width: calc(25% - 4px);
-	height: auto;
+	height: 16vw;
 	display: block;
 	background: #ccc;
 	transition: all 0.3s ease-in-out;
@@ -2099,7 +2130,7 @@ body {
 	top: 0;
 	padding-top: 1vw;
 	width: 100%;
-	height: 100% !important;
+	height: 100%;
 	overflow: auto;
 	background-color: rgba(0, 0, 0, 0.9);
 	transition: display 0.6s ease-in-out;
@@ -2113,13 +2144,17 @@ body {
 	margin: auto;
 	padding: 0;
 	width: 90%;
-	max-width: 1200px;
+	overflow-y: visible;
+	z-index: 80;
 }
 
 /*===========MODAL 2 FOR MOBILE DEVICES=============*/
 
 @media only screen and (max-width: 600px) {
-	.modal2Row img {max-width: calc(100% - 4px);}
+	.modal2Row img {
+		max-width: calc(100% - 4px);
+		height: 27vw;
+	}
 }
 
 @media only screen and (max-width: 600px) {
@@ -2136,12 +2171,14 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	padding: 0 4px;
+	overflow-y: visible;
+	justify-content: center;
 }
 
 .modal3Row img {
 	border: 2px solid #777777;
 	max-width: calc(25% - 4px);
-	height: auto;
+	height: 16vw;
 	display: block;
 	background: #ccc;
 	transition: all 0.3s ease-in-out;
@@ -2165,7 +2202,7 @@ body {
 	top: 0;
 	padding-top: 1vw;
 	width: 100%;
-	height: 100% !important;
+	height: 100%;
 	overflow: auto;
 	background-color: rgba(0, 0, 0, 0.9);
 	transition: display 0.6s ease-in-out;
@@ -2179,13 +2216,17 @@ body {
 	margin: auto;
 	padding: 0;
 	width: 90%;
-	max-width: 1200px;
+	overflow-y: visible;
+	z-index: 80;
 }
 
-/*===========MODAL 2 FOR MOBILE DEVICES=============*/
+/*===========MODAL 3 FOR MOBILE DEVICES=============*/
 
 @media only screen and (max-width: 600px) {
-	.modal3Row img {max-width: calc(100% - 4px);}
+	.modal3Row img {
+		max-width: calc(100% - 4px);
+		height: 27vw;
+	}
 }
 
 @media only screen and (max-width: 600px) {
@@ -2193,21 +2234,23 @@ body {
 }
 
 /*=====================================================*/
-/*===================MODAL 2 START=====================*/
+/*===================MODAL 4 START=====================*/
 /*=====================================================*/
 
-/*Please note that Modal 2 corresponds to EF3.0*/
+/*Please note that Modal 4 corresponds to EF1.0*/
 
 .modal4Row {
 	display: flex;
 	flex-wrap: wrap;
 	padding: 0 4px;
+	overflow-y: visible;
+	justify-content: center;
 }
 
 .modal4Row img {
 	border: 2px solid #777777;
 	max-width: calc(25% - 4px);
-	height: auto;
+	height: 16vw;
 	display: block;
 	background: #ccc;
 	transition: all 0.3s ease-in-out;
@@ -2231,7 +2274,7 @@ body {
 	top: 0;
 	padding-top: 1vw;
 	width: 100%;
-	height: 100% !important;
+	height: 100%;
 	overflow: auto;
 	background-color: rgba(0, 0, 0, 0.9);
 	transition: display 0.6s ease-in-out;
@@ -2245,15 +2288,46 @@ body {
 	margin: auto;
 	padding: 0;
 	width: 90%;
-	max-width: 1200px;
+	overflow-y: visible;
+	z-index: 80;
 }
 
-/*===========MODAL 2 FOR MOBILE DEVICES=============*/
+/*===========MODAL 4 FOR MOBILE DEVICES=============*/
 
 @media only screen and (max-width: 600px) {
-	.modal4Row img {max-width: calc(100% - 4px);}
+	.modal4Row img {
+		max-width: calc(100% - 4px);
+		height: 27vw;
+	}
 }
 
 @media only screen and (max-width: 600px) {
 	.modal4Row {padding: 0 1px;}
+}
+
+/*===================================================================================*/
+/*                             SECTION 5 START                                       */
+/*===================================================================================*/
+
+.section5 {
+	top: 0;
+	height: 10vw;
+	width: 100% !important;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	background-color: #333333;
+	border-top: 2px solid #555555;
+	position: relative;
+	z-index: 10;
+}
+
+.currenteventbanner {
+	width: 100%;
+	height: 10vw;
+	background-color: #333333;
+	padding: 0;
+	margin: 0;
+	line-height: 10vw;
+	border-bottom: 2px solid #555555;
+	position: absolute;
 }
