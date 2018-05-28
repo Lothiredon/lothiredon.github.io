@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 	
 	<meta charset="utf-8">
@@ -25,7 +25,7 @@
 				var $target = $(target);
 
 				$('html, body').stop().animate({
-					'scrollTop': $target.offset().top+15
+					'scrollTop': $target.offset().top-60
 				}, 1000, 'swing',);
 			});
 		});
@@ -34,8 +34,8 @@
 	
 	<script>
 		$(document).ready(function() {
-			$("ul.menu li").click(function() {
-				$("ul.menu li").removeClass("active"); //This is important to make only one link active at a time
+			$("ul.menu li a").click(function() {
+				$("ul.menu li a").removeClass("active"); //This is important to make only one link active at a time
 				// Try without using above line and note the difference
 
 				$(this).addClass("active"); // Add 'active' class to currently clicked element
@@ -53,20 +53,45 @@
 		  });
 		});
 	</script>
+	
+	<script>
+		$(function() {
+		  $('.centerdiv').hover(function() {
+		  $('.titlePageText').css('color', '#ffdd44');
+		}, function() {
+		// on mouseout, reset the scale
+		  $('.titlePageText').css('color', 'white');
+		  });
+		});
+	</script>
+	
+	<script>
+		$(window).scroll(function() {
+			var scroll = $(window).scrollTop();
+			var os = $('.section1').offset().top;
+			var ht = $('.section1').height();
+			if(scroll > os + ht){
+				$('.menu').addClass('past-main');
+			} else {
+				$('.menu').removeClass('past-main');
+			}
+
+		});
+	</script>
 </head>
 
 <body>
 
-	<div class="section1">
+	<div class="section1" id="tab">
 		<a id="sec1" class="smooth"></a>
 			
 		<div class="menudiv">
 			<ul class="menu">
-				<li id="menubutton"><a href="#sec1">Home</a></li>
-				<li id="menubutton"><a href="#sec2">Evenement</a></li>
-				<li id="menubutton"><a href="#sec3">Sitemap</a></li>
-				<li id="menubutton"><a href="#sec4">Vorige Edities</a></li>
-				<li id="menubutton"><a href="#sec5">Contact</a></li>
+				<li id="menubutton1"><a href="#sec1">HOME</a></li>
+				<li id="menubutton2"><a href="#sec2">EVENEMENT</a></li>
+				<li id="menubutton3"><a href="#sec3">SITEMAP</a></li>
+				<li id="menubutton4"><a href="#sec4">VORIGE EDITIES</a></li>
+				<li id="menubutton5"><a href="#sec5">CONTACT</a></li>
 			</ul>
 		</div>
 		
@@ -74,9 +99,11 @@
 		
 		<div class="backgroundvideo"></div>
 		
+		<h1 class="titlePageText">EXAMENFUIF 5.0</h1>
+		
 		<a class="centerdivlink" href="#sec2">
 		<div class="centerdiv" <!--onclick="location.href='#sec2'-->">
-			<p class="centerdivtext">Examenfuif 5.0</p>
+			<p class="centerdivtext">SHOW ME MORE!</p>
 			<div class="overlay"></div>
 		</div>
 		</a>
@@ -199,7 +226,7 @@
 			  <div class="hovergraphic6">
 				<div class="tableoverlay6">
 				  <div class="td6text">
-				    <h3>EF5.0</h3>
+				    <h3>EXAMENFUIF 5.0</h3>
 					<p>VERDERE INFO VOLGT!</p>
 				      <div class="tablespacer6"></div>
 				  </div>
@@ -456,74 +483,7 @@
 				<span class="close cursor" onclick="closeModal3()">&times;</span>
 					<div class="modal3-content">
 					<div class="modal3Row">
-							<img src="ef2pics/1.jpg">
-							<img src="ef2pics/2.jpg">
-							<img src="ef2pics/3.jpg">
-							<img src="ef2pics/4.jpg">
-							<img src="ef2pics/5.jpg">
-							<img src="ef2pics/6.jpg">
-							<img src="ef2pics/7.jpg">
-							<img src="ef2pics/8.jpg">
-							<img src="ef2pics/10.jpg">
-							<img src="ef2pics/11.jpg">
-							<img src="ef2pics/12.jpg">
-							<img src="ef2pics/13.jpg">
-							<img src="ef2pics/14.jpg">
-							<img src="ef2pics/15.jpg">
-							<img src="ef2pics/16.jpg">
-							<img src="ef2pics/17.jpg">
-							<img src="ef2pics/18.jpg">
-							<img src="ef2pics/19.jpg">
-							<img src="ef2pics/20.jpg">
-							<img src="ef2pics/21.jpg">
-							<img src="ef2pics/22.jpg">
-							<img src="ef2pics/24.jpg">
-							<img src="ef2pics/25.jpg">
-							<img src="ef2pics/27.jpg">
-							<img src="ef2pics/29.jpg">
-							<img src="ef2pics/31.jpg">
-							<img src="ef2pics/32.jpg">
-							<img src="ef2pics/33.jpg">
-							<img src="ef2pics/34.jpg">
-							<img src="ef2pics/35.jpg">
-							<img src="ef2pics/36.jpg">
-							<img src="ef2pics/37.jpg">
-							<img src="ef2pics/38.jpg">
-							<img src="ef2pics/40.jpg">
-							<img src="ef2pics/41.jpg">
-							<img src="ef2pics/42.jpg">
-							<img src="ef2pics/43.jpg">
-							<img src="ef2pics/44.jpg">
-							<img src="ef2pics/45.jpg">
-							<img src="ef2pics/46.jpg">
-							<img src="ef2pics/47.jpg">
-							<img src="ef2pics/48.jpg">
-							<img src="ef2pics/49.jpg">
-							<img src="ef2pics/50.jpg">
-							<img src="ef2pics/51.jpg">
-							<img src="ef2pics/52.jpg">
-							<img src="ef2pics/53.jpg">
-							<img src="ef2pics/54.jpg">
-							<img src="ef2pics/55.jpg">
-							<img src="ef2pics/58.jpg">
-							<img src="ef2pics/59.jpg">
-							<img src="ef2pics/60.jpg">
-							<img src="ef2pics/61.jpg">
-							<img src="ef2pics/62.jpg">
-							<img src="ef2pics/63.jpg">
-							<img src="ef2pics/64.jpg">
-							<img src="ef2pics/65.jpg">
-							<img src="ef2pics/66.jpg">
-							<img src="ef2pics/68.jpg">
-							<img src="ef2pics/69.jpg">
-							<img src="ef2pics/70.jpg">
-							<img src="ef2pics/71.jpg">
-							<img src="ef2pics/72.jpg">
-							<img src="ef2pics/73.jpg">
-							<img src="ef2pics/74.jpg">
-							<img src="ef2pics/75.jpg">
-							<img src="ef2pics/76.jpg">
-							<img src="ef2pics/77.jpg">
+
 					</div>
 					</div>
 			</div>
@@ -674,7 +634,41 @@
 			<div class="currenteventbanner">
 				<p>Contact</p>
 			</div>
-		
+			
+			<div class="googleMapWrapper">
+				<div id="googleMap" style="width:100%;height:15vw;"></div>
+			</div>
+			
+			<div class="socialWrapper">
+				<h3>FIND US!</h3>
+				<div class="socialLogoWrapper">
+					<a href="https://www.youtube.com/watch?v=EPFOfYszAXA" target="_blank"><img src="youtubelogo.png"></a>
+					<a href="https://www.facebook.com/events/747560802013986/" target="_blank"><img src="facebooklogo.png"></a>
+					<a><img src="snapchatlogo.png">EXAMENFUIF3.0</a>
+				</div>
+			</div>
+			
+			<div class="disclaimer">
+				<p>2018 EXAMENFUIF | ALL RIGHTS RESERVED. WEBSITE BY GUUS KETELINGS</p>
+			</div>
+				
+				<script>
+					function myMap() {
+					  var myCenter = new google.maps.LatLng(51.273370,5.961051);
+					  var mapCanvas = document.getElementById("googleMap");
+					  var mapOptions = {
+						center: new google.maps.LatLng(51.273370,5.961051),
+						zoom:15,
+						mapTypeId:google.maps.MapTypeId.HYBRID
+					  };
+					  var map = new google.maps.Map(mapCanvas, mapOptions);
+					  var marker = new google.maps.Marker({position:myCenter});
+					  marker.setMap(map);
+					}
+				</script>
+
+				<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPlhXHeQ7V8kIieLsit7wVB-nzf8QqyZY&callback=myMap"></script>
+			
 	</div>
 	
 </body>

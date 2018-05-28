@@ -30,13 +30,13 @@ body {
 }
 
 .menudiv {
-	background-color: #333333;
+	top: 0%;
 	margin: 0;
 	padding: 0;
-	height: 50px;
+	height: 2vw;
 	width: 100% !important;
-	position: absolute;
-	z-index: 50;
+	position: fixed;
+	z-index: 100;
 }
 
 .menu {
@@ -45,16 +45,15 @@ body {
 	top: 0;
 	display: flex;
 	width: 100%;
-	height: 50px;
-	line-height: 50px;
+	height: 4vw;
+	line-height: 4vw;
 	padding: 0;
-	border-bottom: 2px solid #606060;
 }
 
 .menu li {
 	margin-top: 0;
 	padding: 0;
-	width: 25%;
+	width: 8%;
 	justify-content: center;
 	text-align: center;
 	vertical-align: middle;
@@ -62,24 +61,39 @@ body {
 	transition: all 0.5s ease-in-out;
 }
 
-.menu li:hover {
-	background-color: #777777;
-	transition: all 0.2s ease-in-out;
+.menu li a:hover {
+	border-bottom: 2px solid white;
+	transition: all 0.4s ease-in-out;
 }
 
 .menu li a {
 	text-decoration: none;
 	color: white;
-	font-family: Bebas;
-	font-size: 2vw;
+	font-family: Lato;
+	font-size: 1vw;
 	padding: 0;
+	transition: all 0.4s ease-in-out;
+}
+
+.past-main {
+	background-color: black;
 }
 
 /* If the screen size is 601px or less*/
 @media only screen and (max-width: 600px) {
     .menu li a {
-		font-size: 4vw;
+		font-size: 2vw;
     }
+	.menu li {
+		width: 20%;
+	}
+	.menu {
+		height: 8vw;
+		line-height: 8vw;
+	}
+	.menudiv {
+		height: 4vw;
+	}
 }
 
 .section1 {
@@ -146,28 +160,47 @@ body {
     transition: all 0.2s ease-out;
 }
 
+.titlePageText {
+	position: absolute;
+	top: 35%;
+	left: 50%;
+	width: 100%;
+	text-align: center;
+	transform: translate(-50%, -50%);
+	font-family: Lato;
+	font-size: 10vw;
+	z-index: 20;
+	color: white;
+	-webkit-transition: all 0.4s ease-in;
+    -moz-transition: all 0.4s ease-in;
+    -o-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
+	-webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+}
+
 .centerdiv  {
-	top: 50%;
+	top: 80%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	height: 20vw;
-	width: 20vw;
+	height: 5vw;
+	width: 10vw;
+	border: 2px solid white;
 	background-color: #aaaaaa;
 	position: absolute;
-	line-height: 20vw;
+	line-height: 5vw;
 	z-index: 10;
 	overflow: hidden;
-	border: 3px solid white;
 	transition: 0.5s all ease-in-out;
-	background-image: url("centerdiv.png");
-	background-size: 100%, 100%;
-	filter: grayscale(100%);
+	background-color: rgb(212, 39, 86);
 	cursor: pointer;
 }
 
 .overlay {
-	height: 20vw;
-	width: 20vw;
+	height: 5vw;
+	width: 10vw;
 	top: 0vw;
 	position: absolute;
 	background-color: rgba(0,0,0,0.5);
@@ -177,7 +210,7 @@ body {
 }
 
 .centerdiv:hover > .overlay {
-	top: -20vw;
+	top: -5vw;
 	transition: 0.5s all ease-in-out;
 	background-color: rgba(255,200,0,0.5);
 }
@@ -191,6 +224,10 @@ body {
 	filter: grayscale(0%);
 }
 
+.centerdiv:hover > .titlePageText {
+	color: #ffdd44;
+}
+
 .centerdivtext {
     position: absolute;
 	width: 100%;
@@ -200,7 +237,7 @@ body {
 	text-align: center;
 	color: white;
 	font-family: Bebas;
-	font-size: 3.5vw;
+	font-size: 1.5vw;
 	word-wrap: none;
 	z-index: 30;
 }
@@ -208,30 +245,19 @@ body {
 /* If the screen size is 601px or less*/
 @media only screen and (max-width: 600px) {
     .centerdiv {
-		height: 40vw;
-		width: 40vw;
-		line-height: 40vw;
+		height: 10vw;
+		width: 30vw;
+		line-height: 10vw;
     }
-}
-
-@media only screen and (max-width: 600px) {
-    .overlay {
-		height: 40vw;
-		width: 40vw;
+	.overlay {
+		height: 10vw;
+		width: 30vw;
     }
-}
-
-@media only screen and (max-width: 600px) {
     .centerdiv:hover > .overlay {
-		top: -40vw;
+		top: -10vw;
     }
-}
-
-
-/* If the screen size is 601px or less*/
-@media only screen and (max-width: 600px) {
-    .centerdivtext {
-	font-size: 6vw;
+	.centerdivtext {
+	font-size: 4vw;
 	vertical-align: middle;
 	text-align: center;
     }
@@ -280,13 +306,10 @@ body {
 /* If the screen size is 601px or less*/
 @media only screen and (max-width: 600px) {
     .currenteventbanner {
-	line-height: 12vw;
+	line-height: 8vw;
     }
-}
-
-@media only screen and (max-width: 600px) {
-    .currenteventbanner p {
-	font-size: 12vw;
+	.currenteventbanner p {
+	font-size: 8vw;
     }
 }
 
@@ -400,7 +423,7 @@ body {
 .td1text h3 {
 	font-family: Bebas;
 	font-size: 2vw;
-	color: rgb(250, 188, 13);
+	color: #ffdd44;
 	float: left;
 	position: relative;
 	margin-top: 1vw;
@@ -582,7 +605,7 @@ body {
 .td2text h3 {
 	font-family: Bebas;
 	font-size: 2vw;
-	color: rgb(250, 188, 13);
+	color: #ffdd44;
 	float: left;
 	position: relative;
 	margin-top: 1vw;
@@ -764,7 +787,7 @@ body {
 .td3text h3 {
 	font-family: Bebas;
 	font-size: 2vw;
-	color: rgb(250, 188, 13);
+	color: #ffdd44;
 	float: left;
 	position: relative;
 	margin-top: 1vw;
@@ -881,7 +904,7 @@ body {
 /*--------------------TABLE CELL 4 START--------------------*/
 .hovergraphic4 {
 	margin-top: -10%;
-	background-color: rgb(250, 188, 13)
+	background-color: #ffdd44
 	position: relative;
 	overflow: visible;
 	height: 100%;
@@ -946,7 +969,7 @@ body {
 .td4text h3 {
 	font-family: Bebas;
 	font-size: 2vw;
-	color: rgb(250, 188, 13);
+	color: #ffdd44;
 	float: left;
 	position: relative;
 	margin-top: 1vw;
@@ -1128,7 +1151,7 @@ body {
 .td5text h3 {
 	font-family: Bebas;
 	font-size: 2vw;
-	color: rgb(250, 188, 13);
+	color: #ffdd44;
 	float: left;
 	position: relative;
 	margin-top: 1vw;
@@ -1310,7 +1333,7 @@ body {
 .td6text h3 {
 	font-family: Bebas;
 	font-size: 2vw;
-	color: rgb(250, 188, 13);
+	color: #ffdd44;
 	float: left;
 	position: relative;
 	margin-top: 1vw;
@@ -2311,11 +2334,11 @@ body {
 
 .section5 {
 	top: 0;
-	height: 10vw;
+	height: 100%;
 	width: 100% !important;
 	overflow-x: hidden;
 	overflow-y: hidden;
-	background-color: #333333;
+	background-color: #ffffff;
 	border-top: 2px solid #555555;
 	position: relative;
 	z-index: 10;
@@ -2330,4 +2353,135 @@ body {
 	line-height: 10vw;
 	border-bottom: 2px solid #555555;
 	position: absolute;
+}
+
+.googleMapWrapper {
+	width: 50%;
+	height: 15vw;
+	position: relative;
+	margin-top: 10vw;
+	z-index: 30;
+	padding: 10px;
+	float: left;
+	filter: grayscale(100%);
+	transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+}
+
+.googleMapWrapper:hover {
+	filter: grayscale(0%);
+	transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+}
+
+#googleMap {
+	border-bottom: 3px solid rgba(255, 221, 68, 1);
+}
+
+.socialWrapper {
+	height: 100%;
+	width: 20%;
+	left: 15%;
+	float: left;
+	position: relative;
+	z-index: 50;
+	margin-top: 13.5vw;
+}
+
+.socialWrapper h3 {
+	font-size: 2vw;
+	font-family: Lato;
+	color: black;
+	vertical-align: middle;
+	text-align: center;
+	margin: 0;
+}
+
+.socialLogoWrapper {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	display: flex;
+	justify-content: space-around;
+}
+
+.socialLogoWrapper a {
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	left: 20px;
+	display: block;
+	color: black;
+	font-family: Lato;
+	text-decoration: none;
+	padding-left: 2%;
+}
+
+.socialLogoWrapper img {
+	height: 100%;
+	width: 100%;
+	transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+}
+
+.socialLogoWrapper img:hover {
+    border-radius: 50%;
+	background-color: #ffdd44;
+	mix-blend-mode: multiply;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;	
+}
+
+.disclaimer {
+	height: 100%;
+	width: 100%;
+	float: left;
+	position: relative;
+	z-index: 50;
+	background-color: #333333;
+	border-top: 2px solid #555555;
+	text-align: center;
+}
+
+.disclaimer p {
+	font-size: 0.5vw;
+	font-family: Lato;
+	color: white;
+	vertical-align: middle;
+	text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+	.socialWrapper {
+		width: 30%;
+		left: 10%;
+	}
+	.socialWrapper h3 {
+		font-size: 3vw;
+	}
+	.disclaimer p {
+		font-size: 2vw;
+	}
+	.socialLogoWrapper img {
+		width: 100%;
+		height: 100%;
+	}
+	.socialLogoWrapper a {
+		width: 20%;
+		height: 20%;
+		font-size: 0.8vw;
+	}
 }
