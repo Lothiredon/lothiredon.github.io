@@ -118,7 +118,9 @@ body {
 	opacity: 0;
 }
 
-.backToTop p {
+.backToTop a {
+	display: block;
+	text-decoration: none;
 	font-size: 4vw;
 	font-family: Lato;
 	text-align: center;
@@ -132,8 +134,8 @@ body {
 }
 
 /* If the screen size is 400px or less*/
-@media only screen and (max-width: 400px) {
-    .backToTop, .backToTop p {
+@media only screen and (max-width: 600px) {
+    .backToTop, .backToTop a {
 		opacity: 1;
     }
 }
@@ -2010,7 +2012,7 @@ body {
 .close {
 	color: white;
 	position: fixed;
-	top: 1vw;
+	top: 4vw;
 	right: 3%;
 	font-size: 4vw;
 	font-weight: bold;
@@ -2035,8 +2037,9 @@ body {
 
 @media only screen and (max-width: 600px) {
 	.close {
-		font-size: 6vw;
-		right: 5%;
+		font-size: 8vw;
+		right: 7%;
+		top: 8vw;
 	}
 }
 
