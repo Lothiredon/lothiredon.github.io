@@ -1,0 +1,210 @@
+@font-face{
+    font-family: "ExistenceLight";
+    src: url('ExistenceLightTTF.ttf');
+	src: url('ExistenceLightOTF.otf');
+}	
+
+@font-face{
+	font-family: "EternalCall";
+	src: url('EternalCall.ttf');
+}
+
+body{
+	margin: 0px;
+	overflow: auto;
+}
+
+.button {
+	position: fixed;
+	z-index: 50;
+    border-bottom: solid 2px rgba(0,0,0,0.0);
+	border-radius: 2px;
+    color: white;
+    padding-top: ;
+	padding-left: 16px;
+	padding-right: 16px;
+	padding-bottom: 0px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px;
+	font-family: ExistenceLight, sans-serif;
+    margin: 0.4% 0% 0% 94%;
+    cursor: pointer;
+	float: right;
+	-moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+}
+
+.button:hover {
+	border-bottom: solid 2px white;
+}
+
+.section1 {
+	margin: 0px;
+	width: 50%;
+	height: 500px;
+    z-index: 10;
+	background-color: #ffffff;
+	position: static;
+	float: left;
+	overflow: hidden;
+}
+
+.moderatorbackground {
+	margin: 0px;
+	background-image: url("moderator.png");
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	transition: all .5s ease-in;
+    transition: all .5s ease-out;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+}
+
+.moderatorbackground:hover {
+	transform: scale(1.1);
+	filter: grayscale(0%);
+}
+
+.moderator {
+	color: white;
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+	font-size: 100px;
+	font-family: EternalCall, sans-serif;
+	text-align: left;
+	z-index: 12;
+}
+
+.section2 {
+	margin: 0% -50% 0% 0%;
+	width: 50%;
+	height: 500px;
+    z-index: 10;
+	background-color: #ffffff;
+	position: static;
+	float: left;
+	overflow: hidden;
+}
+
+.builderbackground {
+	margin: 0px;
+	background-image: url("builder.png");
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	transition: all .5s ease-in;
+    transition: all .5s ease-out;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+}
+
+.builderbackground:hover {
+	transform: scale(1.1);
+	filter: grayscale(0%);
+}
+
+.builder {
+	color: white;
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+	font-size: 100px;
+	font-family: EternalCall, sans-serif;
+	text-align: left;
+	z-index: 12;
+}
+
+.section3 {
+	margin: 26.25% 0% 0% 0%;
+	width: 50%;
+	height: 500px;
+    z-index: 10;
+	background-color: #ffffff;
+	position: absolute;
+	float: left;
+	overflow: hidden;
+}
+
+.developerbackground {
+	margin: 0px;
+	background-image: url("developer.png");
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	transition: all .5s ease-in;
+    transition: all .5s ease-out;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+}
+
+.developerbackground:hover {
+	transform: scale(1.1);
+	filter: grayscale(0%);
+}
+
+.developer {
+	color: white;
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+	font-size: 100px;
+	font-family: EternalCall, sans-serif;
+	text-align: left;
+	z-index: 12;
+}
+
+.section4 {
+	margin: 26.25% -26.25% 0% 0%;
+	width: 50%;
+	height: 500px;
+    z-index: 11;
+	background-color: #ffffff;
+	position: static;
+	float: left;
+	overflow: hidden;
+}
+
+.lorebackground {
+	margin: 0px;
+	background-image: url("lore.png");
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	transition: all .5s ease-in;
+    transition: all .5s ease-out;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+}
+
+.lorebackground:hover {
+	transform: scale(1.1);
+	filter: grayscale(0%);
+}
+
+.lore {
+	color: white;
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+	font-size: 100px;
+	font-family: EternalCall, sans-serif;
+	text-align: left;
+	z-index: 12;
+}

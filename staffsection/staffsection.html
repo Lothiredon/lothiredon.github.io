@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://github.com/kswedberg/jquery-smooth-scroll/blob/master/jquery.smooth-scroll.min.js"></script>
+	<!-- SMOOTH SCROLL -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>
+		$(function() {
+		$('a[href*=#]:not([href=#])').click(function() {
+			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			if (target.length) {
+				$('html,body').animate({
+				scrollTop: target.offset().top
+				}, 1000);
+				return false;
+			}
+			}
+		});
+		});
+	</script>
+	<!-- End of SMOOTH SCROLL -->
+	<title>Realm of Lothiredon</title>
+	<link rel="stylesheet" href="staffsection.css">
+</head>
+
+<body>
+
+	<a href="../index.html" class="button">Home</a>
+
+<div name="top" class="section1" onclick="location.href='moderator/moderator.html';" style="cursor: pointer";>
+	<a id="sec1" class="smooth"></a> 
+	
+	<div class="moderatorbackground">
+	
+	<div class="moderator">
+		<p>Moderator</p>
+	</div>
+	
+	</div>
+	
+</div>
+
+<div class="section2" onclick="location.href='builder/builder.html';" style="cursor: pointer";>
+	<a id="sec2" class="smooth"></a> 
+	
+	<div class="builderbackground">
+	
+	<div class="builder">
+		<p>Builder</p>
+	</div>
+	
+	</div>
+	
+</div>
+
+<div class="section3" onclick="location.href='developer/developer.html';" style="cursor: pointer";>
+	<a id="sec3" class="smooth"></a> 
+	
+	<div class="developerbackground">
+	
+	<div class="developer">
+		<p>Developer</p>
+	</div>
+	
+	</div>
+	
+</div>
+
+<div class="section4" onclick="location.href='lore/lore.html';" style="cursor: pointer";>
+	<a id="sec4" class="smooth"></a>
+	
+	<div class="lorebackground">
+	
+	<div class="lore">
+		<p>Lore Writer</p>
+	</div>
+	
+	</div>
+	
+</div>
+
+</body>
+</html>

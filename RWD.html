@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://github.com/kswedberg/jquery-smooth-scroll/blob/master/jquery.smooth-scroll.min.js"></script>
+	<!-- SMOOTH SCROLL -->
+	<script>
+		$(function() {
+		$('a[href*=#]:not([href=#])').click(function() {
+			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			if (target.length) {
+				$('html,body').animate({
+				scrollTop: target.offset().top
+				}, 2000);
+				return false;
+			}
+			}
+		});
+		});
+	</script>
+	<!-- End of SMOOTH SCROLL -->
+	
+	<!-- Preloader -->
+	<script>
+		$(document).ready(function() {
+	
+		setTimeout(function(){
+			$('body').addClass('loaded');
+			}, 1000);
+	
+		});
+	</script>
+	<!-- End of preloader -->
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta name="keywords" content="Lothiredon, Minecraft, Realm of Lothiredon, Creative Server, Minecraft Server">
+
+	<title>Realm of Lothiredon</title>
+	<link rel="stylesheet" href="RWD.css">
+</head>
+
+<body>
+	
+<!--Preloader-->
+<div id="loader-wrapper">
+
+	<img id="loaderlogo" src="logo.png">
+
+	<div id="loadertext">
+		<!--<p class="loadertitle">Realm of Lothiredon</p>-->
+		<p class="loadersplash">Preparing your greatest adventure!</p>
+	</div>
+	
+    <div id="loader">
+	</div>
+ 
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+ 
+</div>
+<!--Preloader end-->
+
+<!-- One scroll div -->
+
+<div class="nav">
+	<ul class="menu">
+		<li><a href="#sec4">FORUM</a></li>
+		<li><a href="#sec4">CONTACT</a></li>
+		<li><a href="#sec3">ABOUT</a></li>
+		<li><a href="#sec2">GAMEMODES</a></li>
+		<li><a href="#sec1">HOME</a></li>
+	</ul>
+</div>
+
+<!-- Home page -->
+<div name="top" class="section1">
+	<a id="sec1" class="smooth"></a> 
+	  <div class="rollogo">
+		<a href="#sec2">
+		  <img class="rollogopng" src="logo.png">
+		</a>
+	  </div>
+
+	  <p class="roltextappear">Realm of Lothiredon</p>
+	  
+	<div class="backgroundvideo">
+		<video autoplay loop poster="videoposter.png">
+			<source src="video.mp4" type="video/mp4">
+			<img class="novideo" src="videoposter.png" title="Your browser does not support the video tag.">
+		</video>
+	</div>
+	
+</div>
+<!-- Home page end -->
+
+<!-- Page 2 start-->
+<div class="section2">
+	<a id="sec2" class="smooth"></a> 
+
+<!-- Minigames with pictures start -->	
+<div class="minigames">	
+
+	<div class="kitpvp">
+		<h3>KitPvP</h3>
+			<img class="swords" src="swords.png">
+			<div class="kitpvptext">
+			<p>We offer the greatest KitPvP experience! We have removed the annoying 1.9 cooldown, added instant-heal-soups, diverse kits and much more!</p>
+			</div>
+	</div>
+
+	<div class="skyblock">
+		<h3>SkyBlock</h3>
+			<img class="block" src="block.png">
+			<div class="skyblocktext">
+			<p>Having just released this game, this is our take on Skyblock! We offer diverse islands, customised unlockables and a shop! And it's balanced too!</p>
+			</div>
+	</div>
+
+	<div class="spleef">
+		<h3>Spleef</h3>
+			<img class="shovel" src="shovel.png">
+			<div class="spleeftext">
+			<p>Get your shovels out, we are going old-school! Custom, breathtaking arenas waiting to be battled in! Grief till the death!</p>
+			</div>
+	</div>
+
+</div>
+<!-- Minigames with pictures end -->
+
+</div>
+<!-- Page 2 end-->
+
+<!-- Page 3 start-->
+<div class="section3">
+	  <a id="sec3" class="smooth"></a>
+	  <div class="abouttext">
+	    <h3>About Realm of Lothiredon</h3>
+		<p>Founded in 2015, we are a big MMO-RPG project in development. It is our passion to create the best player experience possible within the RPG/Minecraft community, and by inventing new mechanics and building with incredible detail, we believe we can achieve this. Whilst we are still in development, the players can play minigames such as KitPvP, Skyblock and Spleef. We also have a variety of other activities available on the server. Furthermore, we are always on the lookout for new staff-members to support our amazing team. Navigate to the staff-section if you wish to apply!</p> 
+	  </div>
+	  <div class="button" onclick="location.href='staffsection/staffsection.html';" style="cursor: pointer";>
+		<p>Click here to apply!</p>
+	  </div>
+	  <div class="aboutrol">
+		<img class="rollogoabout" src="logo.png">
+	  </div>
+</div>
+	  
+<!-- Page 3 end-->
+
+<!-- Page 4 start-->
+<div class="section4">
+	<a id="sec4" class="smooth"></a> 
+	<!--Container div-->
+	<div class="container">
+	
+	
+	  <div class="copyright">
+		<h1 class="copyrightheader">©Realm of Lothiredon</h1>
+	  </div>
+	  
+	  <div class="links">
+		<ul class="social">
+		  <h4>Social media:</h4>
+		  <li><a href="https://www.facebook.com/Lothiredon/" target="_blank">Facebook</a></li>
+		  <li><a href="https://www.twitter.com/lothiredon" target="_blank">Twitter</a></li>
+		  <li><a href="https://www.youtube.com/channel/UC5_CiUpOhqbseSiLl7w6ouA" target="_blank">YouTube</a></li>
+		  <li><a href="https://www.planetminecraft.com/member/realm_of_lothiredon/" target="_blank">PlanetMineCraft</a></li>
+		</ul>
+		
+		<ul class="vote">
+		  <h4>Social media:</h4>
+		  <li><a href="https://www.namemc.com/server/play.lothiredon.com" target="_blank">NameMC</a></li>
+		  <li><a href="https://www.planetminecraft.com/server/realm-of-lothiredon---creative-plot-server/vote/" target="_blank">PlanetMineCraft</a></li>
+		  <li><a href="https://www.minecraftservers.org/vote/346819" target="_blank">Minecraft-servers</a></li>
+		  <li><a href="https://minecraft-mp.com/server-s139020" target="_blank">Minecraft-MP</a></li>
+		</ul>
+		
+		<div class="connect">
+		  <h2>Connect to us here:</h2>
+		  <h3>play.lothiredon.com</h3>
+		</div>
+	  </div>
+	  
+	  
+	</div> 
+	<!--Container div end-->  	
+</div>
+<!-- Page 4 end-->
+
+
+<!-- One scroll div end -->
+</div>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://github.com/kswedberg/jquery-smooth-scroll/blob/master/jquery.smooth-scroll.min.js"></script>
+	<!-- SMOOTH SCROLL -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>
+		$(function() {
+		$('a[href*=#]:not([href=#])').click(function() {
+			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			if (target.length) {
+				$('html,body').animate({
+				scrollTop: target.offset().top
+				}, 1000);
+				return false;
+			}
+			}
+		});
+		});
+	</script>
+	
+	<title>Realm of Lothiredon</title>
+	<link rel="stylesheet" href="moderator.css">
+	
+</head>
+
+<body>
+
+<div class="nav">
+	
+	<div class="menu">
+		<div class="menudiv1"><a href="">Moderator</a></div>
+		<div class="menudiv2"><a href="../builder/builder.html">Builder</a></div>
+		<div class="menulogo"><a href="../../index.html"></a>
+		
+		<div class="menuimage" style="cursor: pointer">
+			<a href="../../index.html">
+				<img src="logo.png">
+			</a>
+		</div>
+		
+		</div>
+		<div class="menudiv3"><a href="../developer/developer.html">Developer</a></div>
+		<div class="menudiv4"><a href="../lore/lore.html">Lore Writer</a></div>
+	</div>
+	
+</div>
+
+
+<div class="container1">
+	<div class="parallaxbg"></div>
+	<p class="paratext">Moderator</p>
+</div>	
+
+<div class="jobdesc">
+	<div class="moderatorbig">
+		<p>Moderator</p>
+	</div>
+	
+	<div class="moddesc">
+	<p class="modtext"><span>Being a moderator takes more than just being online. It comes with responsibilities. Knowing how to deal with situations such as griefing, spamming and more mischief. Keeping your head cool, retaining order and being friendly and helpful on the server is your goal. It's of the essence that you polite - after all, it's the moderators who partially are the face of the server. Do you think you can handle it? Apply down below!</span></p>
+	</div>
+</div>
+	
+	
+<div class="mccharacter1">
+
+	<div class="mcchar1bg">
+		<img class="mcchar1" src="char1.png"></img>
+	</div>
+	
+	<div class="modquote1">
+		<p class="name1">Neelram</p>
+		<p class="function1">Moderator since 2015</p>
+	</div> 
+	
+	<div>
+		<p class="quote1">"I think that being a moderator is a great accomplishment, and gives me a lot of satisfaction in being on the server. The playerbase we work with on Realm of Lothiredon is a great start for new moderators seeing as most players are very mature and know how to obey the rules. Other than that, the staff is very friendly and helpful who will help you with any problems you encounter."</p>
+	</div>
+	
+</div>
+
+<div class="mccharacter2">
+
+	<div class="mcchar2bg">
+		<img class="mcchar2" src="char2.png"></img>
+	</div>
+	
+	<div class="modquote2">
+		<p class="name2">Lord_Ewout</p>
+		<p class="function2">Moderator since 2015</p>
+	</div> 
+	
+	<div>
+		<p class="quote2">"My time as a Moderator has led to some of the best experiences I've had in Minecraft. My fellow staff members as well as the regular players have created a great community here, with smooth communication between each and every one of us. There has not been a moment that I've felt uncomfortable on the server and I've had the pleasure to help other players find their way just like the staff did when I first joined. The current staff team is mature and constantly growing and innovative. The worlds and mini-games are also wonderful, with massive plots and a smart ranking system in Creative and a limitless world in Survival, with build protection."</p>
+	</div>
+	
+</div>
+
+<div class="applycontainer"></div>
+
+<div class="apply"><a href="http://www.google.com/">Apply here!</a></div>
+	
+</body>
+</html>

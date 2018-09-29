@@ -1,0 +1,384 @@
+@font-face{
+    font-family: "ExistenceLight";
+    src: url('ExistenceLightTTF.ttf');
+	src: url('ExistenceLightOTF.otf');
+}	
+
+@font-face{
+	font-family: "EternalCall";
+	src: url('EternalCall.ttf');
+}
+
+
+body{
+	margin: 0px;
+	overflow: auto;
+}
+
+.nav {
+	height: 50px;
+	margin: 0px;
+	background-color:rgba(50,50,50,0.75);
+	border-top: solid 1px #dddddd;
+	border-bottom: solid 1px #222222;
+	z-index: 5;
+	position: relative;
+}
+
+.menu {
+    width: 100%    !important;
+    height: auto   !important;
+    list-style-type: none;
+    margin: 0% 0%;
+    padding: 0;
+	z-index: 2;
+    position: absolute;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+	display: flex;
+}
+
+.menu a {
+	height: 50px;
+	justify-content: center;
+	display: flex;
+	vertical-align: center;
+	line-height: 50px;
+	font-size: 34px;
+	font-family: ExistenceLight, sans-serif;
+	text-decoration: none;
+	color: white;
+	position: relative;
+}
+
+.menudiv1 {
+    transition: background-color .25s ease-in-out;
+    -moz-transition: background-color .25s ease-in-out;
+    -webkit-transition: background-color .25s ease-in-out;
+	width: 22%;
+	height: 50px;
+	background-color: #333333;
+	position: absolute;
+	float: left;
+}
+
+.menudiv1:hover {
+	background-color: #222222;
+}
+
+.menudiv2 {
+	transition: background-color .25s ease-in-out;
+    -moz-transition: background-color .25s ease-in-out;
+    -webkit-transition: background-color .25s ease-in-out;
+	width: 22%;
+	height: 50px;
+	margin-left: 22%;
+	position: relative;
+	background-color: #333333;
+	float: left;
+}
+
+.menudiv2:hover {
+	background-color: #222222;
+}
+
+.menulogo {
+	transition: background-color .25s ease-in-out;
+    -moz-transition: background-color .25s ease-in-out;
+    -webkit-transition: background-color .25s ease-in-out;
+	background-color: #202020;
+	width: 12%;
+	height: 50px;
+	position: static;
+	float: left;
+	z-index: 3;
+}
+
+.menulogo:hover {
+	background-color: #404040;
+}
+
+.menuimage {
+	width: 45px;
+	height: 48px;
+	position: absolute;
+	float: left;
+	z-index: 10;
+	top: 0;
+	vertical-align: center;
+	display: flex;
+	justify-content: center;
+	margin-left: 4.75%;
+}
+
+.menudiv3 {
+	transition: background-color .25s ease-in-out;
+    -moz-transition: background-color .25s ease-in-out;
+    -webkit-transition: background-color .25s ease-in-out;
+	width: 22%;
+	height: 50px;
+	margin-left: 56%;
+	position: absolute;
+	background-color: #333333;
+	float: left;
+}
+
+.menudiv3:hover {
+	background-color: #222222;
+}
+
+.menudiv4 {
+	transition: background-color .25s ease-in-out;
+    -moz-transition: background-color .25s ease-in-out;
+    -webkit-transition: background-color .25s ease-in-out;
+	width: 22%;
+	height: 50px;
+	margin-left: 78%;
+	position: absolute;
+	background-color: #333333;
+	float: left;
+}
+
+.menudiv4:hover {
+	background-color: #222222;
+}
+
+.container1 {
+	margin: 0px;
+	width: 100%;
+	height: 300px;
+    z-index: 3;
+	background-color: #ffffff;
+	position: relative;
+	border-bottom: solid 2px #cccccc;
+}
+
+.paratext {
+	position: absolute;
+	font-size: 200px;
+	font-family: EternalCall, sans-serif;
+	text-align: left;
+	z-index: 5;
+	top: -30%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+	color: white;
+}
+
+.parallaxbg {
+	background-size: cover;
+	background-image: url("lore.png");
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	z-index: 0;
+	height: 300px;
+	position: relative;
+}
+
+.jobdesc {
+	height: 300px;
+	border-bottom: solid 2px #cccccc;
+	position: relative;
+}
+
+.moderatorbig {
+	position: relative;
+	font-size: 100px;
+	font-family: ExistenceLight, sans-serif;
+	height: 100px;
+	line-height: 100px;
+	padding-left: 5%;
+	margin: 0px;
+	display: inline-block;
+	float: left;
+	vertical-align: middle;
+}
+
+.moddesc {
+	position: absolute;
+	font-size: 2em;
+	font-family: ExistenceLight, sans-serif;
+	height: 100px;
+	line-height: em;
+	vertical-align: middle;
+	padding-left: 5%;
+	margin: 0px;
+	display: inline-block;
+	float: left;
+}
+
+.modtext span {
+	display: block;
+}
+
+.mccharacter1 {
+	margin-top: 3%;
+	margin-left: 5%;
+	z-index: 5;
+	float: left;
+	overflow: hidden;
+	position: relative;
+}
+
+.mcchar1bg {
+	position: relative;
+	height: 300px;
+	width: 300px;
+	background-image: url("char1bg.png");
+	z-index: 3;
+	border-radius: 5px;
+	border-bottom: solid 2px #cccccc;
+    float:left;
+	overflow: hidden;
+}
+
+.mcchar1 {
+	margin-left: 15%;
+}
+
+.modquote1 {
+	position: relative;
+	z-index: 7;
+	float: right;
+	height: auto;
+	width: 50%;
+	padding-left: 50px;
+}
+
+.name1 {
+	font-family: ExistenceLight;
+	font-size: 4em;
+	margin-top: 60px;
+	margin-bottom: 0;
+	position: relative;
+	padding-left: 50px;
+}
+
+.function1 {
+	font-family: ExistenceLight;
+	font-size: 2em;
+	margin: 0;
+	padding-bottom: 50px;
+	padding-left: 50px;
+	position: relative;
+}
+
+.quote1 {
+	display: block;
+	font-family: ExistenceLight;
+	font-size: 20px;
+	position: relative;
+	margin: 3% 0% 0% 18%;
+}
+
+.mccharacter2 {
+	z-index: 5;
+	float: left;
+	height: 320px;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	border-bottom: solid 2px #cccccc;
+}
+
+.mcchar2bg {
+	position: relative;
+	height: 300px;
+	width: 300px;
+	background-image: url("char1bg.png");
+	border-radius: 5px;
+	border-bottom: solid 2px #cccccc;
+    float: left;
+	overflow: hidden;
+	margin: 0% 0% 0% 78%;
+	z-index: 5;
+}
+
+.mcchar2 {
+	margin-left: 15%;
+	float: left;
+}
+
+.modquote2 {
+	position: absolute;
+	z-index: 9;
+	height: auto;
+	width: 40%;
+	float: left;
+	top: 5%;
+	text-align: right;
+}
+
+.name2 {
+	font-family: ExistenceLight;
+	font-size: 4em;
+	margin-top: 60px;
+	margin-bottom: 0;
+	position: relative;
+	padding-left: 50px;
+}
+
+.function2 {
+	font-family: ExistenceLight;
+	font-size: 2em;
+	margin: 0;
+	padding-bottom: 50px;
+	padding-left: 50px;
+	position: relative;
+}
+
+.quote2 {
+	top: 50%;
+	transform: translateY(-50%);
+	display: block;
+	font-family: ExistenceLight;
+	font-size: 20px;
+	position: relative;
+	margin: 0% 25% 0% 46%;
+	z-index: 8;
+	text-align: right;
+	width: 500px;
+}
+
+.applycontainer {
+	position: absolute;
+	height: 250px;
+	width: 100%;
+	margin-top: 35.8%;
+	opacity: 1;
+	z-index: 10;
+	-webkit-transition: opacity 1.5s ease-in-out;
+	transition: opacity 1.5s ease-in-out;
+	background-image: url("bannerfooter.png");
+}
+
+.apply {
+	position: relative;
+	font-size: 100px;
+	font-family: EternalCall, sans-serif;
+	text-align: left;
+	color: #F57070;
+	margin: 0% 0% 0% 44%;
+	height: 100px;
+	z-index: 15;
+}
+
+.apply a {
+	padding: 0;
+	margin: 0;
+	height: 0px;
+	width: 540px;
+	text-decoration: none;
+	color: #FFFFFF;
+	-moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+}
+
+.apply a:hover {
+	color: #0000AA;
+}

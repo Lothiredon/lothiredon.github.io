@@ -1,0 +1,26 @@
+body {
+background-color: #C5C5C5;
+}
+h1 {
+color: #00FFFF;
+font-size: 50px;
+text-shadow: 8px 8px 6px #088A85;
+}
+h3{
+		margin-left: 175px;
+		font-size: 31px;
+		text-decoration: underline;
+}
+h4{
+	margin-left: 325px;
+}
+a {
+	font-size: 22px;
+	text-align: center;
+}
+div{
+	padding: 0px;
+	border: 5px solid navy;
+	margin-left: 175px;
+	margin-right: 175px;
+	border-color: #06A6A1 #088A85 #088A85 #06A6A1;

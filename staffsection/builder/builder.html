@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://github.com/kswedberg/jquery-smooth-scroll/blob/master/jquery.smooth-scroll.min.js"></script>
+	<!-- SMOOTH SCROLL -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>
+		$(function() {
+		$('a[href*=#]:not([href=#])').click(function() {
+			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			if (target.length) {
+				$('html,body').animate({
+				scrollTop: target.offset().top
+				}, 1000);
+				return false;
+			}
+			}
+		});
+		});
+	</script>
+	
+	<title>Realm of Lothiredon</title>
+	<link rel="stylesheet" href="builder.css">
+	
+</head>
+
+<body>
+
+<div class="nav">
+	
+	<div class="menu">
+		<div class="menudiv1"><a href="../moderator/moderator.html">Moderator</a></div>
+		<div class="menudiv2"><a href="">Builder</a></div>
+		<div class="menulogo"><a href="../../index.html"></a>
+		
+		<div class="menuimage" style="cursor: pointer">
+			<a href="../../index.html">
+				<img src="logo.png">
+			</a>
+		</div>
+		
+		</div>
+		<div class="menudiv3"><a href="../developer/developer.html">Developer</a></div>
+		<div class="menudiv4"><a href="../lore/lore.html">Lore Writer</a></div>
+	</div>
+	
+</div>
+
+
+<div class="container1">
+	<div class="parallaxbg"></div>
+	<p class="paratext">Builder</p>
+</div>	
+
+<div class="jobdesc">
+	<div class="moderatorbig">
+		<p>Builder</p>
+	</div>
+	
+	<div class="moddesc">
+	<p class="modtext"><span>Are you creative, do you think outside of the box and do you like working in teams? Then we are looking for you. This is your chance to help us construct the RPG and the maps for the minigames! We are always willing to give everyone who shows some skill in building a chance and we provide training in multiple aspects of building as well, so everyone benefits. Think you got what it takes! Apply down below!</span></p>
+	</div>
+</div>
+	
+	
+<div class="mccharacter1">
+
+	<div class="mcchar1bg">
+		<img class="mcchar1" src="char1.png"></img>
+	</div>
+	
+	<div class="modquote1">
+		<p class="name1">HazedFlux</p>
+		<p class="function1">Builder since 2015</p>
+	</div> 
+	
+	<div>
+		<p class="quote1">"Being a builder on Realm of Lothiredon is very enjoyable and rewarding. I’ve improved so much since I first joined the team, and loved every minute of building as everyone was so welcoming and lovely. Working with such an amazing team of talented builders, learning from each other and building in many different styles is both a great opportunity for new builders to learn, and for experienced builders to join an exciting project."</p>
+	</div>
+	
+</div>
+
+<div class="mccharacter2">
+
+	<div class="mcchar2bg">
+		<img class="mcchar2" src="char2.png"></img>
+	</div>
+	
+	<div class="modquote2">
+		<p class="name2">Slizz</p>
+		<p class="function2">Builder since 2015</p>
+	</div> 
+	
+	<div>
+		<p class="quote2">""</p>
+	</div>
+	
+</div>
+
+<div class="applycontainer"></div>
+
+<div class="apply"><a href="http://www.google.com/">Apply here!</a></div>
+	
+</body>
+</html>

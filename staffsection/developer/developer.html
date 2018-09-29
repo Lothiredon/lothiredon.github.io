@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://github.com/kswedberg/jquery-smooth-scroll/blob/master/jquery.smooth-scroll.min.js"></script>
+	<!-- SMOOTH SCROLL -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>
+		$(function() {
+		$('a[href*=#]:not([href=#])').click(function() {
+			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			if (target.length) {
+				$('html,body').animate({
+				scrollTop: target.offset().top
+				}, 1000);
+				return false;
+			}
+			}
+		});
+		});
+	</script>
+	
+	<title>Realm of Lothiredon</title>
+	<link rel="stylesheet" href="developer.css">
+	
+</head>
+
+<body>
+
+<div class="nav">
+	
+	<div class="menu">
+		<div class="menudiv1"><a href="../moderator/moderator.html">Moderator</a></div>
+		<div class="menudiv2"><a href="../builder/builder.html">Builder</a></div>
+		<div class="menulogo"><a href="../../index.html"></a>
+		
+		<div class="menuimage" style="cursor: pointer">
+			<a href="../../index.html">
+				<img src="logo.png">
+			</a>
+		</div>
+		
+		</div>
+		<div class="menudiv3"><a href="">Developer</a></div>
+		<div class="menudiv4"><a href="../lore/lore.html">Lore Writer</a></div>
+	</div>
+	
+</div>
+
+
+<div class="container1">
+	<div class="parallaxbg"></div>
+	<p class="paratext">Developer</p>
+</div>	
+
+<div class="jobdesc">
+	<div class="moderatorbig">
+		<p>Developer</p>
+	</div>
+	
+	<div class="moddesc">
+	<p class="modtext"><span>Are you a Java-developer and looking for a new challenge? We can offer you that challenge. We are looking for developers who are skilled enough to code a complete game within Minecraft and are yet able to work in a team. Of course we offer training as well by starting with smaller and simpler projects for the developers who may not be as skilled as the lead developers. Do you think you can assist us in coding the framework behind the entire game? Apply down below! </span></p>
+	</div>
+</div>
+	
+	
+<div class="mccharacter1">
+
+	<div class="mcchar1bg">
+		<img class="mcchar1" src="char1.png"></img>
+	</div>
+	
+	<div class="modquote1">
+		<p class="name1">Plobnob</p>
+		<p class="function1">Developer since 2016</p>
+	</div> 
+	
+	<div>
+		<p class="quote1">"I think that being a moderator is a great accomplishment, and gives me a lot of satisfaction in being on the server. The playerbase we work with on Realm of Lothiredon is a great start for new moderators seeing as most players are very mature and know how to obey the rules. Other than that, the staff is very friendly and helpful who will help you with any problems you encounter."</p>
+	</div>
+	
+</div>
+
+<div class="mccharacter2">
+
+	<div class="mcchar2bg">
+		<img class="mcchar2" src="char2.png"></img>
+	</div>
+	
+	<div class="modquote2">
+		<p class="name2">MathiasCowleyEsq</p>
+		<p class="function2">Developer since 2016</p>
+	</div> 
+	
+	<div>
+		<p class="quote2">"I think that being a moderator is a great accomplishment, and gives me a lot of satisfaction in being on the server. The playerbase we work with on Realm of Lothiredon is a great start for new moderators seeing as most players are very mature and know how to obey the rules. Other than that, the staff is very friendly and helpful who will help you with any problems you encounter."</p>
+	</div>
+	
+</div>
+
+<div class="applycontainer"></div>
+
+<div class="apply"><a href="http://www.google.com/">Apply here!</a></div>
+	
+</body>
+</html>

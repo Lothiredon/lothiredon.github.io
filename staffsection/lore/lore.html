@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://github.com/kswedberg/jquery-smooth-scroll/blob/master/jquery.smooth-scroll.min.js"></script>
+	<!-- SMOOTH SCROLL -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>
+		$(function() {
+		$('a[href*=#]:not([href=#])').click(function() {
+			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			if (target.length) {
+				$('html,body').animate({
+				scrollTop: target.offset().top
+				}, 1000);
+				return false;
+			}
+			}
+		});
+		});
+	</script>
+	
+	<title>Realm of Lothiredon</title>
+	<link rel="stylesheet" href="lore.css">
+	
+</head>
+
+<body>
+
+<div class="nav">
+	
+	<div class="menu">
+		<div class="menudiv1"><a href="../moderator/moderator.html">Moderator</a></div>
+		<div class="menudiv2"><a href="../builder/builder.html">Builder</a></div>
+		<div class="menulogo"><a href="../../index.html"></a>
+		
+		<div class="menuimage" style="cursor: pointer">
+			<a href="../../index.html">
+				<img src="logo.png">
+			</a>
+		</div>
+		
+		</div>
+		<div class="menudiv3"><a href="../developer/developer.html">Developer</a></div>
+		<div class="menudiv4"><a href="">Lore Writer</a></div>
+	</div>
+	
+</div>
+
+
+<div class="container1">
+	<div class="parallaxbg"></div>
+	<p class="paratext">Lore Writer</p>
+</div>	
+
+<div class="jobdesc">
+	<div class="moderatorbig">
+		<p>Lore Writer</p>
+	</div>
+	
+	<div class="moddesc">
+	<p class="modtext"><span>Have you binge-watched Lord of the Rings? Or are you just genuinely interested in RPG-styled lore? Then we need your help. We are on the lookout for new lore-writes who write the backbone of the RPG - the stories, quests, dialogue - everything. If you think you are able to help us out, make sure to apply! </span></p>
+	</div>
+</div>
+	
+	
+<div class="mccharacter1">
+
+	<div class="mcchar1bg">
+		<img class="mcchar1" src="char1.png"></img>
+	</div>
+	
+	<div class="modquote1">
+		<p class="name1">_Erebus_</p>
+		<p class="function1">Lore Writer since 2016</p>
+	</div> 
+	
+	<div>
+		<p class="quote1">"Writing lore is probably one of the most challenging, yet rewarding, jobs I have ever had the pleasure of being able to do. It allows me to search my deepest creativity and spill it onto a page. Every little idea can be built upon and appreciated as a piece of perfection. Watching my little stories and tales grow into a functional, working reality is for sure the best feeling I have ever felt."</p>
+	</div>
+	
+</div>
+
+<div class="mccharacter2">
+
+	<div class="mcchar2bg">
+		<img class="mcchar2" src="char2.png"></img>
+	</div>
+	
+	<div class="modquote2">
+		<p class="name2">Rogue_Spart3n</p>
+		<p class="function2">Lore Writer since 2015</p>
+	</div> 
+	
+	<div>
+		<p class="quote2">"Everyone has something that truly activate that nerve in their system, or something that answers the question, what to do in my down time. For me, lore is one of those things. I first embraced the adoration of the worlds and the nearly endless constraints that fantasy and imagination can have when I was young. Over time, that passion developed, and I worked, and still work, with my friend through the years on creating our own fantasy novel. Writing is a passion, and while for me it may not be a career, it is something that feeds into my desire to build worlds and develop plots, people, and their stories through my own words. Everyone has an art, lore is mine, but the question still remains, is it yours too?"</p>
+	</div>
+	
+</div>
+
+<div class="applycontainer"></div>
+
+<div class="apply"><a href="http://www.google.com/">Apply here!</a></div>
+	
+</body>
+</html>
