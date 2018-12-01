@@ -230,7 +230,7 @@ body{
 }
 
 .active {
-	border-bottom: solid 2px #ffdd44;
+	border-bottom: solid 2px #4286f4;
 }
 
 .menudiv {
@@ -302,16 +302,25 @@ body{
 	}
 }
 
+.videowrapper {
+	overflow: hidden;
+	clip: rect(0%, 5%, 0%, 0%);
+	width: 100%    !important;
+    height: auto   !important;
+	border-bottom: 2px solid #dddddd;
+}
+
 .backgroundvideo {
   width: 100%    !important;
   height: auto;
   z-index: 3;
-  -webkit-filter: grayscale(100%);
-  -moz-filter: grayscale(100%);
-  -o-filter: grayscale(100%);
+  -webkit-filter: grayscale(100%) blur(5px);
+  -moz-filter: grayscale(100%) blur(5px);
+  -o-filter: grayscale(100%) blur(5px);
   -webkit-transition: 0.5s ease-in-out;
   -moz-transition: 0.5s ease-in-out;
-  -o-transition: 0.5s ease-in-out; 
+  -o-transition: 0.5s ease-in-out;
+  transform: scale(1.05);
 }
 
 video {
@@ -349,12 +358,14 @@ video {
 
 .roltextappear {
 	display: flex;
-	font-family: EternalCall, sans-serif;
-	font-size: 150px;
+	font-family: Lato, sans-serif;
+	font-size: 4vw;
 	text-align: center;
 	color: white;
-	margin-top: 35%;
-	margin-left: 37%;
+	top: 80%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
 	opacity: 0;
 	-webkit-transition: opacity 1.5s ease-in-out;
 	transition: opacity 1.5s ease-in-out;
@@ -377,7 +388,6 @@ video {
     z-index: 10;
 	background-color: #ffffff;
 	position: relative;
-	border-bottom: 2px solid #dddddd;
 	top: 0;
 }
 
@@ -428,13 +438,13 @@ video {
 
 .section3 {
 	margin: 0;
-	width: 100%	!important; 
+	width: 100%;
 	height: auto;
     z-index: 5;
 	background-color: #ffffff;
 	position: relative;
-	top: 0;
 	border-bottom: 2px solid #dddddd;
+	top: 0;
 	background-size: cover;
 	background-image: url("aboutbanner.png");
 	background-attachment: fixed;
@@ -442,43 +452,43 @@ video {
 	background-repeat: no-repeat;
 }
 
+/*.rollogoabout {
+	height: 15vw;
+	position: relative;
+	z-index: 6;
+	top: 0;
+	left: 5%;
+}
+
 .abouttext {
-	position: absolute;
+	width: 50%;
+	left: 10%;
 	font-size: 1.3vw;
 	font-family: 'Lato', sans-serif;
 	font-weight: 300;
 	text-align: left;
-	z-index: 6;
-	margin: 0% 10% 0% 30%;
+	z-index: 10;
 	color: white;
 	display: inline-block;
-	position: absolute;
-}
-
-.rollogoabout {
-	margin-left: 5%;
-	height: 15vw;
-	padding-top: 1%;
-	padding-bottom: 1%;
-	vertical-align: middle;
 	position: relative;
-	z-index: 10;
-	top: 0;
 }
 
 .button {
 	position: absolute;
-	width: 10%;
-	height: 15%;
-	top: 80%;
-	left: 50%;
+	top: 10%;
+	width: 15%;
+	height: 80%;
+	left: 80%;
 	display: inline-block;
 	border-radius: 3px;
-	border: solid white 2px;
+	border: solid white 4px;
 	font-size: 1vw;
-	font-family: ExistenceLight, sans-serif;
-	text-align: left;
-	z-index: 1;
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	text-align: center;
+	line-height: 80%;
+	vertical-align: center;
+	z-index: 15;
 	color: white;
 	background-color: rgba(0,0,0,0);
 	-moz-transition: all .2s ease-in;
@@ -488,20 +498,173 @@ video {
 }
 
 .button:hover {
-	background-color: #466EB2;
-	border: solid #466EB2 3px;
-}
-
-.button a{
-	display: block;
-	height: 100%;
-	width: 100%;
-	text-decoration: none;
+	background-color: #FFFFFF;
 }
 
 .button p{
-	margin: 0px;
-	padding: 7.1%;
+	font-size: 750%;
+	margin-top: 35%;
+	filter: grayscale(100%);
+}
+
+.button:hover > p {
+	filter: grayscale(0%);
+}*/
+
+/* Slideshow container */
+.slideshowWrapper {
+	top: 0;
+	max-width: 1920px;
+	position: relative;
+	margin: 0;
+	overflow: hidden;
+}
+
+/* Hide the images by default */
+.Slides {
+    display: none;
+}
+
+.Slides img {
+	margin: -5px -10px -10px -5px;
+	transition: all 0.6s ease-in-out;
+	position: relative;
+	filter: blur(0px);
+	transform: scale(1.01);
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+	color: white;
+	background-color: rgba(255, 255, 255, 0.1);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease-in-out;
+	border-radius: 0 3px 3px 0;
+	-webkit-user-select: none; /* Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none; /* Standard */
+}
+
+/* Position the "next button" to the right */
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Caption text */
+.slideText {
+	color: #FFFFFF;
+	font-size: 8vw;
+	padding: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	text-align: center;
+	font-family: Lato;
+	cursor: pointer;
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;
+	transition: all 0.6s ease-in-out;
+}
+
+.clickMeSlide {
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	text-align: center;
+	width: 100%;
+	transform: translate(-50%, -50%);
+	color: white;
+	font-family: Lato;
+	font-size: 1.5vw;
+	opacity: 0;
+	transition: opacity 0.6s ease-in-out;
+}
+
+.slideText:hover ~ .clickMeSlide {
+	opacity: 1;
+	transition: opacity 0.6s ease-in-out;
+}
+
+.slideText:hover ~ .Slides img {
+	filter: blur(5px);
+}
+
+.dotWrapper {
+	height: 0;
+	position: relative;
+	top: -10vw;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+	cursor: pointer;
+	height: 0.75vw;
+	width: 0.75vw;
+	margin: 0 2px;
+	background-color: #777777;
+	border-radius: 50%;
+	display: inline-block;
+	top: 20px;
+	position: relative;
+	transition: background-color 0.6s ease-in-out;
+}
+
+.active2, .dot:hover {
+	background-color: #FFFFFF;
+}
+
+/* Fading animation */
+.fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+	from {opacity: .4} 
+	to {opacity: 1}
+}
+
+@keyframes fade {
+	from {opacity: .4} 
+	to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 600px) {
+	.prev, .next,.text {font-size: 11px}
+}
+
+/* On smaller screens, decrease top value .dot */
+@media only screen and (max-width: 600px) {
+	.dot {top: 0px}
+}
+
+/* On smaller screens, make .clickMeSlide larger */
+@media only screen and (max-width: 600px) {
+	.clickMeSlide {
+		font-size: 2vw;
+		opacity: 1;
+	}
 }
 
 /*===================================================================================*/
@@ -511,10 +674,11 @@ video {
 .section4 {
 	margin: 0px;
 	width: 100%;
-	height: 300px;
+	height: 100%;
     z-index: 1;
 	background-color: #ffffff;
 	position: relative;
+	border-top: 2px solid #dddddd;
 }
 
 .copyright {
