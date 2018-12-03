@@ -70,6 +70,9 @@
 	<link rel="stylesheet" href="stylesheet.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,500" rel="stylesheet">
+	
+	<link rel="stylesheet" href="owlcarousel/dist/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="owlcarousel/dist/assets/owl.theme.default.min.css">
 </head>
 
 <body>
@@ -187,84 +190,44 @@
 	
 	<!--SECTION 4 START-->
 	<div class="section4">
-		<a id="sec4" class="smooth"></a>
+		<a id="sec4" class="smooth"></a>	
 		
 			<!-- Slideshow container -->
-			<div class="slideshowWrapper">
+			<div class="owl-carousel">
 
-			  <!-- Full-width images with number and caption text -->
-			  <div class="Slides fade">
+			<!-- Full-width images with number and caption text -->
+			  <div class="item">
 				<img src="slideshow/dragon.png" style="width:100%">
 				<div class="slideText">REALM OF LOTHIREDON</div>
 				<p class="clickMeSlide">Founded in 2015, we are a team of dedicated players who all share the passion of creating an immersive MMORPG.</p>
 			  </div>
 			  
-			  <div class="Slides fade">
+			  <div class="item">
 				<img src="slideshow/europe.png" style="width:100%">
 				<div class="slideText">PROFESSIONAL BUILDS</div>
 				<p class="clickMeSlide">With a team of highly passionate builders and loads of training, we aim to produce quality content.</p>
 			  </div>
 
-			  <div class="Slides fade">
+			  <div class="item">
 				<img src="slideshow/forest.png" style="width:100%">
 				<div class="slideText">OPEN WORLD</div>
 				<p class="clickMeSlide">We are working on creating a fully explorable, customised map with plenty to explore.</p>
 			  </div>
 
-			  <div class="Slides fade">
+			  <div class="item">
 				<img src="slideshow/mountain.png" style="width:100%">
 				<div class="slideText">WE PROVIDE TRAINING</div>
 				<p class="clickMeSlide">Our core principle revolves around training people up to the desired standard, instead of setting thresholds. </p>
 			  </div>
 			  
-			  <div class="Slides fade">
+			  <div class="item">
 				<img src="slideshow/planetarium.png" style="width:100%">
 				<div class="slideText">MAP BUILDING SERVICES</div>
 				<p class="clickMeSlide">We provide professional customised map building services, tailored to your needs.</p>
 			  </div>
-
-			  <!-- Next and previous buttons -->
-			  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-			  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-			</div>
 			
-			<div class="dotWrapper" style="text-align:center">
-			  <span class="dot" onclick="currentSlide(1)"></span> 
-			  <span class="dot" onclick="currentSlide(2)"></span> 
-			  <span class="dot" onclick="currentSlide(3)"></span> 
-			  <span class="dot" onclick="currentSlide(4)"></span>
-			  <span class="dot" onclick="currentSlide(5)"></span>			  
-			</div>
-			
-			<script>
-				var slideIndex = 1;
-				showSlides(slideIndex);
+		</div>
 
-				function plusSlides(n) {
-				  showSlides(slideIndex += n);
-				}
-
-				function currentSlide(n) {
-				  showSlides(slideIndex = n);
-				}
-
-				function showSlides(n) {
-				  var i;
-				  var slides = document.getElementsByClassName("Slides");
-				  var dots = document.getElementsByClassName("dot");
-					  if (n > slides.length) {slideIndex = 1}    
-					  if (n < 1) {slideIndex = slides.length}
-					  for (i = 0; i < slides.length; i++) {
-						  slides[i].style.display = "none";  
-					  }
-					  for (i = 0; i < dots.length; i++) {
-						  dots[i].className = dots[i].className.replace(" active2", "");
-					  }
-				  slides[slideIndex-1].style.display = "block";  
-				  dots[slideIndex-1].className += " active2";
-				}
-			</script>
-			
 			<script>
 				$(function() {
 				  $('.slideshowWrapper').hover(function() {
@@ -279,15 +242,13 @@
 			<script>
 				$(function() {
 				  $('.slideText').hover(function() {
-				  $('.Slides img').css('filter', 'blur(5px)');
+				  $('.item img').css('filter', 'blur(5px)');
 				}, function() {
 				// on mouseout, reset the scale
-				  $('.Slides img').css('filter', 'blur(0px)');
+				  $('.item img').css('filter', 'blur(0px)');
 				  });
 				});
 			</script>
-			
-		</div>
 	  
 <!-- Page 3 end-->
 
@@ -334,6 +295,21 @@
 
 <!-- One scroll div end -->
 </div>
+
+	<script src="jquery.min.js"></script>
+	<script src="owlcarousel/dist/owl.carousel.min.js"></script>
+			<script>
+				$('.owl-carousel').owlCarousel({
+					loop:true,
+					margin:0,
+					nav:false,
+					items:1,
+					autoplay:true,
+					autoplayTimeout:5000,
+					autoplayHoverPause:true,
+					dots:false,
+				})
+			</script>
 
 </body>
 </html>
