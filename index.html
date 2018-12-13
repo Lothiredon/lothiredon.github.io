@@ -48,6 +48,21 @@
 	</script>
 	<!-- End of preloader -->
 	
+	<!--Start video filters-->
+	<script>
+		$(function() {
+		    $('.videocontent').hover(function() {
+		    $('.backgroundvideo').css('filter', 'grayscale(0%) blur(0px)');
+		    }, function() {
+		// on mouseout, reset the scale
+		    $('.backgroundvideo').css('filter', 'grayscale(100%) blur(5px)');
+		    });
+		});
+	</script>
+
+
+<!--End of video filter-->
+	
 	<script>
 		$(window).scroll(function() {
 			var scroll = $(window).scrollTop();
@@ -96,7 +111,9 @@
 </div>
 <!--Preloader end-->
 
-<!-- One scroll div -->
+<!-- Home page -->
+<div name="top" class="section1">
+	<a id="sec1" class="smooth"></a>
 
 		<div class="menudiv" id="menudiv">
 			<ul class="menu">
@@ -107,29 +124,18 @@
 				<li id="menubutton5"><a href="#sec5">FORUM</a></li>
 			</ul>
 		</div>
-
-<!-- Home page -->
-<div name="top" class="section1">
-	<a id="sec1" class="smooth"></a>
-	 
-	<div class="videowrapper">
-		<div class="rollogo">
-				<a href="#sec2">
-				  <img class="rollogopng" src="logowhite.png">
-				</a>
-		</div>
-		
-		<p class="roltextappear">REALM OF LOTHIREDON</p>
 		
 		<div class="backgroundvideo">
 			<video autoplay loop muted>
 				<source src="video.mp4" type="video/mp4">
 				<img src="videoposter.png" title="Your browser does not support the video tag.">
 			</video>
-
 		</div>
 		
-	</div>
+		<div class="videocontent">
+			<img class="rollogopng" src="logowhite.png">
+			<!--p class="roltextappear">REALM OF LOTHIREDON</p-->
+		</div>
 	
 </div>
 <!-- Home page end -->
@@ -257,35 +263,27 @@
 	<a id="sec4" class="smooth"></a> 
 	<!--Container div-->
 	<div class="container">
-	
-	
-	  <div class="copyright">
-		<h1 class="copyrightheader">©Realm of Lothiredon</h1>
-	  </div>
 	  
-	  <div class="links">
-		<ul class="social">
-		  <h4>Social media:</h4>
-		  <li><a href="https://www.facebook.com/Lothiredon/" target="_blank">Facebook</a></li>
-		  <li><a href="https://www.twitter.com/lothiredon" target="_blank">Twitter</a></li>
-		  <li><a href="https://www.youtube.com/channel/UC5_CiUpOhqbseSiLl7w6ouA" target="_blank">YouTube</a></li>
-		  <li><a href="https://www.planetminecraft.com/member/realm_of_lothiredon/" target="_blank">PlanetMineCraft</a></li>
-		</ul>
+		<div class="social-wrapper">
+		  <a href="https://www.facebook.com/Lothiredon/" target="_blank"><img src="facebook_hex.png"></a>
+		  <a href="https://www.twitter.com/lothiredon" target="_blank"><img src="twitter_hex.png"></a>
+		  <a href="https://www.youtube.com/channel/UC5_CiUpOhqbseSiLl7w6ouA" target="_blank"><img src="youtube_hex.png"></a>
+		  <a href="https://www.planetminecraft.com/member/realm_of_lothiredon/" target="_blank"><img src="block_hex.png"></a>
+		  <a href="https://www.instagram.com/lothiredon/" target="_blank"><img src="instagram_hex.png"></a>
+		</div>
 		
-		<ul class="vote">
-		  <h4>Social media:</h4>
+		<!--<div class="connect">
+			<h2>JOIN US ON:</h2>
+			<h3>play.lothiredon.com</h3>
+		</div>-->
+		
+		<!--<ul class="vote">
+		  <h4>VOTE FOR US!</h4>
 		  <li><a href="https://www.namemc.com/server/play.lothiredon.com" target="_blank">NameMC</a></li>
 		  <li><a href="https://www.planetminecraft.com/server/realm-of-lothiredon---creative-plot-server/vote/" target="_blank">PlanetMineCraft</a></li>
 		  <li><a href="https://www.minecraftservers.org/vote/346819" target="_blank">Minecraft-servers</a></li>
 		  <li><a href="https://minecraft-mp.com/server-s139020" target="_blank">Minecraft-MP</a></li>
-		</ul>
-		
-		<div class="connect">
-		  <h2>Connect to us here:</h2>
-		  <h3>play.lothiredon.com</h3>
-		</div>
-	  </div>
-	  
+		</ul>-->
 	  
 	</div> 
 	<!--Container div end-->  	
