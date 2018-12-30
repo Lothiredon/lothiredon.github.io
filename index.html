@@ -82,6 +82,7 @@
 	<meta name="keywords" content="Lothiredon, Minecraft, Realm of Lothiredon, Creative Server, Minecraft Server">
 
 	<title>Realm of Lothiredon</title>
+	<link rel="icon" href="favicon.ico" type="image/gif" sizes="32x32">
 	<link rel="stylesheet" href="stylesheet.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,500" rel="stylesheet">
@@ -125,15 +126,17 @@
 			</ul>
 		</div>
 		
-		<div class="backgroundvideo">
-			<video autoplay loop muted>
-				<source src="video.mp4" type="video/mp4">
-				<img src="videoposter.png" title="Your browser does not support the video tag.">
-			</video>
-		</div>
+		<div class="backgroundvideo-wrapper">
+			<div class="backgroundvideo">
+				<video autoplay loop muted>
+					<source src="video.mp4" type="video/mp4">
+					<img src="videoposter.png" title="Your browser does not support the video tag.">
+				</video>
+			</div>
+		</div>	
 		
 		<div class="videocontent">
-			<img class="rollogopng" src="logowhite.png">
+			<a href="#sec2"><img class="rollogopng" src="logowhite.png"></a>
 			<!--p class="roltextappear">REALM OF LOTHIREDON</p-->
 		</div>
 	
@@ -195,8 +198,8 @@
 	</div>-->
 	
 	<!--SECTION 4 START-->
-	<div class="section4">
-		<a id="sec4" class="smooth"></a>	
+	<div class="section3">
+		<a id="sec3" class="smooth"></a>	
 		
 			<!-- Slideshow container -->
 			<div class="owl-carousel">
@@ -255,21 +258,32 @@
 				  });
 				});
 			</script>
+			
+			<script>
+				$(document).ready(function() {
+					$('.section3').mousedown(function() {
+						$(this).css('cursor', 'grabbing');
+					});
+					$('.section3').mouseup(function() {
+						$(this).css('cursor', 'grab');
+					});
+				});
+			</script>
 	  
+	</div>
 <!-- Page 3 end-->
 
 <!-- Page 4 start-->
 <div class="section4">
 	<a id="sec4" class="smooth"></a> 
 	<!--Container div-->
-	<div class="container">
 	  
 		<div class="social-wrapper">
-		  <a href="https://www.facebook.com/Lothiredon/" target="_blank"><img src="facebook_hex.png"></a>
-		  <a href="https://www.twitter.com/lothiredon" target="_blank"><img src="twitter_hex.png"></a>
-		  <a href="https://www.youtube.com/channel/UC5_CiUpOhqbseSiLl7w6ouA" target="_blank"><img src="youtube_hex.png"></a>
-		  <a href="https://www.planetminecraft.com/member/realm_of_lothiredon/" target="_blank"><img src="block_hex.png"></a>
-		  <a href="https://www.instagram.com/lothiredon/" target="_blank"><img src="instagram_hex.png"></a>
+		  <div class="social-hex"><a href="https://www.facebook.com/Lothiredon/" target="_blank"><img src="facebook_hex.png"></a></div>
+		  <div class="social-hex"><a href="https://www.twitter.com/lothiredon" target="_blank"><img src="twitter_hex.png"></a></div>
+		  <div class="social-hex"><a href="https://www.youtube.com/channel/UC5_CiUpOhqbseSiLl7w6ouA" target="_blank"><img src="youtube_hex.png"></a></div>
+		  <div class="social-hex"><a href="https://www.planetminecraft.com/member/realm_of_lothiredon/" target="_blank"><img src="block_hex.png"></a></div>
+		  <div class="social-hex"><a href="https://www.instagram.com/lothiredon/" target="_blank"><img src="instagram_hex.png"></a></div>
 		</div>
 		
 		<!--<div class="connect">
@@ -283,16 +297,25 @@
 		  <li><a href="https://www.planetminecraft.com/server/realm-of-lothiredon---creative-plot-server/vote/" target="_blank">PlanetMineCraft</a></li>
 		  <li><a href="https://www.minecraftservers.org/vote/346819" target="_blank">Minecraft-servers</a></li>
 		  <li><a href="https://minecraft-mp.com/server-s139020" target="_blank">Minecraft-MP</a></li>
-		</ul>-->
-	  
-	</div> 
-	<!--Container div end-->  	
+		</ul>--> 
+	
 </div>
+<!-- Page 4 end-->
+
+<!-- Page 4 start-->
+	<div class="section5">
+		<a id="sec5" class="smooth"></a> 
+		
+		<div class="copyright-footer">
+		
+			<p>&copy; REALM OF LOTHIREDON | ALL RIGHTS RESERVED.</p>
+		
+		</div> 
+	</div>
 <!-- Page 4 end-->
 
 
 <!-- One scroll div end -->
-</div>
 
 	<script src="jquery.min.js"></script>
 	<script src="owlcarousel/dist/owl.carousel.min.js"></script>
