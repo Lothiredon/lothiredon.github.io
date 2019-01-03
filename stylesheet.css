@@ -450,7 +450,7 @@ video {
     z-index: 10;
 	background-color: #ffffff;
 	position: relative;
-	border-bottom: 2px solid #dddddd;
+	border-top: 2px solid #dddddd;
 	top: 0;
 	background-size: cover;
 	background-image: url("aboutbanner.png");
