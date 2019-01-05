@@ -16,6 +16,15 @@ body{
 	height: 100%;
 }
 
+@media only screen and (max-width: 600px) {
+	body {
+		-webkit-user-select: none; /* Safari */        
+		-moz-user-select: none; /* Firefox */
+		-ms-user-select: none; /* IE10+/Edge */
+		user-select: none; /* Standard */
+	}
+}
+
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -392,6 +401,7 @@ video {
 	height: auto;
     z-index: 20;
 	background-color: #ffffff;
+	border-bottom: 2px solid #dddddd;
 	position: static;
 	top: 0;
 }
@@ -453,10 +463,65 @@ video {
 	border-bottom: 2px solid #dddddd;
 	top: 0;
 	background-size: cover;
-	background-image: url("aboutbanner.png");
+	background-image: url("QuoteBanner.png");
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
+}
+
+.section3 br {
+	margin: 0;
+	padding: 0;
+}
+
+.quote-wrapper {
+	height: 100%;
+	width: auto;
+	margin: 10% 0% 10% 0%;
+	position: relative;
+	z-index: 20;
+}
+
+.quote {
+	font-size: 7vmin;
+	font-family: 'Roboto Slab';
+	font-style: italic;
+	color: white;
+	text-align: center;
+	margin: 0;
+}
+
+.quoteauthor {
+	font-size: 3.5vmin;
+	font-family: 'Roboto Slab';
+	font-style: italic;
+	color: #cccccc;
+	text-align: center;
+	margin: 2% 0% 0% 0%;
+}
+
+/* If the screen size is 601px or less*/
+@media only screen and (max-width: 600px) {
+	.quote {
+		font-size: 4vmin;
+	}
+	.quoteauthor {
+		font-size: 2vmin;
+	}
+}
+
+/*===================================================================================*/
+/*                             SECTION 4 START                                       */
+/*===================================================================================*/
+
+.section4 {
+	margin: 0;
+	width: 100%;
+	height: auto;
+    z-index: 10;
+	background-color: #ffffff;
+	position: relative;
+	top: 0;
 }
 
 /*.rollogoabout {
@@ -523,7 +588,6 @@ video {
 	top: 0;
 	max-width: 1920px;
 	position: relative;
-	margin: 0;
 	overflow: hidden;
 }
 
@@ -680,10 +744,10 @@ video {
 }
 
 /*===================================================================================*/
-/*                             SECTION 4 START                                       */
+/*                             SECTION 5 START                                       */
 /*===================================================================================*/
 
-.section4 {
+.section5 {
 	margin: 0;
 	width: 100%;
 	height: 100%;
@@ -762,10 +826,10 @@ video {
 }
 
 /*===================================================================================*/
-/*                             SECTION 5 START                                       */
+/*                             SECTION 6 START                                       */
 /*===================================================================================*/
 
-.section5 {
+.section6 {
 	margin: 0;
 	width: 100%;
 	height: 100%;

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<!--<script src="https://github.com/kswedberg/jquery-smooth-scroll/blob/master/jquery.smooth-scroll.min.js"></script>
+	<!-- SMOOTH SCROLL -->
+	<script>
+		$(function() {
+		$('a[href*=#]:not([href=#])').click(function() {
+			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			if (target.length) {
+				$('html,body').animate({
+				scrollTop: target.offset().top-60
+				}, 1000);
+				return false;
+			}
+			}
+		});
+		});
+	</script>
+	<!-- End of SMOOTH SCROLL -->
+	
+	<!--Start menu active thing-->
+	<script>
+		$(document).ready(function() {
+			$("ul.menu li a").click(function() {
+				$("ul.menu li a").removeClass("active"); //This is important to make only one link active at a time
+				// Try without using above line and note the difference
+
+				$(this).addClass("active"); // Add 'active' class to currently clicked element
+			});    
+		});
+    </script>
+	<!--End menu active-->
+	
+	<!--<script>
+		$(window).scroll(function() {
+			var scroll = $(window).scrollTop();
+			var os = $('.section1').offset().top-100;
+			var ht = $('.section1').height();
+			if(scroll > os + ht){
+				$('.menu').addClass('past-main');
+			} else {
+				$('.menu').removeClass('past-main');
+			}
+
+		});
+	</script>-->
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta name="keywords" content="Lothiredon, Minecraft, Realm of Lothiredon, Creative Server, Minecraft Server">
+
+	<title>Realm of Lothiredon</title>
+	<link rel="icon" href="favicon.ico" type="image/gif" sizes="32x32">
+	<link rel="stylesheet" href="stylesheet.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,500" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+
+<body>
+
+	<!-- Home page -->
+	<div name="top" class="section1">
+		<a id="sec1" class="smooth"></a>
+
+			<div class="menudiv" id="menudiv">
+				<ul class="menu">
+					<li id="menubutton1"><a href="#sec1">HOME</a></li>
+					<li id="menubutton2"><a href="commissions/commissions.html">COMMISSIONS</a></li>
+					<li id="menubutton3"><a href="#sec3">ABOUT</a></li>
+					<li id="menubutton4"><a href="#sec4">CONTACT</a></li>
+					<li id="menubutton5"><a href="#sec5">FORUM</a></li>
+				</ul>
+			</div>
+			
+			<div class="header-hero-image">
+			
+				<div class="hero-text-wrapper">
+					<p class="hero-main-text">LOOKING TO COMMISSION A BUILD?</p>
+					<p class="hero-sub-text">LOOK NO FURTHER.</p>
+				</div>
+			
+			</div>
+		
+	</div>
+
+</body>
+
+</html>
