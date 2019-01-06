@@ -460,7 +460,7 @@ video {
     z-index: 10;
 	background-color: #ffffff;
 	position: relative;
-	border-top: 2px solid #dddddd;
+	border-bottom: 2px solid #dddddd;
 	top: 0;
 	background-size: cover;
 	background-image: url("QuoteBanner.png");

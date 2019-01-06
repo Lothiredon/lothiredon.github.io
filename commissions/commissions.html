@@ -36,7 +36,7 @@
     </script>
 	<!--End menu active-->
 	
-	<!--<script>
+	<script>
 		$(window).scroll(function() {
 			var scroll = $(window).scrollTop();
 			var os = $('.section1').offset().top-100;
@@ -48,7 +48,7 @@
 			}
 
 		});
-	</script>-->
+	</script>
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -60,24 +60,29 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,500" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+	<script src="gen_validatorv4.js" type="text/javascript"></script>
 </head>
 
 <body>
 
-	<!-- Home page -->
+<!--=========================================================-->
+<!--=                       SECTION 1                       =-->
+<!--=========================================================-->
+
 	<div name="top" class="section1">
 		<a id="sec1" class="smooth"></a>
 
 			<div class="menudiv" id="menudiv">
 				<ul class="menu">
-					<li id="menubutton1"><a href="#sec1">HOME</a></li>
-					<li id="menubutton2"><a href="commissions/commissions.html">COMMISSIONS</a></li>
+					<li id="menubutton1"><a href="../index.html">HOME</a></li>
+					<li id="menubutton2"><a href="#sec1" class="active">COMMISSIONS</a></li>
 					<li id="menubutton3"><a href="#sec3">ABOUT</a></li>
 					<li id="menubutton4"><a href="#sec4">CONTACT</a></li>
 					<li id="menubutton5"><a href="#sec5">FORUM</a></li>
 				</ul>
 			</div>
 			
+			<!--==Hero Image Wrapper==-->
 			<div class="header-hero-image">
 			
 				<div class="hero-text-wrapper">
@@ -86,9 +91,137 @@
 				</div>
 			
 			</div>
+			<!--======================-->
 		
 	</div>
+	
+<!--=========================================================-->
+<!--=                       SECTION 2                       =-->
+<!--=========================================================-->
+	
+	<div class="section2">
+		<a id="sec2" class="smooth"></a>
+		
+		<!--=====WORKFLOW START=====-->
+		
+		<h1>How we work</h1>
+		<div class="section2-h1-line"></div>
+		
+		<div class="workflow-wrapper">
+		
+			<div class="workflow design">
+				<img src="lightbulb.png">
+			</div>
+			
+			<div class="workflow-arrow">
+				<img src="arrow.png">
+			</div>
+			
+			<div class="workflow build">
+				<img src="wrench.png">
+			</div>
+			
+			<div class="workflow-arrow">
+				<img src="arrow.png">
+			</div>
+			
+			<div class="workflow deliver">
+				<img src="clipboard.png">
+			</div>
+		
+		</div>
+		
+		<!--=====WORKFLOW TEXTBOX=====-->
+		
+		<div class="workflow-text-wrapper">
+		
+			<div class="workflow-textbox">
+				<p>We closely liaise with you to make sure every single idea is thought of.</p>
+			</div>
+			
+			<div class="workflow-textbox">
+				<p>We commence the building and periodically send reports and screenshots of the build, or invite you to have a look.</p>
+			</div>
+			
+			<div class="workflow-textbox">
+				<p>We re-assess the build at multiple stages, incorporating any feedback you have. Free of charge - no hidden costs.</p>
+			</div>
+		
+		</div>
+		
+		<!--=====WORKFLOW END=====-->
+		
+	</div>
+	
+<!--=========================================================-->
+<!--=                       SECTION 3                       =-->
+<!--=========================================================-->
+	
+	<div class="section3">
+		<a id="sec3" class="smooth"></a>
+		
+		<br>
+		<div class="quote-wrapper">
+			<p class="quote">"1, 2, 3, 4, 5, 6, 7, 8... DAMN, I RAN OUT OF FINGERS."</p>
+			<p class="quoteauthor">- Refreshinq, Builder and part-time server drunk</p>
+		</div>
+		<br>
+		
+	</div>
+		
+	</div>	
 
+<!--=========================================================-->
+<!--=                       SECTION 4                       =-->
+<!--=========================================================-->
+	
+	<div class="section4">
+		<a id="sec4" class="smooth"></a>
+
+			<div class="form-container">
+				<form id="gform" name="contactform" method="POST" class="pure-form pure-form-stacked"
+					action="contact-form-handler.php">
+
+				<fieldset class="field-group">
+				  <label for="name">Name</label>
+				  <input id="name" name="name" placeholder="Please enter your first and surname." />
+				</fieldset>
+
+				<fieldset class="field-group">
+				  <label for="email">Email Address</label>
+				  <input id="email" name="email" type="email" value=""
+				  required placeholder="email@domain.com"/>
+				  <span id="email-invalid" style="display:none">
+					Must be a valid email address</span>
+				</fieldset>
+				
+				<fieldset class="field-group">
+				  <label for="message">Message</label>
+				  <textarea id="message" name="message" rows="10"
+				  placeholder="Tell us what's on your mind..."></textarea>
+				</fieldset>
+
+				<button class="button-success pure-button button-xlarge">
+				  <i class="fa fa-paper-plane"></i><p>Send</p></button>
+
+			  </form>
+			  
+				  <div class="form-thankyou" style="display:none;" id="thankyou_message">
+					<h2>Thank you for contacting us! We will get back to you soon!</h2>
+				  </div> 
+			</div>
+			<!--Form end-->
+			
+			<script language="JavaScript">
+				var frmvalidator  = new Validator("contactform");
+				frmvalidator.addValidation("name","req","Please provide your name");
+				frmvalidator.addValidation("email","req","Please provide your email");
+				frmvalidator.addValidation("email","email",
+				  "Please enter a valid email address");
+			</script>
+
+	</div>
+	
 </body>
 
 </html>
