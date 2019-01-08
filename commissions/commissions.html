@@ -49,6 +49,7 @@
 
 		});
 	</script>
+	<script src="typed.js"></script>
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -177,19 +178,28 @@
 	
 	<div class="section4">
 		<a id="sec4" class="smooth"></a>
-
+			
+		<div class="commission-text-wrapper">	
+			<div class="commission-form-text">
+				<div id="typed-strings">
+					<p>I would like</p>
+				</div>
+				<span id="typed"></span>
+			</div>
+		</div>
+			
 			<div class="form-container">
-				<form id="gform" name="contactform" method="POST" class="pure-form pure-form-stacked"
+				<form id="gform" name="contactform" method="post" class="pure-form pure-form-stacked"
 					action="contact-form-handler.php">
 
 				<fieldset class="field-group">
 				  <label for="name">Name</label>
-				  <input id="name" name="name" placeholder="Please enter your first and surname." />
+				  <input id="name" name="first-name" placeholder="Please enter your first and surname." />
 				</fieldset>
 
 				<fieldset class="field-group">
 				  <label for="email">Email Address</label>
-				  <input id="email" name="email" type="email" value=""
+				  <input id="email" name="email-address" type="email" value=""
 				  required placeholder="email@domain.com"/>
 				  <span id="email-invalid" style="display:none">
 					Must be a valid email address</span>
@@ -197,12 +207,11 @@
 				
 				<fieldset class="field-group">
 				  <label for="message">Message</label>
-				  <textarea id="message" name="message" rows="10"
+				  <textarea id="message" name="comments" rows="10"
 				  placeholder="Tell us what's on your mind..."></textarea>
 				</fieldset>
 
-				<button class="button-success pure-button button-xlarge">
-				  <i class="fa fa-paper-plane"></i><p>Send</p></button>
+				<button class="button-success"><p>Send</p></button>
 
 			  </form>
 			  
@@ -212,6 +221,23 @@
 			</div>
 			<!--Form end-->
 			
+			
+			<script>
+				var typed = new Typed('#typed',{
+					strings: ["Developers.", "Designers.", "People."],
+					// Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
+					stringsElement: null,
+                    stringsElement: '#typed-strings',
+                    backSpeed: 40,
+                    typeSpeed: 40,
+					loop: true,
+					startDelay: 1000,
+					backDelay: 1000,
+					cursorChar: "|",
+					contentType: 'html'
+                 });
+			</script>
+				
 			<script language="JavaScript">
 				var frmvalidator  = new Validator("contactform");
 				frmvalidator.addValidation("name","req","Please provide your name");
