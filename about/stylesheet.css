@@ -219,13 +219,13 @@ body{
 }
 
 .about-image-wrapper {
-	width: 100% !important;
+	width: 90% !important;
 	height: auto;
 	position: relative;
 	display: flex;
 	z-index: 80;
 	justify-content: space-around;
-	margin: 2% 5% 2% 5%;
+	margin: 2% 0% 1% 5%;
 }
 
 .sub-image-wrapper {
@@ -233,6 +233,7 @@ body{
 	height: 100%;
 	text-align: center;
 	z-index: 90;
+	padding-right: 1vw;
 }
 
 .sub-image-wrapper img {
@@ -244,14 +245,14 @@ body{
 
 /*================TEXT FLEX================*/
 .about-text-wrapper {
-	width: 100%;
+	width: 90%;
 	height: auto;
+	margin-left: 5%;
 	position: absolute;
-	top: -30%;
+	top: 37%;
 	z-index: 125;
 	display: flex;
 	justify-content: space-around;
-	top: 48%;
 }
 
 .sub-text-wrapper {
@@ -269,4 +270,50 @@ body{
 	color: white;
 	margin: 0;
 	text-align: center;
+}
+
+/*================TEXT FLEX================*/
+.about-text-column-wrapper {
+	width: 90%;
+	height: auto;
+	margin-left: 5%;
+	position: relative;	
+	z-index: 125;
+	display: flex;
+	justify-content: space-around;
+}
+
+.sub-text-column-wrapper {
+	width: 33.333333333%;
+	position: relative;
+	z-index: 150;
+	left: 0;
+	padding-right: -1vw;
+}
+
+.sub-text-column-wrapper p {
+	position: relative;
+	z-index: 200;
+	font-family: 'Lato';
+	font-size: 2vmin;
+	color: black;
+	margin: 0;
+	margin-left: 10%;
+	margin-right: 10%;
+	line-height: 3vmin;
+}
+
+/*===================================================================================*/
+/*                             SECTION 3 START                                       */
+/*===================================================================================*/
+
+.section3 {
+	margin: 0;
+	width: 100%;
+	height: auto;
+    z-index: 10;
+	background-color: #ffffff;
+	position: relative;
+	border-bottom: 2px solid #dddddd;
+	top: 0;
 }
