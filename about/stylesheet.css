@@ -677,9 +677,7 @@ ol, ul{
 }
 
 .cd-horizontal-timeline .events-content h2 {
-    font-size: 2rem;
     font-family: 'Lato',sans-serif;
-    line-height: 1.2;
 	color: white;
 }
 
@@ -707,7 +705,7 @@ ol, ul{
 
 @media only screen and (min-width: 768px) {
     .cd-horizontal-timeline .events-content h2 {
-        font-size: 5rem;
+        font-size: 3rem;
     }
 
     .cd-horizontal-timeline .events-content em {
@@ -805,4 +803,74 @@ ol, ul{
         -o-transform: translateX(0%);
         transform: translateX(0%)
     }
+}
+
+/*===================================================================================*/
+/*                             SECTION 4 START                                       */
+/*===================================================================================*/
+
+.section4 {
+	margin: 0% 0% 0% 0%;
+	width: 100%;
+	height: auto;
+    z-index: 20;
+	background-color: #ffffff;
+	position: relative;
+	border-bottom: 2px solid #dddddd;
+	top: 0;
+}
+
+.section4 h1 {
+	width: 100% !important;
+	height: auto;
+	margin: 2% 0% 0% 0%;
+	position: relative;
+	font-family: 'Lato';
+	font-size: 6vw;
+	font-style: none;
+	text-align: center;
+}
+
+.section4-h1-line {
+	width: 36%;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%,0%);
+	border-bottom: 2px solid #dddddd;
+	margin: 0;
+}
+
+.portrait-wrapper {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+.portrait-wrapper img {
+	width: 100%;
+	max-width: 250px;
+}
+
+.cd-background-wrapper {
+  overflow: hidden;
+  perspective: 4000px;
+  display: block;
+}
+
+.cd-floating-background {
+  transform-style: preserve-3d;
+}
+
+.cd-floating-background img:first-child {
+  transform: translateZ(50px);
+}
+
+.cd-floating-background img:nth-child(2) {
+  transform: translateZ(400px);
+}
+
+.cd-floating-background img:not(:first-child) {
+    position: absolute;
+    top: 0;
+    left: 0;
 }

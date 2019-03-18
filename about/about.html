@@ -3,6 +3,7 @@
 
 <head>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
 	<!--<script src="https://github.com/kswedberg/jquery-smooth-scroll/blob/master/jquery.smooth-scroll.min.js"></script>
 	<!-- SMOOTH SCROLL -->
 	<script>
@@ -440,10 +441,48 @@
 				</div> 
 			</section>
 			
-			<script src="main.js"></script>
-			<script src="jquery.mobile.custom.min.js"></script>
+			<script src="main_timeline.js"></script>
 			
 	</div>
+	
+	<div class="section4">
+		<a id="sec4" class="smooth"></a>
+		
+			<br>
+			<h1>TESTEMONIALS</h1>
+			<div class="section4-h1-line"></div>
+			
+			<div class="portrait-wrapper">
+				<div class="cd-background-wrapper">
+				   <figure class="cd-floating-background">
+					  <img class="cd-portrait-bg" src="portraits/aaron_bg.png" alt="image-1">
+					  <img class="cd-portrait-img" src="portraits/aaron_portrait.png" alt="image-2">
+					  <!-- images here -->
+				   </figure>
+				</div>
+			</div>
+			
+			<!--<script src="main_parallax.js"></script>-->
+			<script>
+				$(".cd-background-wrapper").mousemove(function(e) {
+				  parallaxIt(e, ".cd-portrait-bg", -100);
+				  parallaxIt(e, ".cd-portrait-img", -30);
+				});
+
+				function parallaxIt(e, target, movement) {
+				  var $this = $(".cd-background-wrapper");
+				  var relX = e.pageX - $this.offset().left;
+				  var relY = e.pageY - $this.offset().top;
+
+				  TweenMax.to(target, 1, {
+					x: (relX - $this.width() / 2) / $this.width() * movement
+				  });
+				}
+			</script>
+			
+	</div>
+	
+	<script src="jquery.mobile.custom.min.js"></script>
 	
 </body>
 
