@@ -840,37 +840,52 @@ ol, ul{
 	margin: 0;
 }
 
-.portrait-wrapper {
-	height: 100%;
-	width: 100%;
-	overflow: hidden;
+/*----PORTRAIT 1----*/
+
+.testemonial-wrapper {
+	position: relative;
 }
 
-.portrait-wrapper img {
-	width: 100%;
-	max-width: 250px;
+.portrait-wrapper {
+	position: relative;
+	margin-top: 0%;
+	height: 100%;
+	width: 66%;
+	overflow: hidden;
 }
 
 .cd-background-wrapper {
   overflow: hidden;
-  perspective: 4000px;
   display: block;
+  height: 100%;
 }
 
 .cd-floating-background {
   transform-style: preserve-3d;
 }
 
-.cd-floating-background img:first-child {
-  transform: translateZ(50px);
+.cd-portrait-bg {
+	width: 100%;
+	transform: translateY(15%);
 }
 
-.cd-floating-background img:nth-child(2) {
-  transform: translateZ(400px);
+.cd-portrait-img {
+	position: absolute;
+	transform: translateY(-5%);
 }
 
 .cd-floating-background img:not(:first-child) {
     position: absolute;
     top: 0;
     left: 0;
+}
+
+.portrait-textbox {
+	position: absolute;
+	z-index: 30;
+	width: 30%;
+	left: 67%;
+	top: 10%;
+	font-size: 1vmax;
+	font-family: 'Open Sans';
 }
