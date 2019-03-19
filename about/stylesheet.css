@@ -356,45 +356,6 @@ ol, ul{
 	list-style: none;
 }
 
-.cd-nugget-info a {
-    display: inline-block;
-    width: 200px;
-    height: 60px;
-    text-align: center;
-    line-height: 60px;
-    background: #7b9d6f;
-    position: relative;
-    font-size: 14px;
-    border-radius: 50em;
-    color: #fff;
-    -webkit-transition: all .2s;
-    -moz-transition: all .2s;
-    transition: all .2s;
-    position: fixed;
-    z-index: 100;
-    bottom: 40px;
-    left: calc(50% - 100px);
-	color: #7b9d6f;
-    text-decoration: none;
-}
-
-.no-touch .cd-nugget-info a:hover {
-    opacity: .8
-}
-
-.cd-nugget-info span {
-    vertical-align: middle;
-    display: inline-block
-}
-
-.cd-nugget-info span svg {
-    display: block
-}
-
-.cd-nugget-info .cd-nugget-info-arrow {
-    fill: #fff
-}
-
 .cd-horizontal-timeline {
     opacity: 0;
     margin: 2em auto;
@@ -840,13 +801,13 @@ ol, ul{
 	margin: 0;
 }
 
-/*----PORTRAIT 1----*/
+/*----PORTRAITS----*/
 
-.testemonial-wrapper {
+.testemonial-wrapper-1, .testemonial-wrapper-2 {
 	position: relative;
 }
 
-.portrait-wrapper {
+.portrait-wrapper-1 {
 	position: relative;
 	margin-top: 0%;
 	height: 100%;
@@ -854,7 +815,7 @@ ol, ul{
 	overflow: hidden;
 }
 
-.cd-background-wrapper {
+.cd-background-wrapper-1, .cd-background-wrapper-2, .cd-background-wrapper-3 {
   overflow: hidden;
   display: block;
   height: 100%;
@@ -864,12 +825,12 @@ ol, ul{
   transform-style: preserve-3d;
 }
 
-.cd-portrait-bg {
+.cd-portrait-bg-1, .cd-portrait-bg-2, .cd-portrait-bg-3 {
 	width: 100%;
 	transform: translateY(15%);
 }
 
-.cd-portrait-img {
+.cd-portrait-img-1, .cd-portrait-img-2, .cd-portrait-img-3 {
 	position: absolute;
 	transform: translateY(-5%);
 }
@@ -880,7 +841,7 @@ ol, ul{
     left: 0;
 }
 
-.portrait-textbox {
+.portrait-textbox-1 {
 	position: absolute;
 	z-index: 30;
 	width: 30%;
@@ -888,4 +849,34 @@ ol, ul{
 	top: 10%;
 	font-size: 1vmax;
 	font-family: 'Open Sans';
+}
+
+/*-----PORTRAIT 2-----*/
+
+.testemonial-wrapper-2 {
+	position: relative;
+	margin-top: 5%;
+}
+
+.portrait-wrapper-2 {
+	position: relative;
+	margin-top: 0%;
+	height: 100%;
+	width: 66%;
+	left: 33%;
+	overflow: hidden;
+}
+
+.portrait-textbox-2 {
+	position: absolute;
+	z-index: 30;
+	width: 30%;
+	left: 2.5%;
+	top: 10%;
+	font-size: 1vmax;
+	font-family: 'Open Sans';
+}
+
+.cd-portrait-img-2 {
+	transform: translateX(15%);
 }

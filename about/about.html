@@ -452,33 +452,67 @@
 			<h1>TESTEMONIALS</h1>
 			<div class="section4-h1-line"></div>
 			
-			<div class="testemonial-wrapper">
+			<div class="testemonial-wrapper-1">
 			
-			<div class="portrait-wrapper">
-				<div class="cd-background-wrapper">
+			<div class="portrait-wrapper-1">
+				<div id="portrait1" class="cd-background-wrapper-1">
 				   <figure class="cd-floating-background">
-					  <img class="cd-portrait-bg" src="portraits/aaron_bg.png" alt="image-1">
-					  <img class="cd-portrait-img" src="portraits/aaron_portrait.png" alt="image-2">
+					  <img class="cd-portrait-bg-1" src="portraits/aaron_bg.png" alt="image-1">
+					  <img class="cd-portrait-img-1" src="portraits/aaron_portrait.png" alt="image-2">
 				   </figure>
 				</div>
 			</div>
 			
-			<div class="portrait-textbox">
+			<div class="portrait-textbox-1">
 				<h1>Aaron</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor de incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<p>
 			</div>
 			
 			</div>
 			
+			<div class="testemonial-wrapper-2">
+			
+				<div class="portrait-wrapper-2">
+					<div class="cd-background-wrapper-2">
+					   <figure class="cd-floating-background">
+						  <img class="cd-portrait-bg-2" src="portraits/hazel_bg.png" alt="image-1">
+						  <img class="cd-portrait-img-2" src="portraits/hazel_portrait.png" alt="image-2">
+					   </figure>
+					</div>
+				</div>
+				
+				<div class="portrait-textbox-2">
+					<h1>Hazel</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor de incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<p>
+				</div>
+			
+			</div>
+			
 			<!--<script src="main_parallax.js"></script>-->
 			<script>
-				$(".cd-background-wrapper").mousemove(function(e) {
-				  parallaxIt(e, ".cd-portrait-bg", -200);
-				  parallaxIt(e, ".cd-portrait-img", -30);
+				$(".cd-background-wrapper-1").mousemove(function(e) {
+				  parallaxIt(e, ".cd-portrait-bg-1", -200);
+				  parallaxIt(e, ".cd-portrait-img-1", -30);
 				});
 
 				function parallaxIt(e, target, movement) {
-				  var $this = $(".cd-background-wrapper");
+				  var $this = $(".cd-background-wrapper-1");
+				  var relX = e.pageX - $this.offset().left;
+
+				  TweenMax.to(target, 1, {
+					x: (relX - $this.width() / 2) / $this.width() * movement
+				  });
+				}
+			</script>
+			
+			<script>
+				$(".cd-background-wrapper-2").mousemove(function(e) {
+				  parallaxIt(e, ".cd-portrait-bg-2", -200);
+				  parallaxIt(e, ".cd-portrait-img-2", -30);
+				});
+
+				function parallaxIt(e, target, movement) {
+				  var $this = $(".cd-background-wrapper-2");
 				  var relX = e.pageX - $this.offset().left;
 
 				  TweenMax.to(target, 1, {
