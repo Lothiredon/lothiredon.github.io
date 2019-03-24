@@ -880,3 +880,33 @@ ol, ul{
 .cd-portrait-img-2 {
 	transform: translateX(15%);
 }
+
+/*-----PORTRAIT 2-----*/
+
+.testemonial-wrapper-3 {
+	position: relative;
+	margin-top: 5%;
+}
+
+.portrait-wrapper-3 {
+	position: relative;
+	margin-top: 0%;
+	height: 100%;
+	width: 66%;
+	left: 0%;
+	overflow: hidden;
+}
+
+.portrait-textbox-3 {
+	position: absolute;
+	z-index: 30;
+	width: 30%;
+	left: 67%;
+	top: 10%;
+	font-size: 1vmax;
+	font-family: 'Open Sans';
+}
+
+.cd-portrait-img-3 {
+	transform: translateX(15%);
+}
