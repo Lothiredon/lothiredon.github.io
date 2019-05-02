@@ -156,7 +156,7 @@ body{
 	margin: 0;
 	color: white;
 	font-family: 'Lato';
-	font-size: 6vmin;
+	font-size: 10vmin;
 	text-align: center;
 	z-index: 30;
 }
@@ -166,10 +166,40 @@ body{
 	margin-top: 2%;
 	color: #eeeeee;
 	font-family: 'Lato';
-	font-size: 2vmin;
+	font-size: 3vmin;
 	text-align: center;
 	z-index: 20;
 	font-style: italic;
+}
+
+.button-container {
+	top: 80%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+	flex-wrap: wrap;
+	margin: 0 auto;
+}
+
+.hero-button {
+	flex: 1 1 auto;
+	margin: 10px;
+	padding: 30px;
+	text-align: center;
+	text-transform: uppercase;
+	transition: all 0.5s ease-in-out;
+	background-size: 300% auto;
+	color: white;
+	font-family: 'Lato';
+	font-size: 5vmin;
+	border-bottom: 5px solid white;
+	border-radius: 10px;
+	background-image: linear-gradient(to right,#0873fd 20%, #9362f7 30%, #b855ee 40%, #d745e2 50%, #ea31ca 60%, #f71bb1 70%, #ff0098 80%, #ff3d54 90%, #ee7315 100%);
+   }
+
+.hero-button:hover {
+	background-position: right bottom;
+	transition: all 0.5s ease-in-out;
 }
 
 /* If the screen size is 601px or less*/
