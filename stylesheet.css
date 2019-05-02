@@ -836,7 +836,8 @@ video {
     z-index: 0;
 	background-color: #202020;
 	position: relative;
-	border-top: 2px solid #dddddd;
+	border-top: 5px solid;
+	border-image: linear-gradient(to right,#0873fd 25%, #9362f7 50%, #b855ee 75%, #d745e2 100%) 1;
 }
 
 .copyright-footer {

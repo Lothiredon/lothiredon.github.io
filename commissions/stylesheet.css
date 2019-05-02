@@ -197,7 +197,8 @@ body{
 	position: relative;
 	left: 50%;
 	transform: translate(-50%,0%);
-	border-bottom: 2px solid #dddddd;
+	border-bottom: 5px solid;
+	border-image: linear-gradient(to right,#0873fd 25%, #9362f7 50%, #b855ee 75%, #d745e2 100%) 1;
 	margin: 0;
 }
 
@@ -244,12 +245,28 @@ body{
 	position: relative;
 	z-index: 70;
 	margin: 0% 3% 0% 3%;
-	border-bottom: 2px solid #dddddd;
+	border-bottom: 2px solid;
+	border-image: linear-gradient(to right,#0873fd 25%, #9362f7 50%, #b855ee 75%, #d745e2 100%) 1;
 	vertical-align: bottom;
 }
 
 .workflow-textbox p {
 	text-align: center;
+}
+
+.tb1{
+	border-bottom: 3px solid;
+	border-image: linear-gradient(to right,#0873fd 0%, #9362f7 50%, #b855ee 100%) 1;
+}
+
+.tb2{
+	border-bottom: 3px solid;
+	border-image: linear-gradient(to right,#d745e2 0%, #ea31ca 50%, #f71bb1 100%) 1;
+}
+
+.tb3{
+	border-bottom: 3px solid;
+	border-image: linear-gradient(to right,#ff0098 0%, #ff3d54 50%, #ee7315 100%) 1;
 }
 
 /*===================================================================================*/
@@ -444,4 +461,32 @@ label {
 	font-size: 0.9vw;
 	color: black;
 	border-bottom: 1px solid #AAAAAA;
+}
+
+/*===================================================================================*/
+/*                             SECTION 6 START                                       */
+/*===================================================================================*/
+
+.section6 {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+    z-index: 0;
+	background-color: #202020;
+	position: relative;
+	border-top: 5px solid;
+	border-image: linear-gradient(to right,#0873fd 25%, #9362f7 50%, #b855ee 75%, #d745e2 100%) 1;
+}
+
+.copyright-footer {
+	width: 100%;
+	height: auto;
+}
+
+.copyright-footer p {
+	color: #505050;
+	font-family: 'Lato';
+	font-size: 100%;
+	line-height: 300%;
+	text-align: center;
 }

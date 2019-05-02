@@ -187,19 +187,26 @@ body{
 	padding: 30px;
 	text-align: center;
 	text-transform: uppercase;
-	transition: all 0.5s ease-in-out;
+	transition: background-position 0.5s ease-in-out;
+	transition: border-bottom-color 0.2s ease-in-out;
 	background-size: 300% auto;
 	color: white;
 	font-family: 'Lato';
+	text-decoration: none;
 	font-size: 5vmin;
 	border-bottom: 5px solid white;
 	border-radius: 10px;
 	background-image: linear-gradient(to right,#0873fd 20%, #9362f7 30%, #b855ee 40%, #d745e2 50%, #ea31ca 60%, #f71bb1 70%, #ff0098 80%, #ff3d54 90%, #ee7315 100%);
-   }
+}
 
 .hero-button:hover {
 	background-position: right bottom;
 	transition: all 0.5s ease-in-out;
+}
+
+.hero-button:focus {
+	border-bottom-color: #555555;
+	transition: all 0.2s ease-in-out;
 }
 
 /* If the screen size is 601px or less*/
@@ -242,7 +249,8 @@ body{
 	position: relative;
 	left: 50%;
 	transform: translate(-50%,0%);
-	border-bottom: 2px solid #dddddd;
+	border-bottom: 5px solid;
+	border-image: linear-gradient(to right,#0873fd 25%, #9362f7 50%, #b855ee 75%, #d745e2 100%) 1;
 	margin: 0;
 }
 
@@ -369,15 +377,6 @@ body{
 	font-style: none;
 	text-align: center;
 	color: white;
-}
-
-.section3-h1-line {
-	width: 36%;
-	position: relative;
-	left: 50%;
-	transform: translate(-50%,0%);
-	border-bottom: 2px solid #dddddd;
-	margin: 0;
 }
 
 /*==================Timeline slideshow start==================*/
@@ -807,7 +806,6 @@ ol, ul{
     z-index: 20;
 	background-color: #ffffff;
 	position: relative;
-	border-bottom: 2px solid #dddddd;
 	top: 0;
 }
 
@@ -822,18 +820,9 @@ ol, ul{
 	text-align: center;
 }
 
-.section4-h1-line {
-	width: 36%;
-	position: relative;
-	left: 50%;
-	transform: translate(-50%,0%);
-	border-bottom: 2px solid #dddddd;
-	margin: 0;
-}
-
 /*----PORTRAITS----*/
 
-.testemonial-wrapper-1, .testemonial-wrapper-2 {
+.testemonial-wrapper-1, .testemonial-wrapper-2 .testemonial-wrapper-3 {
 	position: relative;
 }
 
@@ -911,11 +900,12 @@ ol, ul{
 	transform: translateX(15%);
 }
 
-/*-----PORTRAIT 2-----*/
+/*-----PORTRAIT 3-----*/
 
 .testemonial-wrapper-3 {
 	position: relative;
 	margin-top: 5%;
+	padding-bottom: 2vmin;
 }
 
 .portrait-wrapper-3 {
@@ -939,4 +929,32 @@ ol, ul{
 
 .cd-portrait-img-3 {
 	transform: translateX(15%);
+}
+
+/*===================================================================================*/
+/*                             SECTION 6 START                                       */
+/*===================================================================================*/
+
+.section6 {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+    z-index: 0;
+	background-color: #202020;
+	position: relative;
+	border-top: 5px solid;
+	border-image: linear-gradient(to right,#0873fd 25%, #9362f7 50%, #b855ee 75%, #d745e2 100%) 1;
+}
+
+.copyright-footer {
+	width: 100%;
+	height: auto;
+}
+
+.copyright-footer p {
+	color: #505050;
+	font-family: 'Lato';
+	font-size: 100%;
+	line-height: 300%;
+	text-align: center;
 }
