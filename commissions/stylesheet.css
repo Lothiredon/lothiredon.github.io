@@ -159,12 +159,11 @@ body{
 .hero-sub-text {
 	position: relative;
 	margin-top: 5%;
-	color: #ffffff;
+	color: #bbbbbb;
 	font-family: 'Lato';
 	font-size: 3vmin;
 	text-align: center;
 	z-index: 20;
-	font-style: italic;
 }
 
 /*===================================================================================*/
