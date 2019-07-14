@@ -176,12 +176,13 @@ body{
 /*                             SECTION 2 START                                       */
 /*===================================================================================*/
 
+/*=======================APPLICATION FORM CSS ONLY=======================*/
+
 .section2 {
 	margin: 0;
 	width: 100%;
 	height: auto;
     z-index: 20;
-	background-color: blue;
 	position: relative;
 	top: 0;
 	border-bottom: 2px solid #dddddd;
@@ -194,25 +195,185 @@ body{
 	top: 0;
 	display: flex;
 	justify-content: space-around;
+	position: relative;
+	z-index: 100;
 }
 
 .contact-form {
 	width: 33.33333333%;
 	height: auto;
+	transition: all 0.5s ease-in-out;
+}
+
+.contact-form img {
+	height: auto;
+	max-width: 10%;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, 0%);
 }
 
 .contact-form p {
 	text-align: center;
 }
 
-.social-form {
-	background-color: cyan;
+.contact-form-overlay {
+	transition: all 0.5s ease-in-out;
 }
 
-.technical-form {
-	background-color: magenta;
+/*=======================APPLICATION FORM CSS ONLY======================*/
+
+.application-form-overlay {
+	height: auto;
+	width: 100%;
+	top: 0;
+	position: relative;
+	z-index: 20;
+	padding-top: 2%;
+	background-color: rgba(0, 106, 255, 0);
+	pointer-events: all;
+}
+
+.application-form-overlay:hover{
+	background-color: rgba(0, 106, 255, 0.35);
+}
+
+.application-form {
+	background-color: #cccccc;
+}
+
+/*=========================GENERAL FORM CSS ONLY========================*/
+
+.general-form-overlay {
+	height: auto;
+	width: 100%;
+	top: 0;
+	position: relative;
+	z-index: 20;
+	padding-top: 2%;
+	background-color: rgba(0, 106, 255, 0);
+	pointer-events: all;
+}
+
+.general-form-overlay:hover{
+	background-color: rgba(0, 106, 255, 0.35);
+}
+
+.general-form {
+	background-color: #aaaaaa;
+}
+
+/*===========================BUG FORM CSS ONLY==========================*/
+
+.bug-form-overlay {
+	height: auto;
+	width: 100%;
+	top: 0;
+	position: relative;
+	z-index: 20;
+	padding-top: 2%;
+	background-color: rgba(0, 106, 255, 0);
+	pointer-events: all;
+}
+
+.bug-form-overlay:hover{
+	background-color: rgba(0, 106, 255, 0.35);
 }
 
 .bug-form {
-	background-color: yellow;
+	background-color: #888888;
+}
+
+.form-container {
+	height: auto;
+	width: auto;
+	padding-top: 2%;
+	margin: 0% 10% 0% 10%;
+	position: relative;
+	overflow-x: hidden;
+}
+
+.form-container fieldset {
+	padding: 0% 0% 0% 0%;
+	margin: 2% 0% 0% 0%;
+}
+
+.field-group {
+    width: 100%; 
+    border: none;
+    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+.button-success {
+	position: relative;
+	width: 20%;
+	height: 4%;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	margin: 5% 0% 5% 0%;
+	background-color: #2a5599;
+	border-bottom: 1px solid black;
+	border: none;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+.button-success:hover {
+	background-color: #4286f4;
+}
+
+.button-success p {
+	padding: 0;
+	text-align: center;
+	color: white;
+	font-size: 1.5vmin;
+	font-family: 'Lato';
+}
+
+input, textarea {
+    display: block;
+    margin: 0;
+    width: 100%;
+    font-family: 'Lato';
+    font-size: 0.8vw;
+    appearance: none;
+    box-shadow: none;
+    border-radius: none;
+    padding: 1vmin;
+    border: none;
+	border: 1px solid rgba(0,0,0,0);
+    border-bottom: solid 2px #c9c9c9;
+    transition: border 0.3s ease-in-out;
+	transition: background 0.3s ease-in-out;
+	background-color: #eeeeee;
+}
+input:focus, textarea:focus {
+    outline: none;
+	border: 1px solid #eeeeee;
+    border-bottom: solid 2px #4286f4;
+	background-color: #ffffff;
+}
+
+textarea {
+	height: 4vw;
+}
+
+label {
+	font-family: 'Lato';
+	font-size: 2vmin;
+}
+
+.form-thankyou {
+	font-family: 'Open Sans';
+	font-size: 0.9vw;
+	color: black;
+	border-bottom: 1px solid #AAAAAA;
+}
+
+.general-form {
+
+}
+
+.bug-form {
+
 }

@@ -103,18 +103,81 @@
     <a id="sec2" class="smooth"></a>
 
     <div class="contact-form-wrapper">
-        <div class="contact-form social-form">
-            <p>form stuff here</p>
-        </div>
 
-        <div class="contact-form technical-form">
-            <p>form stuff here</p>
-        </div>
+		<!--=======Team application form=======-->
+        <div class="contact-form application-form">
+			
+			<div class="contact-form-overlay application-form-overlay">
+			<img src="team.svg" class="team-application-icon">
+
+			<!--Form start-->
+            <div class="form-container">
+				<form id="gform" name="contactform" method="post" class="pure-form pure-form-stacked" action="contact-form-handler.php">
+	
+				<fieldset class="field-group">
+					  <label for="name">Name</label>
+					  <input id="name" name="first-name" placeholder="Please enter your first and surname." />
+				</fieldset>
+	
+				<fieldset class="field-group">
+					  <label for="email">Email Address</label>
+					  <input id="email" name="email-address" type="email" value=""
+					  required placeholder="email@domain.com"/>
+					  <span id="email-invalid" style="display:none">
+						Must be a valid email address</span>
+				</fieldset>
+					
+				<fieldset class="field-group">
+					  <label for="message">Message</label>
+					  <textarea id="message" name="comments" rows="10"
+					  placeholder="Tell us what's on your mind..."></textarea>
+				</fieldset>
+	
+				<button class="button-success"><p>Send</p></button>
+	
+				</form>
+				  
+				<div class="form-thankyou" style="display:none;" id="thankyou_message">
+					<h2>Thank you for contacting us! We will get back to you soon!</h2>
+				</div> 
+			</div>
+		</div>
+			<!--Form end-->
+
+	</div>
+	
+	<!--=======General Contact form=======-->
+
+        <div class="contact-form general-form">
+
+				<div class="contact-form-overlay general-form-overlay">
+				<img src="general.svg" class="general-form-icon">
+
+				<div class="form-container">
+					<form id="gform" name="contactform" method="post" class="pure-form pure-form-stacked" action="contact-form-handler.php">
+
+							<fieldset class="field-group">
+								<label for="name">Name</label>
+								<input id="name" name="first-name" placeholder="Please enter your first and surname." />
+							</fieldset>
+
+					</form>
+
+				</div>	
+			</div>
+		</div>
+		
+	<!--=======Bug Report form=======-->
 
         <div class="contact-form bug-form">
+
+			<div class="contact-form-overlay application-form-overlay">
+				<img src="bug.svg" class="general-form-icon">
+
             <p>form stuff here</p>
-        </div>
-    </div>
+			</div>
+		</div>
+</div>
 
 </body>
 </html>
