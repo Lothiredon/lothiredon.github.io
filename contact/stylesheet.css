@@ -176,7 +176,7 @@ body{
 /*                             SECTION 2 START                                       */
 /*===================================================================================*/
 
-/*=======================APPLICATION FORM CSS ONLY=======================*/
+/*=======================SHARED FORM CSS=======================*/
 
 .section2 {
 	margin: 0;
@@ -211,6 +211,7 @@ body{
 	position: relative;
 	left: 50%;
 	transform: translate(-50%, 0%);
+	padding-top: 2%;
 }
 
 .contact-form p {
@@ -221,74 +222,10 @@ body{
 	transition: all 0.5s ease-in-out;
 }
 
-/*=======================APPLICATION FORM CSS ONLY======================*/
-
-.application-form-overlay {
-	height: auto;
-	width: 100%;
-	top: 0;
-	position: relative;
-	z-index: 20;
-	padding-top: 2%;
-	background-color: rgba(0, 106, 255, 0);
-	pointer-events: all;
-}
-
-.application-form-overlay:hover{
-	background-color: rgba(0, 106, 255, 0.35);
-}
-
-.application-form {
-	background-color: #cccccc;
-}
-
-/*=========================GENERAL FORM CSS ONLY========================*/
-
-.general-form-overlay {
-	height: auto;
-	width: 100%;
-	top: 0;
-	position: relative;
-	z-index: 20;
-	padding-top: 2%;
-	background-color: rgba(0, 106, 255, 0);
-	pointer-events: all;
-}
-
-.general-form-overlay:hover{
-	background-color: rgba(0, 106, 255, 0.35);
-}
-
-.general-form {
-	background-color: #aaaaaa;
-}
-
-/*===========================BUG FORM CSS ONLY==========================*/
-
-.bug-form-overlay {
-	height: auto;
-	width: 100%;
-	top: 0;
-	position: relative;
-	z-index: 20;
-	padding-top: 2%;
-	background-color: rgba(0, 106, 255, 0);
-	pointer-events: all;
-}
-
-.bug-form-overlay:hover{
-	background-color: rgba(0, 106, 255, 0.35);
-}
-
-.bug-form {
-	background-color: #888888;
-}
-
 .form-container {
 	height: auto;
 	width: auto;
-	padding-top: 2%;
-	margin: 0% 10% 0% 10%;
+	margin: 2% 10% 0% 10%;
 	position: relative;
 	overflow-x: hidden;
 }
@@ -296,6 +233,15 @@ body{
 .form-container fieldset {
 	padding: 0% 0% 0% 0%;
 	margin: 2% 0% 0% 0%;
+}
+
+.contact-form h2 {
+	width: 100%;
+	text-align: center;
+	font-size: 3vw;
+	font-family: 'Lato';
+	margin: 0;
+	padding: 0;
 }
 
 .field-group {
@@ -333,24 +279,25 @@ body{
 input, textarea {
     display: block;
     margin: 0;
-    width: 100%;
+    width: 97%;
     font-family: 'Lato';
-    font-size: 0.8vw;
+	font-size: 0.8vw;
+	margin-top: 1%;
     appearance: none;
     box-shadow: none;
     border-radius: none;
-    padding: 1vmin;
-    border: none;
-	border: 1px solid rgba(0,0,0,0);
-    border-bottom: solid 2px #c9c9c9;
+	padding: 1vmin;
+	border: none;
+    border-bottom: solid 4px #c9c9c9;
     transition: border 0.3s ease-in-out;
 	transition: background 0.3s ease-in-out;
 	background-color: #eeeeee;
 }
+
 input:focus, textarea:focus {
     outline: none;
-	border: 1px solid #eeeeee;
-    border-bottom: solid 2px #4286f4;
+	border-bottom: 4px solid;
+    border-image: linear-gradient(to right,#0873fd 25%, #9362f7 50%, #b855ee 75%, #d745e2 100%) 1;
 	background-color: #ffffff;
 }
 
@@ -370,10 +317,80 @@ label {
 	border-bottom: 1px solid #AAAAAA;
 }
 
-.general-form {
+/*=======================TEAM APPLICATION FORM CSS ONLY======================*/
 
+.application-form-overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	position: relative;
+	z-index: 20;
+	background: linear-gradient(0deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	background-size: 400% 400%;
+}
+
+.application-form-overlay:hover{
+	-webkit-animation: Gradient 10s ease infinite;
+	-moz-animation: Gradient 10s ease infinite;
+	animation: Gradient 10s ease infinite;
+}
+
+.application-form {
+	background-color: #cccccc;
+}
+
+/*=========================GENERAL CONTACT FORM CSS ONLY========================*/
+
+.general-form-overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	position: relative;
+	z-index: 20;
+	background: linear-gradient(0deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	background-size: 400% 400%;
+}
+
+.general-form-overlay:hover{
+	-webkit-animation: Gradient 10s ease infinite;
+	-moz-animation: Gradient 10s ease infinite;
+	animation: Gradient 10s ease infinite;
+}
+
+.general-form {
+	background-color: #aaaaaa;
+}
+
+/*===========================BUG FORM CSS ONLY==========================*/
+
+.bug-form-overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	position: relative;
+	z-index: 20;
+	background: linear-gradient(0deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	background-size: 400% 400%;
+}
+
+.bug-form-overlay:hover{
+	-webkit-animation: Gradient 10s ease infinite;
+	-moz-animation: Gradient 10s ease infinite;
+	animation: Gradient 10s ease infinite;
 }
 
 .bug-form {
+	background-color: #888888;
+}
 
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 0%
+	}
+	50% {
+		background-position: 0% 100%
+	}
+	100% {
+		background-position: 0% 0%
+	}
 }

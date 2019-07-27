@@ -108,7 +108,9 @@
         <div class="contact-form application-form">
 			
 			<div class="contact-form-overlay application-form-overlay">
-			<img src="team.svg" class="team-application-icon">
+			<img src="team.svg" class="team-application-icon form-image">
+
+			<h2>Staff Application</h2>
 
 			<!--Form start-->
             <div class="form-container">
@@ -116,8 +118,13 @@
 	
 				<fieldset class="field-group">
 					  <label for="name">Name</label>
-					  <input id="name" name="first-name" placeholder="Please enter your first and surname." />
+					  <input id="name" name="first-name" required placeholder="Please enter your first and last name." />
 				</fieldset>
+
+				<fieldset class="field-group">
+						<label for="ingame-name">In-game Name</label>
+						<input id="ingame-name" name="first-name" required placeholder="Please enter your in-game name." />
+				  </fieldset>
 	
 				<fieldset class="field-group">
 					  <label for="email">Email Address</label>
@@ -126,23 +133,41 @@
 					  <span id="email-invalid" style="display:none">
 						Must be a valid email address</span>
 				</fieldset>
+
+				<fieldset class="field-group">
+					<label for="team-position">Team Position</label>
+					<input name="team-position" list="available-positions" required placeholder="Please enter the position you would like to apply for.">
+					<datalist id="available-positions">
+						<option value="Builder">
+						<option value="Command Block Specialist">
+						<option value="Redstone Logic Expert">
+						<option value="Lore Writer">
+						<option value="Java Developer">
+						<option value="Moderator">
+					</datalist>
+				 </fieldset>
 					
 				<fieldset class="field-group">
-					  <label for="message">Message</label>
+					  <label for="message">Cover Letter</label>
 					  <textarea id="message" name="comments" rows="10"
-					  placeholder="Tell us what's on your mind..."></textarea>
+					  placeholder="Please tell us why you think you should join our team."></textarea>
+				</fieldset>
+
+				<fieldset class="field-group">
+						<label for="images">Supporting Imagery/Videos</label>
+						<input id="images" name="image-link" required placeholder="Builder/Redstone/Command block only. Otherwise, enter N/A." />
 				</fieldset>
 	
 				<button class="button-success"><p>Send</p></button>
 	
 				</form>
+			<!--Form end-->
 				  
 				<div class="form-thankyou" style="display:none;" id="thankyou_message">
 					<h2>Thank you for contacting us! We will get back to you soon!</h2>
 				</div> 
 			</div>
 		</div>
-			<!--Form end-->
 
 	</div>
 	
@@ -151,17 +176,41 @@
         <div class="contact-form general-form">
 
 				<div class="contact-form-overlay general-form-overlay">
-				<img src="general.svg" class="general-form-icon">
+				<img src="general.svg" class="general-form-icon form-image">
 
+				<h2>General Contact</h2>
+
+				<!--Form start-->
 				<div class="form-container">
 					<form id="gform" name="contactform" method="post" class="pure-form pure-form-stacked" action="contact-form-handler.php">
 
 							<fieldset class="field-group">
-								<label for="name">Name</label>
-								<input id="name" name="first-name" placeholder="Please enter your first and surname." />
+								<label for="name-general">In-game Name</label>
+								<input id="name-general" name="first-name" placeholder="Please enter your in-game name." />
 							</fieldset>
 
+							<fieldset class="field-group">
+									<label for="email-general">Email Address</label>
+									<input id="email-general" name="email-address" type="email" value=""
+									required placeholder="email@domain.com"/>
+									<span id="email-invalid" style="display:none">
+									  Must be a valid email address</span>
+							</fieldset>
+
+							<fieldset class="field-group">
+									<label for="message-general">Message</label>
+									<textarea id="message-general" name="comments" rows="10"
+									placeholder="Please tell us what's on your mind."></textarea>
+							</fieldset>
+
+							<button class="button-success button-2"><p>Send</p></button>
+
 					</form>
+				<!--Form end-->
+
+					<div class="form-thankyou" style="display:none;" id="thankyou_message">
+							<h2>Thank you for contacting us! We will get back to you soon!</h2>
+					</div> 
 
 				</div>	
 			</div>
@@ -172,9 +221,62 @@
         <div class="contact-form bug-form">
 
 			<div class="contact-form-overlay application-form-overlay">
-				<img src="bug.svg" class="general-form-icon">
+				<img src="bug.svg" class="general-form-icon form-image">
 
-            <p>form stuff here</p>
+				<h2>Bug Report</h2>
+
+				<!--Form start-->
+				<div class="form-container">
+					<form id="gform" name="contactform" method="post" class="pure-form pure-form-stacked" action="contact-form-handler.php">
+
+						<fieldset class="field-group">
+								<label for="name-bug">In-game Name</label>
+								<input id="name-bug" name="first-name" placeholder="Please enter your in-game name." />
+						</fieldset>
+
+						<fieldset class="field-group">
+								<label for="email-bug">Email Address</label>
+								<input id="email-bug" name="email-address" type="email" value=""
+								required placeholder="email@domain.com"/>
+								<span id="email-invalid" style="display:none">
+								Must be a valid email address</span>
+						</fieldset>
+
+						<fieldset class="field-group">
+								<label for="bug-feature">Applicable Feature</label>
+								<input name="bug-feature" list="feature-list" required placeholder="Please enter the position you would like to apply for.">
+								<datalist id="feature-list">
+									<option value="KitPvP">
+									<option value="Spleef">
+									<option value="Skyblock">
+									<option value="Creative">
+									<option value="Survival">
+									<option value="Spawn">
+									<option value="Other">
+								</datalist>
+						</fieldset>
+
+						<fieldset class="field-group">
+								<label for="message-bug">Message</label>
+								<textarea id="message-bug" name="comments" rows="10"
+								placeholder="Please describe what bug you encountered and how we can reproduce it."></textarea>
+						</fieldset>
+
+						<fieldset class="field-group">
+								<label for="images-bug">Supporting Imagery/Videos</label>
+								<input id="images-bug" name="image-link" required placeholder="Please paste links to images/videos here." />
+						</fieldset>
+
+						<button class="button-success button-2"><p>Send</p></button>
+					</form>
+				<!--Form end-->
+
+					<div class="form-thankyou" style="display:none;" id="thankyou_message">
+							<h2>Thank you for contacting us! We will get back to you soon!</h2>
+					</div> 
+
+				</div>
+
 			</div>
 		</div>
 </div>
