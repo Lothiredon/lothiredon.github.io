@@ -2,13 +2,13 @@
 <html>
 
 <head>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
-	<!--<script src="https://github.com/kswedberg/jquery-smooth-scroll/blob/master/jquery.smooth-scroll.min.js"></script>
-	<!-- SMOOTH SCROLL -->
+	<!--<script src="https://github.com/kswedberg/jquery-smooth-scroll/blob/master/jquery.smooth-scroll.min.js"></script>-->
+	<!--SMOOTH SCROLL -->
 	<script>
 		$(function() {
-		$('a[href*=#]:not([href=#])').click(function() {
+		$('a[href*=\\#]:not([href=\\#])').click(function() { 
 			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 			var target = $(this.hash);
 			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
@@ -111,6 +111,7 @@
 			<img src="team.svg" class="team-application-icon form-image">
 
 			<h2>Staff Application</h2>
+			<h3 class="form-pencil">✎</h3>
 
 			<!--Form start-->
             <div class="form-container">
@@ -168,7 +169,6 @@
 				</div> 
 			</div>
 		</div>
-
 	</div>
 	
 	<!--=======General Contact form=======-->
@@ -179,6 +179,7 @@
 				<img src="general.svg" class="general-form-icon form-image">
 
 				<h2>General Contact</h2>
+				<h3 class="form-pencil">✎</h3>
 
 				<!--Form start-->
 				<div class="form-container">
@@ -224,6 +225,7 @@
 				<img src="bug.svg" class="general-form-icon form-image">
 
 				<h2>Bug Report</h2>
+				<h3 class="form-pencil">✎</h3>
 
 				<!--Form start-->
 				<div class="form-container">
@@ -280,6 +282,36 @@
 			</div>
 		</div>
 </div>
+</div>
+
+<!--=========================================================-->
+<!--=                       SECTION 3                       =-->
+<!--=========================================================-->
+
+<div class="section3">
+	<a id="sec3" class="smooth"></a> 
+				
+		<div class="copyright-footer">
+				
+			<p>&copy; REALM OF LOTHIREDON | ALL RIGHTS RESERVED.</p>
+				
+		</div> 
+</div>
+<!-- Section 3 end-->
+
+<script>
+$(".form-pencil").click(function() {
+	$(".form-container").not(this).removeClass("toggled");
+    $(this).next().toggleClass("toggled");
+});
+</script>
+
+<script>
+	$(".form-pencil").click(function() {
+		$(".contact-form").not(this).removeClass("expand");
+		$(this).parent().parent().toggleClass("expand");
+	});
+	</script>
 
 </body>
 </html>
