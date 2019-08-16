@@ -474,7 +474,7 @@ label {
 		width: 125vw;
 	}
 	body {
-		overflow: hidden;
+		overflow-x: hidden;
 		background-color: black;
 	}
 
