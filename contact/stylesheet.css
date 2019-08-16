@@ -473,5 +473,9 @@ label {
 	.expand {
 		width: 125vw;
 	}
+	body {
+		overflow: hidden;
+		background-color: black;
+	}
 
 }

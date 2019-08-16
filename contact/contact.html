@@ -300,18 +300,27 @@
 <!-- Section 3 end-->
 
 <script>
-$(".form-pencil").click(function() {
-	$(".form-container").not(this).removeClass("toggled");
-    $(this).next().toggleClass("toggled");
-});
+	$(".form-pencil").click(function() {
+		$(".form-container").not(this).removeClass("toggled");
+		$(this).next().toggleClass("toggled");
+	});
 </script>
 
-<script>
+<!--<script>
 	$(".form-pencil").click(function() {
 		$(".contact-form").not(this).removeClass("expand");
 		$(this).parent().parent().toggleClass("expand");
 	});
-	</script>
+</script>-->
+
+<script>
+	$(".form-pencil").click(function() {
+		$(".contact-form").not(this).css('width', '0%');
+		$(".contact-form").children().children().next("h2").not(this).css('display', 'none');
+		$(".contact-form").children().children().next(".form-pencil").not(this).css('display', 'none');
+		$(this).parent().parent().css('width', '100%');
+	});
+</script>
 
 </body>
 </html>
