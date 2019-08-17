@@ -299,10 +299,19 @@
 </div>
 <!-- Section 3 end-->
 
+<!--script>
+	$(document).ready(function(){
+		$(".form-pencil").click(function() {
+			$(".form-container").not(this).removeClass("toggled");
+			$(this).next(".form-container").toggleClass("toggled");
+		});
+	});
+</script-->
+
 <script>
-	$(".form-pencil").click(function() {
-		$(".form-container").not(this).removeClass("toggled");
-		$(this).next().toggleClass("toggled");
+	$(".form-pencil").click(function(){
+		$(".contact-form").children().children().next(".form-container").not(this).removeClass("toggled");
+		$(this).next(".form-container").toggleClass("toggled");
 	});
 </script>
 
