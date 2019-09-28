@@ -123,7 +123,7 @@ body{
 	width: 100%;
 	height: auto;
     z-index: 20;
-	background-color: red;
+	background-image: url("background.png");
 	position: relative;
 	top: 0;
 	border-bottom: 2px solid #dddddd;
