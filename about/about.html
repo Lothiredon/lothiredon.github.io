@@ -4,6 +4,8 @@
 <head>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+	<script src="../scripts/ResizeSensor.js"></script>
+	<script src="../scripts/ElementQueries.js"></script>
 	<!--<script src="https://github.com/kswedberg/jquery-smooth-scroll/blob/master/jquery.smooth-scroll.min.js"></script>
 	<!-- SMOOTH SCROLL -->
 	<script>
@@ -113,7 +115,7 @@
 		
 		<div class="about-flex-wrapper">
 		
-			<div class="about-image-wrapper">
+			<!--<div class="about-image-wrapper">
 				<div class="sub-image-wrapper">
 					<img src="about-builder.png">
 				</div>
@@ -149,9 +151,66 @@
 				</div>
 			</div>
 			
-		</div>
+		</div>-->
+
+			<div class="about-image-wrapper">
+				<div class="about-image-flex-wrap">
+					<div class="sub-image-wrapper">
+						<img src="about-builder.png">
+					</div>
+
+					<div class="sub-text-column-wrapper">
+							<p>We are a team of highly skilled builders. By providing in-house training, holding weekly build-nights and encouraging friendship within the team, we are pushing the boundaries of what our team is capable of on a daily basis.</p>
+					</div>
+
+				</div>
+
+				<div class="sub-text-wrapper">
+					<h1 class="about-builders-p">BUILDERS</h1>
+				</div>
+			</div>
+
+			<div class="about-image-wrapper">
+				<div class="about-image-flex-wrap">
+					<div class="sub-image-wrapper">
+						<img src="about-community.png">
+					</div>
+
+					<div class="sub-text-column-wrapper">
+						<p>Providing a platform for people to meet and become friends for life, we strive to keep our community intimate. We host yearly meetups with the staff-team to reinforce this bond, growing the sense of unity.</p>
+					</div>
+	
+				</div>
+	
+				<div class="sub-text-wrapper">
+					<h1 class="about-community-p">COMMUNITY</h1>
+				</div>
+			</div>
+
+			<div class="about-image-wrapper">
+				<div class="about-image-flex-wrap">
+					<div class="sub-image-wrapper">
+						<img src="about-multilingual.png">
+					</div>
+	
+					<div class="sub-text-column-wrapper">
+						<p>Our staff-team alone comprises over 10 different nationalities, ensuring that all languages and timezones are covered. We are always on the lookout for both staff-members and community members to expand our multi-nationality.</p>
+					</div>
 		
-	</div>
+				</div>
+		
+				<div class="sub-text-wrapper">
+					<h1 class="about-multilingual-p">NO BOUNDARIES</h1>
+				</div>
+			</div>
+		
+		</div>
+
+	<script>
+			new ResizeSensor(jQuery('.sub-image-wrapper'), function(){ 
+				$(".sub-text-wrapper").css("height", $(".sub-image-wrapper").height());
+			});
+	</script>
 	
 <!--=========================================================-->
 <!--=                       SECTION 3                       =-->
