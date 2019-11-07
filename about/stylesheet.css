@@ -111,14 +111,14 @@ body{
 /* If the screen size is 601px or less*/
 @media only screen and (max-width: 600px) {
     .menu li a {
-		font-size: 2vw;
+		font-size: 3vw;
     }
 	.menu li {
 		width: 20%;
 	}
 	.menu {
-		height: 8vw;
-		line-height: 8vw;
+		height: 10vw;
+		line-height: 10vw;
 	}
 	.menudiv {
 		height: 4vw;
@@ -211,11 +211,14 @@ body{
 
 /* If the screen size is 601px or less*/
 @media only screen and (max-width: 600px) {
-    .hero-main-text {
-		font-size: 4vmin;
+	.hero-main-text {
+		font-size: 8vmin;
     }
 	.hero-sub-text {
-		font-size: 2.5vmin;
+		font-size: 4vmin;
+	}
+	.button-container {
+		white-space: nowrap;
 	}
 }
 	
@@ -947,6 +950,31 @@ ol, ul{
 	transform: translateX(15%);
 }
 
+/*================Responsive Web Design================*/
+
+/* If the screen size is 601px or less*/
+@media only screen and (max-width: 600px) {
+	.cd-portrait-img-1, .cd-portrait-img-2, .cd-portrait-img-3 {
+		visibility: hidden;
+	}
+	.testemonial-wrapper-1, .testemonial-wrapper-2, .testemonial-wrapper-3 {
+		margin-top: 1%;
+	}
+	.portrait-wrapper-1, .portrait-wrapper-2, .portrait-wrapper-3 {
+		width: 90%;
+		left: 5%;
+	}
+	.portrait-textbox-1, .portrait-textbox-2, .portrait-textbox-3 {
+		width: 90%;
+		left: 5%;
+		position: relative;
+	}
+	.portrait-textbox-1 p, .portrait-textbox-2 p, .portrait-textbox-3 p {
+		margin-top: 1%;
+		font-size: 4vmin;
+	}
+}
+
 /*===================================================================================*/
 /*                             SECTION 6 START                                       */
 /*===================================================================================*/
@@ -973,4 +1001,15 @@ ol, ul{
 	font-size: 100%;
 	line-height: 300%;
 	text-align: center;
+}
+
+/*================Responsive Web Design================*/
+
+/* If the screen size is 601px or less*/
+@media only screen and (max-width: 600px) {
+	.copyright-footer p {
+		color: white;
+		font-size: 2vmin;
+		line-height: 6vmin;
+	}
 }
