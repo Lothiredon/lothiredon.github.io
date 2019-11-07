@@ -1009,7 +1009,7 @@ ol, ul{
 @media only screen and (max-width: 600px) {
 	.copyright-footer p {
 		color: white;
-		font-size: 2vmin;
+		font-size: 3vmin;
 		line-height: 6vmin;
 	}
 }
