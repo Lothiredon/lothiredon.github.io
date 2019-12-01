@@ -38,6 +38,30 @@ body{
 	border-bottom: solid 2px #4286f4;
 }
 
+.no-display {
+	display: none;
+}
+
+.display {
+	display: block !important;
+}
+
+.toggled {
+	width: 80% !important;
+}
+
+.no-width {
+	width: 0% !important;
+}
+
+.full-width {
+	width: 100% !important;
+}
+
+/*===================================================================================*/
+/*                                  MENU START                                       */
+/*===================================================================================*/
+
 .menudiv {
 	top: 0%;
 	margin: 0;
@@ -100,14 +124,14 @@ body{
 /* If the screen size is 601px or less*/
 @media only screen and (max-width: 600px) {
     .menu li a {
-		font-size: 2vw;
+		font-size: 3vw;
     }
 	.menu li {
 		width: 20%;
 	}
 	.menu {
-		height: 8vw;
-		line-height: 8vw;
+		height: 10vw;
+		line-height: 10vw;
 	}
 	.menudiv {
 		height: 4vw;
@@ -123,11 +147,6 @@ body{
 	width: 100%;
 	height: auto;
     z-index: 20;
-	background-size: cover;
-	background-image: url("contactbg.png");
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
 	position: relative;
 	top: 0;
 	border-bottom: 2px solid #dddddd;
@@ -139,7 +158,7 @@ body{
 	min-height: 60vmin;
 	position: relative;
 	background-size: cover;
-	background-image: url("header-hero-image.png");
+	background-image: url("contactbg.png");
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -235,6 +254,7 @@ body{
 	position: relative;
 	overflow-x: hidden;
 	transition: all 0.5s ease-in-out;
+	display: none;
 }
 
 .form-container fieldset {
@@ -257,7 +277,7 @@ body{
 	text-align: center;
 	font-size: 200%;
 	margin: 5% 0% 0% 0%;
-	padding: 0;
+	padding-bottom: 5%;
 	color: white;
 	visibility: hidden;
 }
@@ -446,8 +466,15 @@ label {
 	text-align: center;
 }
 
-.toggled {
-	width: 100%;
+/*================Responsive Web Design================*/
+
+/* If the screen size is 601px or less*/
+@media only screen and (max-width: 600px) {
+	.copyright-footer p {
+		color: white;
+		font-size: 3vmin;
+		line-height: 6vmin;
+	}
 }
 
 .expand {

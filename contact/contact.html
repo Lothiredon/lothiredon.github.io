@@ -111,7 +111,7 @@
 			<img src="team.svg" class="team-application-icon form-image">
 
 			<h2>Staff Application</h2>
-			<h3 class="form-pencil">✎</h3>
+			<h3 class="form-pencil form-pencil-application">✎</h3>
 
 			<!--Form start-->
             <div class="form-container">
@@ -179,7 +179,7 @@
 				<img src="general.svg" class="general-form-icon form-image">
 
 				<h2>General Contact</h2>
-				<h3 class="form-pencil">✎</h3>
+				<h3 class="form-pencil form-pencil-general">✎</h3>
 
 				<!--Form start-->
 				<div class="form-container">
@@ -225,7 +225,7 @@
 				<img src="bug.svg" class="general-form-icon form-image">
 
 				<h2>Bug Report</h2>
-				<h3 class="form-pencil">✎</h3>
+				<h3 class="form-pencil form-pencil-bug">✎</h3>
 
 				<!--Form start-->
 				<div class="form-container">
@@ -299,35 +299,38 @@
 </div>
 <!-- Section 3 end-->
 
-<!--script>
-	$(document).ready(function(){
-		$(".form-pencil").click(function() {
-			$(".form-container").not(this).removeClass("toggled");
-			$(this).next(".form-container").toggleClass("toggled");
-		});
-	});
-</script-->
-
 <script>
 	$(".form-pencil").click(function(){
-		/*$(".contact-form").children().children().next(".form-container").not(this).removeClass("toggled");*/
 		$(this).next(".form-container").toggleClass("toggled");
+		$(this).next(".form-container").toggleClass("display");
+		$("html, body").animate({ scrollTop: $(document).height() }, 1000);
 	});
 </script>
 
-<!--<script>
-	$(".form-pencil").click(function() {
-		$(".contact-form").not(this).removeClass("expand");
-		$(this).parent().parent().toggleClass("expand");
+<script>
+	$(".form-pencil-bug").click(function() {
+		$(".general-form, .application-form").toggleClass("no-width");
+		$(".contact-form").children().children().next("h2").not(this).toggleClass("no-display");
+		$(".contact-form").children().children().next(".form-pencil").not(this).toggleClass("no-display");
+		$(this).parent().parent().toggleClass("full-width");
 	});
-</script>-->
+</script>
 
 <script>
-	$(".form-pencil").click(function() {
-		$(".contact-form").not(this).css('width', '0%');
-		$(".contact-form").children().children().next("h2").not(this).css('display', 'none');
-		$(".contact-form").children().children().next(".form-pencil").not(this).css('display', 'none');
-		$(this).parent().parent().css('width', '100%');
+	$(".form-pencil-general").click(function() {
+		$(".bug-form, .application-form").toggleClass("no-width");
+		$(".contact-form").children().children().next("h2").not(this).toggleClass("no-display");
+		$(".contact-form").children().children().next(".form-pencil").not(this).toggleClass("no-display");
+		$(this).parent().parent().toggleClass("full-width");
+	});
+</script>
+
+<script>
+	$(".form-pencil-application").click(function() {
+		$(".general-form, .bug-form").toggleClass("no-width");
+		$(".contact-form").children().children().next("h2").not(this).toggleClass("no-display");
+		$(".contact-form").children().children().next(".form-pencil").not(this).toggleClass("no-display");
+		$(this).parent().parent().toggleClass("full-width");
 	});
 </script>
 

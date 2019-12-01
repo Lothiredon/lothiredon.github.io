@@ -3,7 +3,7 @@
 
 <head>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script src="https://github.com/kswedberg/jquery-smooth-scroll/blob/master/jquery.smooth-scroll.min.js"></script>
+	<!--<script src="https://github.com/kswedberg/jquery-smooth-scroll/blob/master/jquery.smooth-scroll.min.js"></script>-->
 	<!-- SMOOTH SCROLL -->
 	<script>
 		$(function() {
@@ -14,7 +14,7 @@
 			if (target.length) {
 				$('html,body').animate({
 				scrollTop: target.offset().top-60
-				}, 1000);
+				}, 0);
 				return false;
 			}
 			}
@@ -179,26 +179,26 @@
 		<!-- Minigames with pictures start -->	
 		<div class="minigames">	
 
-			<div class="kitpvp">
+			<div class="kitpvp gamemode-wrapper">
 				<h3>KITPVP</h3>
-					<img class="swords" src="swords.png">
-					<div class="kitpvptext">
+					<img class="gamemode-logo" src="swords.png">
+					<div class="gamemode-text-wrapper">
 						<p>We offer the greatest KitPvP experience! We have removed the annoying 1.9 cooldown, added instant-heal-soups, diverse kits and much more!</p>
 					</div>
 			</div>
 
-			<div class="skyblock">
+			<div class="skyblock gamemode-wrapper">
 				<h3>SKYBLOCK</h3>
-					<img class="block" src="block.png">
-					<div class="skyblocktext">
+					<img class="gamemode-logo" src="block.png">
+					<div class="gamemode-text-wrapper">
 						<p>Having just released this game, this is our take on Skyblock! We offer diverse islands, customised unlockables and a shop! And it's balanced too!</p>
 					</div>
 			</div>
 
-			<div class="spleef">
+			<div class="spleef gamemode-wrapper">
 				<h3>SPLEEF</h3>
-					<img class="shovel" src="shovel.png">
-					<div class="spleeftext">
+					<img class="gamemode-logo" src="shovel.png">
+					<div class="gamemode-text-wrapper">
 					<p>Get your shovels out, we are going old-school! Custom, breathtaking arenas waiting to be battled in! Grief till the death!</p>
 					</div>
 			</div>
@@ -207,22 +207,9 @@
 		<!-- Minigames with pictures end -->
 
 </div>
-<!-- Page 2 end-->
-
-	<!--<div class="section3">
-		<a id="sec5" class="smooth"></a>
-		
-		<br>
-		<div class="quote-wrapper">
-			<p class="quote">"Insert statement from Magmaguy or someone here"</p>
-			<p class="quoteauthor">- Magmaguy, EliteMobs developer</p>
-		</div>
-		<br>
-		
-	</div>-->
 	
 	<!--SECTION 3 START-->
-	<div class="section4">
+	<div class="section3">
 		<a id="sec3" class="smooth"></a>	
 		
 			<!-- Slideshow container -->
@@ -230,7 +217,7 @@
 
 			<!-- Full-width images with number and caption text -->
 			  <div class="item">
-				<img src="slideshow/dragon.png" style="width:100%">
+				<img src="slideshow/dragon.png" style="height:100%">
 				<div class="slideText">REALM OF LOTHIREDON</div>
 				<p class="clickMeSlide">Founded in 2015, we are a team of dedicated players who all share the passion of creating an immersive MMORPG.</p>
 			  </div>
@@ -285,16 +272,65 @@
 			
 			<script>
 				$(document).ready(function() {
-					$('.section4').mousedown(function() {
+					$('.section3').mousedown(function() {
 						$(this).css('cursor', 'grabbing');
 					});
-					$('.section4').mouseup(function() {
+					$('.section3').mouseup(function() {
 						$(this).css('cursor', 'grab');
 					});
 				});
 			</script>
 	  
 	</div>
+
+<!--SECTION 4 START-->
+	<div class="section4">
+		<a id="sec4" class="smooth"></a>
+
+		<span class="mobile-gallery-overlay-span"><p>CLICK TO SEE MORE!</p><img src="arrow.png"></span>
+
+			<div class="mobile-gallery-wrapper">
+				<div class="mobile-item mobile-item-first">
+					<img src="slideshow/dragon.png">
+				</div>
+				
+				<div class="mobile-item">
+					<img src="slideshow/europe.png">
+				</div>
+
+				<div class="mobile-item">
+					<img src="slideshow/forest.png">
+				</div>
+
+				<div class="mobile-item">
+					<img src="slideshow/mountain2.png">
+				</div>
+				
+				<div class="mobile-item mobile-item-last">
+					<img src="slideshow/planetarium.png">
+				</div>
+			</div>
+
+		<img class="mobile-gallery-close" src="arrow.png">
+
+	</div>
+
+	<script>
+		$(".mobile-gallery-overlay-span").click(function() {
+			$(".mobile-item").toggle();
+			$(".mobile-gallery-overlay-span").toggle();
+			$(".mobile-gallery-close").toggle();
+		});
+	</script>
+
+<script>
+	$(".mobile-gallery-close").click(function() {
+		$(".mobile-item").toggle();
+		$(".mobile-gallery-overlay-span").toggle();
+		$(".mobile-gallery-close").toggle();
+	});
+</script>
+
 <!-- Page 3 end-->
 
 <!-- Page 4 start-->
