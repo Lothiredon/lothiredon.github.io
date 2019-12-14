@@ -168,12 +168,11 @@ body{
 .hero-sub-text {
 	position: relative;
 	margin-top: 2%;
-	color: #eeeeee;
+	color: #dddddd;
 	font-family: 'Lato';
 	font-size: 3vmin;
 	text-align: center;
 	z-index: 20;
-	font-style: italic;
 }
 
 .button-container {
@@ -361,14 +360,19 @@ body{
 		flex-direction: column;
 	}
 	.about-image-wrapper {
-		width: 95%;
+		width: 90%;
+		margin-left: 5%;
+		margin-right: 5%;
 	}
 	.sub-text-wrapper h1 {
 		font-size: 10vmin;
 	}
 	.sub-text-column-wrapper p {
-		font-size: 4vmin;
-		line-height: 5vmin;
+		width: 90%;
+		margin-left: 5%;
+		margin-right: 5%;
+		font-size: 6vmin;
+		line-height: 7vmin;
 	}
 }
 
@@ -701,7 +705,7 @@ ol, ul{
     font-style: italic;
     margin: 10px auto;
 	font-family: 'Lato', sans-serif;
-	color: #959595;
+	color: #dddddd;
 }
 
 .cd-horizontal-timeline .events-content em::before {
@@ -958,6 +962,9 @@ ol, ul{
 
 /* If the screen size is 601px or less*/
 @media only screen and (max-width: 600px) {
+	.section4 h1{
+		font-size: 12vmin;
+	}
 	.cd-portrait-img-1, .cd-portrait-img-2, .cd-portrait-img-3 {
 		visibility: hidden;
 	}
@@ -975,7 +982,7 @@ ol, ul{
 	}
 	.portrait-textbox-1 p, .portrait-textbox-2 p, .portrait-textbox-3 p {
 		margin-top: 1%;
-		font-size: 4vmin;
+		font-size: 6vmin;
 	}
 }
 

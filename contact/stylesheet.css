@@ -188,13 +188,23 @@ body{
 .hero-sub-text {
 	position: relative;
 	margin-top: 5%;
-	color: #bbbbbb;
+	color: #dddddd;
 	font-family: 'Lato';
 	font-size: 3vmin;
 	text-align: center;
 	z-index: 20;
 	margin-left: 5%;
 	margin-right: 5%;
+}
+
+/* If the screen size is 601px or less*/
+@media only screen and (max-width: 600px) {
+	.hero-main-text {
+		font-size: 8vmin;
+    }
+	.hero-sub-text {
+		font-size: 4vmin;
+	}
 }
 
 /*===================================================================================*/
@@ -466,8 +476,6 @@ label {
 	text-align: center;
 }
 
-/*================Responsive Web Design================*/
-
 /* If the screen size is 601px or less*/
 @media only screen and (max-width: 600px) {
 	.copyright-footer p {
@@ -482,10 +490,6 @@ label {
 }
 
 @media only screen and (max-width: 600px) {
-    .copyright-footer p {
-		line-height: 100%;
-		font-size: 33%;
-	}
 	.section3 {
 		border-top: 2px solid;
 	}

@@ -8,6 +8,7 @@
 		crossorigin="anonymous">
   	</script>
 	<script src="https://github.com/kswedberg/jquery-smooth-scroll/blob/master/jquery.smooth-scroll.min.js"></script>
+
 	<!-- SMOOTH SCROLL -->
 	<script>
 		$(function() {
@@ -66,13 +67,14 @@
 	
 	<!-- Preloader -->
 	<script>
-		$(document).ready(function() {
-	
-		setTimeout(function(){
+	jQuery(window).on("load", function(){
+		$('body').addClass('loaded');
+
+		setTimeout(function () {
 			$('body').addClass('loaded');
-			}, 3000);
-	
-		});
+		}, 3000);
+
+	});
 	</script>
 	<!-- End of preloader -->
 	
@@ -110,6 +112,7 @@
 	<meta name="keywords" content="Lothiredon, Minecraft, Realm of Lothiredon, Creative Server, Minecraft Server">
 
 	<title>Realm of Lothiredon</title>
+	
 	<link rel="icon" href="favicon.ico" type="image/gif" sizes="32x32">
 	<link rel="stylesheet" href="stylesheet.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">

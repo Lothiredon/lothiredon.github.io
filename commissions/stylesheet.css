@@ -169,11 +169,24 @@ body{
 .hero-sub-text {
 	position: relative;
 	margin-top: 5%;
-	color: #bbbbbb;
+	color: #dddddd;
 	font-family: 'Lato';
 	font-size: 3vmin;
 	text-align: center;
 	z-index: 20;
+}
+
+/* If the screen size is 601px or less*/
+@media only screen and (max-width: 600px) {
+    .header-hero-image {
+		min-height: 100vmax;
+	}
+	.hero-main-text {
+		font-size: 8vmin;
+	}
+	.hero-sub-text {
+		font-size: 4vmin;
+	}
 }
 
 /*===================================================================================*/
@@ -226,17 +239,46 @@ body{
 	position: relative;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translateX(-50%);
 	text-align: center;
 	margin: 0;
-	height: 100%;
-	width: 100%;
+	height: 8vmax;
+	width: 8vmax;
 	z-index: 10;
 }
 
-.workflow, .workflow-arrow {
+.workflow {
+	height: auto;
+	width: 100%;
+}
+
+.workflow-arrow {
 	height: 8vmax;
 	width: 8vmax;
+}
+
+/* If the screen size is 601px or less*/
+@media only screen and (max-width: 600px) {
+	.workflow-wrapper {
+		flex-direction: column;
+	}
+	.workflow img {
+		margin-top: 2%;
+		height: 16vmax;
+		width: 16vmax;
+	}
+	.workflow-arrow {
+		left: 50%;
+		transform: translateX(-50%) rotate(90deg);
+		position: relative;
+		height: 16vmax;
+		width: 16vmax;
+	}
+	.workflow-arrow img {
+		top: 0;
+		height: 16vmax;
+		width: 16vmax;
+	}
 }
 
 /*================Workflow Text================*/
@@ -247,13 +289,13 @@ body{
 }
 
 .workflow-textbox {
-	width: 30%;
+	width: 100%;
 	height: auto;
 	font-family: 'Lato';
 	font-size: 3vmin;
 	position: relative;
 	z-index: 70;
-	margin: 0% 3% 0% 3%;
+	margin: 10% 0% 0% 0%;
 	border-bottom: 2px solid;
 	border-image: linear-gradient(to right,#0873fd 25%, #9362f7 50%, #b855ee 75%, #d745e2 100%) 1;
 	vertical-align: bottom;
@@ -276,6 +318,19 @@ body{
 .tb3{
 	border-bottom: 3px solid;
 	border-image: linear-gradient(to right,#ff0098 0%, #ff3d54 50%, #ee7315 100%) 1;
+}
+
+/* If the screen size is 601px or less*/
+@media only screen and (max-width: 600px) {
+	.section2 h1 {
+		font-size: 10vmin;
+	}
+	.workflow-textbox p {
+		font-size: 6vmin;
+	}
+	.workflow-textbox {
+		margin-top: 2%;
+	}
 }
 
 /*===================================================================================*/
@@ -331,11 +386,25 @@ body{
 
 /* If the screen size is 601px or less*/
 @media only screen and (max-width: 600px) {
+	.section3 {
+		height: 100vmin;
+	}
+	.quote-wrapper {
+		height: auto;
+		width: 100%;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		margin: 0% 0% 0% 0%;
+		position: absolute;
+	}
 	.quote {
-		font-size: 4vmin;
+		width: 90%;
+		font-size: 8vmin;
+		margin: 0% 5% 0% 5%;
 	}
 	.quoteauthor {
-		font-size: 2vmin;
+		font-size: 4vmin;
 	}
 }
 
@@ -372,6 +441,7 @@ body{
 	position: absolute;
 	text-align: left;
 }
+
 .commission-form-text h1 {
 	width: auto;
 	position: relative;
@@ -470,6 +540,59 @@ label {
 	font-size: 0.9vw;
 	color: black;
 	border-bottom: 1px solid #AAAAAA;
+}
+
+/* If the screen size is 601px or less*/
+@media only screen and (max-width: 600px) {
+	.commission-text-wrapper {
+		width: 90%;
+		height: 16vmin;
+		top: 10%;
+		margin: 5% 5% 0% 5%;
+		position: relative;
+	}
+	.commission-form-text {
+		width: 87%;
+		left: 50%;
+		top: 0%;
+		transform: translate(-50%);
+		position: relative;
+	}
+	.commission-form-text h1 {
+		font-size: 8vmin;
+	}
+	.form-container {
+		width: 90%;
+		height: auto;
+		margin: 0% 5% 0% 5%;
+		position: relative;
+	}
+	.form-container fieldset {
+		margin: 7.5% 0% 0% 0%;
+	}
+	label {
+		font-size: 6vmin;
+	}
+	input, textarea {
+		margin-top: 2%;
+	}
+	input {
+		font-size: 5vmin;
+	}
+	textarea {
+		font-size: 5vmin;
+		padding-bottom: 15vmin;
+	}
+	.button-success {
+		width: 40%;
+	}
+	.button-success p {
+		font-size: 6vmin;
+		text-align: center;
+		height: 2%;
+		width: auto;
+		line-height: 3vmin;
+	}
 }
 
 /*===================================================================================*/
