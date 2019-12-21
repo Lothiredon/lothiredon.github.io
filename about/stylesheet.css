@@ -235,7 +235,6 @@ body{
 	height: auto;
     z-index: 20;
 	background-color: #ffffff;
-	border-bottom: 2px solid #dddddd;
 	position: static;
 	top: 0;
 }
@@ -383,7 +382,7 @@ body{
 .section3 {
 	margin: 0% 0% 0% 0%;
 	width: 100%;
-	height: auto;
+	min-height: 41vmax;
     z-index: 10;
 	background-color: #ffffff;
 	position: relative;
@@ -406,6 +405,14 @@ body{
 	font-style: none;
 	text-align: center;
 	color: white;
+}
+
+@media only screen and (max-width: 600px) {
+
+	.section3{
+		min-height: 120vmin;
+	}
+
 }
 
 /*==================Timeline slideshow start==================*/
@@ -832,10 +839,10 @@ ol, ul{
 	margin: 0% 0% 0% 0%;
 	width: 100%;
 	height: auto;
-    z-index: 20;
 	background-color: #ffffff;
 	position: relative;
 	top: 0;
+	z-index: 10;
 }
 
 .section4 h1 {
@@ -1012,6 +1019,7 @@ ol, ul{
 	font-size: 100%;
 	line-height: 300%;
 	text-align: center;
+	margin: 0;
 }
 
 /*================Responsive Web Design================*/

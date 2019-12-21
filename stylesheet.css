@@ -592,7 +592,7 @@ video {
 	width: 100%;
 	height: auto;
     z-index: 10;
-	background-color: #ffffff;
+	background-color: #222222;
 	position: relative;
 	border-top: 2px solid #dddddd;
 	border-bottom: 2px solid #dddddd;
@@ -737,10 +737,15 @@ video {
 	to {opacity: 1}
 }
 
-/* On smaller screens, decrease text size */
+/* On smaller screens */
 @media only screen and (max-width: 600px) {
 	.section3 {
 		display: none;
+	}
+}
+@media only screen and (min-width: 1440px) {
+	.slideText {
+		font-size: 6vw;
 	}
 }
 
@@ -872,7 +877,6 @@ video {
 	max-height: 100%;
 	display: inline-block;
 	padding-right: 10%;
-	margin-bottom: 1%;
 }
 
 .social-wrapper img {
@@ -930,6 +934,7 @@ video {
 	font-size: 100%;
 	line-height: 300%;
 	text-align: center;
+	margin: 0;
 }
 
 /*================Responsive Web Design================*/
