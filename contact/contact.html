@@ -324,39 +324,80 @@
 <!-- Section 3 end-->
 
 <script>
-	$(".form-pencil").click(function(){
-		$(this).next(".form-container").toggleClass("toggled");
-		$(this).next(".form-container").toggleClass("display");
-		$("html, body").animate({ scrollTop: $(document).height() }, 1000);
+	var eventFired = 0;
+	const mq = window.matchMedia( "(min-width: 960px)" );
+
+	if (mq.matches) {
+		$(".form-pencil").css("visibility","visible");
+		$(".bug-form, .general-form, .application-form").css("width", "33.3333333%");
+		$(".contact-form, .contact-form h2, .form-container").css("display","block");
+	}
+	else {
+		$(".form-pencil").click(function(){
+			$(this).next(".form-container").toggleClass("toggled");
+			$(this).next(".form-container").toggleClass("display");
+			$("html, body").animate({ scrollTop: $(document).height() }, 1000);
+		});
+
+		$(".form-pencil-bug").click(function() {
+			$(".general-form, .application-form").toggleClass("no-width");
+			$(".contact-form").children().children().next("h2").not(this).toggleClass("no-display");
+			$(".contact-form").children().children().next(".form-pencil").not(this).toggleClass("no-display");
+			$(this).parent().parent().toggleClass("full-width");
+		});
+
+		$(".form-pencil-general").click(function() {
+			$(".bug-form, .application-form").toggleClass("no-width");
+			$(".contact-form").children().children().next("h2").not(this).toggleClass("no-display");
+			$(".contact-form").children().children().next(".form-pencil").not(this).toggleClass("no-display");
+			$(this).parent().parent().toggleClass("full-width");
+		});
+
+		$(".form-pencil-application").click(function() {
+			$(".general-form, .bug-form").toggleClass("no-width");
+			$(".contact-form").children().children().next("h2").not(this).toggleClass("no-display");
+			$(".contact-form").children().children().next(".form-pencil").not(this).toggleClass("no-display");
+			$(this).parent().parent().toggleClass("full-width");
+		});
+	}
+
+	$(window).on('resize', function() {
+		if (!eventFired) {
+			if ($(window).width() < 960) {
+
+			} else {
+
+			}
+		}
 	});
 </script>
 
-<script>
+<!--<script>
 	$(".form-pencil-bug").click(function() {
 		$(".general-form, .application-form").toggleClass("no-width");
 		$(".contact-form").children().children().next("h2").not(this).toggleClass("no-display");
 		$(".contact-form").children().children().next(".form-pencil").not(this).toggleClass("no-display");
 		$(this).parent().parent().toggleClass("full-width");
 	});
-</script>
+</script>-->
 
-<script>
+<!--<script>
 	$(".form-pencil-general").click(function() {
 		$(".bug-form, .application-form").toggleClass("no-width");
 		$(".contact-form").children().children().next("h2").not(this).toggleClass("no-display");
 		$(".contact-form").children().children().next(".form-pencil").not(this).toggleClass("no-display");
 		$(this).parent().parent().toggleClass("full-width");
 	});
-</script>
+</script>-->
 
-<script>
+<!--<script>
 	$(".form-pencil-application").click(function() {
 		$(".general-form, .bug-form").toggleClass("no-width");
 		$(".contact-form").children().children().next("h2").not(this).toggleClass("no-display");
 		$(".contact-form").children().children().next(".form-pencil").not(this).toggleClass("no-display");
 		$(this).parent().parent().toggleClass("full-width");
 	});
-</script>
+</script>-->
 
 </body>
 </html>
