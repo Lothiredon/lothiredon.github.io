@@ -183,7 +183,7 @@
 						<input id="images" name="image-link" required placeholder="Builder/Redstone/Command block only. Otherwise, enter N/A." />
 				</fieldset>
 	
-				<button class="button-success"><p>Send</p></button>
+				<input type="submit" value="Submit" class="button-success"></input>
 	
 				</form>
 			<!--Form end-->
@@ -210,14 +210,13 @@
 					<form id="gform" name="contactform" method="post" class="pure-form pure-form-stacked" action="contact-form-handler.php">
 
 							<fieldset class="field-group">
-								<label for="name-general">In-game Name</label>
+								<label for="name-general" required>In-game Name</label>
 								<input id="name-general" name="first-name" placeholder="Please enter your in-game name." />
 							</fieldset>
 
 							<fieldset class="field-group">
 									<label for="email-general">Email Address</label>
-									<input id="email-general" name="email-address" type="email" value=""
-									required placeholder="email@domain.com"/>
+									<input id="email-general" name="email-address" type="email" value="" required placeholder="email@domain.com"/>
 									<span id="email-invalid" style="display:none">
 									  Must be a valid email address</span>
 							</fieldset>
@@ -228,7 +227,7 @@
 									placeholder="Please tell us what's on your mind."></textarea>
 							</fieldset>
 
-							<button class="button-success button-2"><p>Send</p></button>
+							<input type="submit" value="Submit" class="button-success button-2"></input>
 
 					</form>
 				<!--Form end-->
@@ -293,7 +292,7 @@
 								<input id="images-bug" name="image-link" required placeholder="Please paste links to images/videos here." />
 						</fieldset>
 
-						<button class="button-success button-2"><p>Send</p></button>
+						<input type="submit" value="Submit" class="button-success button-2"></input>
 					</form>
 				<!--Form end-->
 
