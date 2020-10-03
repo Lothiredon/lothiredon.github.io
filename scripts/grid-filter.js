@@ -37,6 +37,28 @@ for (const btn of btns) {
 // SET THUMBNAIL VIEW - CHANGE CSS VARIABLE
 rangeInput.addEventListener("input", function() {
   document.documentElement.style.setProperty("--minRangeValue",`${this.value}px`);
+
+      //Change slide thumb color on way up
+    if (this.value > 250) {
+      inputRange.classList.add('ltpurple');
+    }
+    if (this.value > 300) {
+        inputRange.classList.add('purple');
+    }
+    if (this.value > 350) {
+        inputRange.classList.add('pink');
+    }
+
+    //Change slide thumb color on way down
+    if (this.value < 250) {
+        inputRange.classList.remove('ltpurple');
+    }
+    if (this.value < 300) {
+        inputRange.classList.remove('purple');
+    }
+    if (this.value < 350) {
+        inputRange.classList.remove('pink');
+    }
 });
 
 // SEARCH FUNCTIONALITY
@@ -62,3 +84,31 @@ function keyupHandler() {
   }
   photosCounter.textContent = filteredArray.length;
 }
+
+var inputRange = document.getElementsByClassName('range')[0],
+    /*maxValue = 1,*/ // the higher the smoother when dragging
+    /*speed = 5,*/
+    currValue;
+
+// set equal to HTML input range min and max value
+inputRange.min = 200;
+inputRange.max = 400;
+
+// handle range animation
+function animateHandler() {
+
+  // calculate gradient transition
+  var transX = currValue - maxValue;
+  
+  // update input range
+  inputRange.value = currValue;
+
+  // decrement value
+  currValue = currValue - speed;
+}
+
+// bind events
+inputRange.addEventListener('mousedown', unlockStartHandler, false);
+inputRange.addEventListener('mousestart', unlockStartHandler, false);
+inputRange.addEventListener('mouseup', unlockEndHandler, false);
+inputRange.addEventListener('touchend', unlockEndHandler, false);
