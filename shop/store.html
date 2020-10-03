@@ -5,7 +5,7 @@
 	<script src="https://kit.fontawesome.com/1c0a337638.js" crossorigin="anonymous"></script>
 	<link href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all" rel="stylesheet">
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
 	<script src="../scripts/ResizeSensor.js"></script>
 	<script src="../scripts/ElementQueries.js"></script>
@@ -104,15 +104,38 @@
 
 			<div class="menudiv" id="menudiv">
 				<ul class="menu">
-					<li id="menubutton1"><a href="../index.html">HOME</a></li>
-					<li id="menubutton2"><a href="../commissions/commissions.html">COMMISSIONS</a></li>
-					<li id="menubutton3"><a href="../about/about.hmtl">ABOUT</a></li>
-					<li id="menubutton4"><a href="../contact/contact.html">CONTACT</a></li>
-					<li id="menubutton5"><a href="" class="active">STORE</a></li>
+					<div class="menu-link-wrapper">	
+						<li id="menubutton1"><a href="../index.html">HOME</a></li>
+						<li id="menubutton2"><a href="../commissions/commissions.html">COMMISSIONS</a></li>
+						<li id="menubutton3"><a href="../about/about.hmtl">ABOUT</a></li>
+						<li id="menubutton4"><a href="../contact/contact.html">CONTACT</a></li>
+						<li id="menubutton5"><a href="" class="active">STORE</a></li>
+					</div>
+					<figure class="shopping-cart">
+						<object type="image/svg+xml" data="shopping-cart.svg"></object>
+					</figure>
 				</ul>
 			</div>
-			
 	<!--=========MENU END=========-->
+
+
+	<!--=========CURTAIN START=========-->
+		<!-- The overlay -->
+		<div id="cart-curtain" class="overlay">
+
+		<!-- Button to close the overlay navigation -->
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		
+			<!-- Overlay content -->
+		<div class="overlay-content">
+			<a href="#">About</a>
+				<a href="#">Services</a>
+				<a href="#">Clients</a>
+				<a href="#">Contact</a>
+			</div>
+		</div>
+	<!--=========CURTAIN END=========-->
+			
 		<div class="hero-wrapper">
 			<div class="hero-text-wrapper">
 				<h1>HIGH QUALITY CONTENT, JUST FOR YOU.</h1>
@@ -336,6 +359,7 @@
 </div>
 <!--Grid script implement-->
 <script src="../scripts/grid-filter.js"></script>
+<script src="../scripts/cart-curtain.js"></script>
 
 </body>
 
