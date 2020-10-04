@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="16.933332mm"
+   height="16.933332mm"
+   viewBox="0 0 16.933332 16.933332"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="cross.svg">
+  <defs
+     id="defs2">
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Lightness-Contrast"
+       id="filter36">
+      <feColorMatrix
+         values="-1 0 0 0 1 0 0 -1 0 1 0 -1 0 0 1 -0.21 -0.72 -0.07 2 0 "
+         result="fbSourceGraphic"
+         id="feColorMatrix34" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix350" />
+      <feColorMatrix
+         id="feColorMatrix352"
+         values="0 0 0 -0.283854 0.5 0 0 0 -0.283854 0.5 0 0 0 -0.283854 0.5 0 0 0 1 0"
+         in="fbSourceGraphic" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.979899"
+     inkscape:cx="-11.800934"
+     inkscape:cy="31.617711"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-280.06668)">
+    <image
+       y="280.06668"
+       x="4.3368087e-19"
+       id="image18"
+       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACx jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJaSURBVHhe5ZtdbsIwEIRpT8EBOAbH6EG4b3uL PvaBeikj2ckk+GfX9jYrfaIZJXi/ETxVvN3v99OR5/35yub8fP0Ps+myVcA18Bm4Pa58jziIizit R74CC66B7wDmFmD3eUB2x4iTuCX3JBeBpTzGYwmxPGZVQvzAljzGUwlMHpOUgAfOgT15jIcS9uQx 4irOyScg50GZmUsodmh+g4mo2j1+A+CxhOqdk4sITyU07boKIjyU0LwjDSNmLkFlNxoumLEEtZ1o SJipBNVdaLjBDCWo70DDHUaWYHI2DV8wogSzM2mYQc8STM+iYSY9SjA/g4YFWC5oLi/QsBCLRbvI CzSsQHPhbvICDSvRWLyrvEDDBloEussLNGykRmSIvEBDBUqEhskLNFQiVyxnTOQFGiqiUYKZvEBD ZVpKMJUXaGhATQnm8gINjSgpoYu8sPfv8WMMa8WAQ38FauQx5iXQUJEWeYxpCTRUQkMeY1YCDRXI lZf7Su5lZzVBw0ZqhIaVQMMGWkSGlEDDSjQEupdAwwo0F+9aAg0LsVi4Wwk0LMBy0S4l0DCTHgua n0HDDHrIA9OzaPiCnvLA7Ewa7jBCHpicTcMNRsoD9R1oSJhBHqjuQsMFM8kDtZ1oGDGjPFDZjYZP ZpYHzTvSMOBBHjTtugoCnuRB9c7JRcCjPKjavfkNJqPYAQ9eAj+BVzOzPMgpQVzFOfkEfAT2SvAg D/ZKEEdxfdy7fHCrBE/ygJWQyAvxA2BZgkd5EJewkheSiwiU4FkeiAOVF/Z+PX4JfP396X42XQ7+ 8/nT6RdIk2+ERuaPHQAAAABJRU5ErkJggg== "
+       preserveAspectRatio="none"
+       height="16.933332"
+       width="16.933332"
+       style="filter:url(#filter36)" />
+  </g>
+</svg>

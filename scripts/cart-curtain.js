@@ -35,12 +35,14 @@
 }*/
 
 window.onclick = e => {
-    if($(e.target).hasClass("overlay")) {
+    if($(e.target).is(".overlay, .closebtn")) {
       // Do close stuff
         document.getElementById("cart-curtain").style.width = "0%";
+        document.getElementById("shopping-cart").style.visibility = "visible";
     }
-    else if($(e.target).hasClass("shopping-cart" || "closebtn")) {
+    else if($(e.target).is(".shopping-cart")) {
       // Do open staff
-        document.getElementById("cart-curtain").style.width = "25%";
+        document.getElementById("cart-curtain").style.width = "20%";
+        document.getElementById("shopping-cart").style.visibility = "hidden";
     }
   };

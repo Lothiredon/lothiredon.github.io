@@ -111,8 +111,8 @@
 						<li id="menubutton4"><a href="../contact/contact.html">CONTACT</a></li>
 						<li id="menubutton5"><a href="" class="active">STORE</a></li>
 					</div>
-					<figure class="shopping-cart">
-						<object type="image/svg+xml" data="shopping-cart.svg"></object>
+					<figure class="shopping-cart" id="shopping-cart">
+						<object type="image/svg+xml" data="../img/shopping-cart.svg"></object>
 					</figure>
 				</ul>
 			</div>
@@ -123,26 +123,36 @@
 		<!-- The overlay -->
 		<div id="cart-curtain" class="overlay">
 
-		<!-- Button to close the overlay navigation -->
-		<a href="javascript:void(0)" class="closebtn">&times;</a>
-		
-			<!-- Overlay content -->
-		<div class="overlay-content">
-			<a href="#">About</a>
-				<a href="#">Services</a>
-				<a href="#">Clients</a>
-				<a href="#">Contact</a>
+			<!-- Button to close the overlay navigation -->
+			<div class="cart-header">
+				<!--Shopping cart title-->
+				<div class="cart-header-wrapper">
+					<h1 id="shopping-cart-header">SHOPPING CART</h1>
+				</div>
+
+				<!--Close button X-->
+				<figure class="closebtn">
+					<object type="image/svg+xml" data="../img/cross.svg"></object>
+				</figure>
 			</div>
-		</div>
-	<!--=========CURTAIN END=========-->
 			
-		<div class="hero-wrapper">
-			<div class="hero-text-wrapper">
-				<h1>HIGH QUALITY CONTENT, JUST FOR YOU.</h1>
-				<p>FROM TERRAIN TO HUBS TO MINIGAMES, WE'VE GOT IT.</p>
+				<!-- Overlay content -->
+			<div class="overlay-content">
+				<a href="#">About</a>
+					<a href="#">Services</a>
+					<a href="#">Clients</a>
+					<a href="#">Contact</a>
+				</div>
+			</div>
+		<!--=========CURTAIN END=========-->
+				
+			<div class="hero-wrapper">
+				<div class="hero-text-wrapper">
+					<h1>HIGH QUALITY CONTENT, JUST FOR YOU.</h1>
+					<p>FROM TERRAIN TO HUBS TO MINIGAMES, WE'VE GOT IT.</p>
+				</div>
 			</div>
 		</div>
-	</div>
 <!--=========================================================-->
 <!--=                       SECTION 2                       =-->
 <!--=========================================================-->
