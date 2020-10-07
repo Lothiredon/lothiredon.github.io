@@ -221,25 +221,10 @@ body{
 /* Position the content inside the overlay */
 .overlay-content {
 	position: relative;
-	top: 25%;
 	width: 100%;
-	text-align: center;
-	margin-top: 30px;
+	margin-top: 2%;
+	margin-left: 4%;
 	z-index: 10;
-}
-  
-/* The navigation links inside the overlay */
-.overlay a {
-	text-decoration: none;
-	font-size: 2rem;
-	color: #818181;
-	display: block;
-	transition: 0.3s;
-}
-  
-/* When you mouse over the navigation links, change their color */
-.overlay a:hover, .overlay a:focus {
-	color: #f1f1f1;
 }
 
 .cart-header {
@@ -291,6 +276,78 @@ body{
 	}
 }
 
+/*======Cart items======*/
+.cart-item-list {
+	height: 100%;
+	width: 85%;
+	padding: 0;
+}
+
+.cart-item {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+}
+
+.cart-item-img-wrapper,.cart-item-text-wrapper {
+	width: 50%;
+}
+
+.cart-item-text-wrapper {
+	top: 0;
+}
+
+.cart-item-img-wrapper img {
+	height: 100%;
+	width: 85%;
+	margin: 5%;
+}
+
+.cart-item-list p {
+	margin: 0.5rem;
+	padding: 0;
+	font-size: 1rem;
+}
+
+.cart-item-title {
+	color: var(--gray);
+}
+
+.cart-item-cost {
+	font-weight: bold;
+	color: white;
+}
+
+.cart-item-quantity {
+	height: auto;
+	width: 40%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	border: 1px solid white;
+}
+
+.cart-item-quantity p {
+	color: var(--gray)
+}
+
+.cart-item-quantity figure {
+	margin: 0% 3% 0% 1%;
+	padding: 0;
+	text-align: center;
+}
+
+.cart-item-quantity object {
+	height: 1rem;
+	width: 1rem;
+	display: flex;
+}
+
+.cart-item-quantity object svg g image {
+	align-items: center;
+	fill: var(--gray);
+}
 
 /*===================================================================================*/
 /*                                  HERO IMAGE                                       */
