@@ -138,14 +138,13 @@
 			
 				<!-- Overlay content -->
 			<div class="overlay-content">
-				<ul class="cart-item-list">
+				<table class="cart-item-list show-cart table">
 
-					<!--List item-->
+					<!--List item
 					<li class=cart-item>
 						<div class=cart-item-img-wrapper>
 							<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/unsplash_nature1.jpg">
 						</div>
-						
 						<div class="cart-item-text-wrapper">	
 							<p class="cart-item-title">Test item</p>
 							<p class="cart-item-cost">$cost</p>
@@ -160,10 +159,9 @@
 								</figure>
 							</div>
 						</div>
+					</li>-->
 
-					</li>
-
-				</ul>
+				</table>
 			</div>
 		</div>
 		<!--=========CURTAIN END=========-->
@@ -184,202 +182,168 @@
 
 	<section class="gallery">
 		<div class="container">
-		  <div class="toolbar">
+		<div class="toolbar">
+
 			<div class="search-wrapper">
-			  <input type="search" placeholder="Search for products">
-			  <div class="counter">
-				Total products: <span>12</span></div>
+				<input type="search" placeholder="Search for products">
+				<div class="counter">
+					Total products: <span>12</span>
+				</div>
 			</div>
+
 			<ul class="view-options">
-			  <li class="zoom">
-				<input type="range" min="200" max="400" value="300" class="range blue">
-			  </li>
-			  <li class="show-grid active">
-				<button disabled>
-				  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/grid-view.svg" alt="grid view">  
-				</button>
-			  </li>
-			  <li class="show-list">
-				<button>
-				  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/list-view.svg" alt="list view">  
-				</button>
-			  </li>
+				<li class="zoom">
+					<input type="range" min="200" max="400" value="300" class="range blue">
+				</li>
+				<li class="show-grid active">
+					<button disabled>
+					<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/grid-view.svg" alt="grid view">  
+					</button>
+				</li>
+				<li class="show-list">
+					<button>
+					<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/list-view.svg" alt="list view">  
+					</button>
+				</li>
 			</ul>
-		  </div>
+
+		</div>
 
 		<!--===========================-->
 		<!--=     Grid view start     =-->
 		<!--===========================-->
 
-		  <ol class="image-list grid-view">
+		<ol class="image-list grid-view">
 
 			<li>
-			  <figure>
-				<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/unsplash_nature1.jpg" alt="">
-				<div class="figcaption-wrapper">
-					<figcaption>
-					<p>Product #</p>
-					<p>Product # description</a></p>
-					<p class="product-cost">$10.00</p>
-					<button class="purchase"><a href="product#/product#.html">Purchase</a></button>
-					</figcaption>
-				</div>
-			  </figure>
+				<figure>
+					<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/unsplash_nature1.jpg" alt="">
+					<div class="figcaption-wrapper">
+						<figcaption>
+							<p>Product #</p>
+							<p>Product # description</a></p>
+							<p class="product-cost">$10.00</p>
+							<div class="add-to-cart-wrapper">
+								<a href="#" data-name="Testmap 1" data-price="10.00" class="add-to-cart">Purchase</a>
+							</div>
+						</figcaption>
+					</div>
+				</figure>
 			</li>
 
 			<li>
 				<figure>
-				  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/unsplash_nature1.jpg" alt="">
-				  <div class="figcaption-wrapper">
-					  <figcaption>
-					  <p>Product #</p>
-					  <p>Product # description</a></p>
-					  <p class="product-cost">$10.00</p>
-					  <button class="purchase"><a href="product#/product#.html">Purchase</a></button>
-					  </figcaption>
-				  </div>
+					<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/unsplash_nature1.jpg" alt="">
+					<div class="figcaption-wrapper">
+						<figcaption>
+							<p>Product #</p>
+							<p>Product # description</a></p>
+							<p class="product-cost">$10.00</p>
+							<div class="add-to-cart-wrapper">
+								<a href="#" data-name="Testmap 1" data-price="10.00" class="add-to-cart">Purchase</a>
+							</div>
+						</figcaption>
+					</div>
 				</figure>
-			  </li>
-
-			  <li>
-				<figure>
-				  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/unsplash_nature1.jpg" alt="">
-				  <div class="figcaption-wrapper">
-					  <figcaption>
-					  <p>Product #</p>
-					  <p>Product # description</a></p>
-					  <p class="product-cost">$10.00</p>
-					  <button class="purchase"><a href="product#/product#.html">Purchase</a></button>
-					  </figcaption>
-				  </div>
-				</figure>
-			  </li>
-
-			  <li>
-				<figure>
-				  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/unsplash_nature1.jpg" alt="">
-				  <div class="figcaption-wrapper">
-					  <figcaption>
-					  <p>Product #</p>
-					  <p>Product # description</a></p>
-					  <p class="product-cost">$10.00</p>
-					  <button class="purchase"><a href="product#/product#.html">Purchase</a></button>
-					  </figcaption>
-				  </div>
-				</figure>
-			  </li>
-
-			  <li>
-				<figure>
-				  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/unsplash_nature1.jpg" alt="">
-				  <div class="figcaption-wrapper">
-					  <figcaption>
-					  <p>Product #</p>
-					  <p>Product # description</a></p>
-					  <p class="product-cost">$10.00</p>
-					  <button class="purchase"><a href="product#/product#.html">Purchase</a></button>
-					  </figcaption>
-				  </div>
-				</figure>
-			  </li>
-			  			<li>
-			  <figure>
-				<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/unsplash_nature1.jpg" alt="">
-				<div class="figcaption-wrapper">
-					<figcaption>
-					<p>Product #</p>
-					<p>Product # description</a></p>
-					<p class="product-cost">$10.00</p>
-					<button class="purchase"><a href="product#/product#.html">Purchase</a></button>
-					</figcaption>
-				</div>
-			  </figure>
 			</li>
 
 			<li>
 				<figure>
-				  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/unsplash_nature1.jpg" alt="">
-				  <div class="figcaption-wrapper">
-					  <figcaption>
-					  <p>Product #</p>
-					  <p>Product # description</a></p>
-					  <p class="product-cost">$10.00</p>
-					  <button class="purchase"><a href="product#/product#.html">Purchase</a></button>
-					  </figcaption>
-				  </div>
+					<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/unsplash_nature1.jpg" alt="">
+					<div class="figcaption-wrapper">
+						<figcaption>
+							<p>Product #</p>
+							<p>Product # description</a></p>
+							<p class="product-cost">$10.00</p>
+							<div class="add-to-cart-wrapper">
+								<a href="#" data-name="Testmap 1" data-price="10.00" class="add-to-cart">Purchase</a>
+							</div>
+						</figcaption>
+					</div>
 				</figure>
-			  </li>
+			</li>
 
-			  <li>
+			<li>
 				<figure>
-				  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/unsplash_nature1.jpg" alt="">
-				  <div class="figcaption-wrapper">
-					  <figcaption>
-					  <p>Product #</p>
-					  <p>Product # description</a></p>
-					  <p class="product-cost">$10.00</p>
-					  <button class="purchase"><a href="product#/product#.html">Purchase</a></button>
-					  </figcaption>
-				  </div>
+					<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/unsplash_nature1.jpg" alt="">
+					<div class="figcaption-wrapper">
+						<figcaption>
+							<p>Product #</p>
+							<p>Product # description</a></p>
+							<p class="product-cost">$10.00</p>
+							<div class="add-to-cart-wrapper">
+								<a href="#" data-name="Testmap 1" data-price="10.00" class="add-to-cart">Purchase</a>
+							</div>
+						</figcaption>
+					</div>
 				</figure>
-			  </li>
+			</li>
 
-			  <li>
+			<li>
 				<figure>
-				  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/unsplash_nature1.jpg" alt="">
-				  <div class="figcaption-wrapper">
-					  <figcaption>
-					  <p>Product #</p>
-					  <p>Product # description</a></p>
-					  <p class="product-cost">$10.00</p>
-					  <button class="purchase"><a href="product#/product#.html">Purchase</a></button>
-					  </figcaption>
-				  </div>
+					<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/unsplash_nature1.jpg" alt="">
+					<div class="figcaption-wrapper">
+						<figcaption>
+							<p>Product #</p>
+							<p>Product # description</a></p>
+							<p class="product-cost">$10.00</p>
+							<div class="add-to-cart-wrapper">
+								<a href="#" data-name="Testmap 1" data-price="10.00" class="add-to-cart">Purchase</a>
+							</div>
+						</figcaption>
+					</div>
 				</figure>
-			  </li>
+			</li>
 
-			  <li>
+			<li>
 				<figure>
-				  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/unsplash_nature1.jpg" alt="">
-				  <div class="figcaption-wrapper">
-					  <figcaption>
-					  <p>Product #</p>
-					  <p>Product # description</a></p>
-					  <p class="product-cost">$10.00</p>
-					  <button class="purchase"><a href="product#/product#.html">Purchase</a></button>
-					  </figcaption>
-				  </div>
+					<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/unsplash_nature1.jpg" alt="">
+					<div class="figcaption-wrapper">
+						<figcaption>
+							<p>Product #</p>
+							<p>Product # description</a></p>
+							<p class="product-cost">$10.00</p>
+							<div class="add-to-cart-wrapper">
+								<a href="#" data-name="Testmap 1" data-price="10.00" class="add-to-cart">Purchase</a>
+							</div>
+						</figcaption>
+					</div>
 				</figure>
-			  </li>
+			</li>
 
-			  <li>
+			<li>
 				<figure>
-				  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/unsplash_nature1.jpg" alt="">
-				  <div class="figcaption-wrapper">
-					  <figcaption>
-					  <p>Product #</p>
-					  <p>Product # description</a></p>
-					  <p class="product-cost">$10.00</p>
-					  <button class="purchase"><a href="product#/product#.html">Purchase</a></button>
-					  </figcaption>
-				  </div>
+					<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/unsplash_nature1.jpg" alt="">
+					<div class="figcaption-wrapper">
+						<figcaption>
+							<p>Product #</p>
+							<p>Product # description</a></p>
+							<p class="product-cost">$10.00</p>
+							<div class="add-to-cart-wrapper">
+								<a href="#" data-name="Testmap 1" data-price="10.00" class="add-to-cart">Purchase</a>
+							</div>
+						</figcaption>
+					</div>
 				</figure>
-			  </li>
+			</li>
 
-			  <li>
+			<li>
 				<figure>
-				  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/unsplash_nature1.jpg" alt="">
-				  <div class="figcaption-wrapper">
-					  <figcaption>
-					  <p>Product #</p>
-					  <p>Product # description</a></p>
-					  <p class="product-cost">$10.00</p>
-					  <button class="purchase"><a href="product#/product#.html">Purchase</a></button>
-					  </figcaption>
-				  </div>
+					<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/unsplash_nature1.jpg" alt="">
+					<div class="figcaption-wrapper">
+						<figcaption>
+							<p>Product #</p>
+							<p>Product # description</a></p>
+							<p class="product-cost">$10.00</p>
+							<div class="add-to-cart-wrapper">
+								<a href="#" data-name="Testmap 1" data-price="10.00" class="add-to-cart">Purchase</a>
+							</div>
+						</figcaption>
+					</div>
 				</figure>
-			  </li>
-		  </ol>
+			</li>
+
+		</ol>
 
 		<!--===========================-->
 		<!--=      Grid view end      =-->
@@ -392,6 +356,7 @@
 <!--Grid script implement-->
 <script src="../scripts/grid-filter.js"></script>
 <script src="../scripts/cart-curtain.js"></script>
+<script src="../scripts/shopping-cart.js"></script>
 
 </body>
 

@@ -35,14 +35,28 @@
 }*/
 
 window.onclick = e => {
-    if($(e.target).is(".overlay, .closebtn")) {
-      // Do close stuff
-        document.getElementById("cart-curtain").style.width = "0%";
-        document.getElementById("shopping-cart").style.visibility = "visible";
+    if ($(window).width() < 960) {
+        if($(e.target).is(".overlay, .closebtn")) {
+        // Do close stuff
+            document.getElementById("cart-curtain").style.width = "0%";
+            document.getElementById("shopping-cart").style.visibility = "visible";
+        }
+        else if($(e.target).is(".shopping-cart")) {
+        // Do open staff
+            document.getElementById("cart-curtain").style.width = "100%";
+            document.getElementById("shopping-cart").style.visibility = "hidden";
+        }
     }
-    else if($(e.target).is(".shopping-cart")) {
-      // Do open staff
-        document.getElementById("cart-curtain").style.width = "20%";
-        document.getElementById("shopping-cart").style.visibility = "hidden";
+    else {
+        if($(e.target).is(".overlay, .closebtn")) {
+            // Do close stuff
+                document.getElementById("cart-curtain").style.width = "0%";
+                document.getElementById("shopping-cart").style.visibility = "visible";
+            }
+            else if($(e.target).is(".shopping-cart")) {
+            // Do open staff
+                document.getElementById("cart-curtain").style.width = "20%";
+                document.getElementById("shopping-cart").style.visibility = "hidden";
+        }
     }
-  };
+};
