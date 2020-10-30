@@ -253,7 +253,7 @@ body{
 .cart-header-wrapper h1 {
 	color: var(--black);
 	margin: 0;
-	padding: 0% 5% 0% 5%;
+	margin-left: 10%;
 	font-size: 1.5vw;
 	transition: 1s all ease-in-out;
 	white-space: nowrap;
@@ -264,6 +264,7 @@ body{
 	z-index: 200;
 	display: block;
 	margin: 0;
+	margin-right: 5%;
 	height: 50%;
 	width: 10%;
 	cursor: pointer;
@@ -336,6 +337,10 @@ body{
 	color: white;
 }
 
+.cart-item-quantity-wrapper {
+	width: 20% !important;
+}
+
 .cart-item-quantity {
 	height: auto;
 	width: auto;
@@ -356,6 +361,7 @@ body{
 	font-family: 'Open Sans';
 	text-align: center;
 	font-size: 1rem;
+	box-sizing: border-box;
 }
 
 .plus-item, .minus-item, .delete-item, .cart-item-total {

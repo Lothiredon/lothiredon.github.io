@@ -167,7 +167,7 @@ function displayCart() {
       "<td class='cart-item-cost'>" +
       item.price.toFixed(2) +
       "</td>" +
-      "<td><div class='cart-item-quantity'><button class='minus-item' data-name='" +
+      "<td class='cart-item-quantity-wrapper'><div class='cart-item-quantity'><button class='minus-item' data-name='" +
       item.name +
       "'>-</button>" +
       "<input type='number' class='item-count' data-name='" +
