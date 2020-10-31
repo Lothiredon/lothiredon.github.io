@@ -8,7 +8,7 @@ include 'functions.php';
 // Connect to MySQL database
 $pdo = pdo_connect_mysql();
 // Page is set to home (home.php) by default, so when the visitor visits that will be the page they see.
-$page = isset($_GET['page']) && file_exists($_GET['page'] . '.php') ? $_GET['page'] : 'home';
+$page = isset($_GET['page']) && file_exists($_GET['page'] . '.php') ? $_GET['page'] : 'store';
 // Output error variable
 $error = '';
 // Include the requested page

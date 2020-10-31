@@ -48,35 +48,43 @@ echo <<<EOT
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,minimum-scale=1">
 		<title>$title</title>
-        <link rel="icon" type="image/png" href="favicon.png">
-		<link href="style.css" rel="stylesheet" type="text/css">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+        <link rel="icon" href="../img/favicon.ico" type="image/gif" sizes="32x32">
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <link href="stylesheet.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	</head>
 	<body>
         <header>
             <div class="content-wrapper">
-                <h1>$site_name</h1>
-                <nav>
-                    <a href="index.php">Home</a>
-                    <a href="index.php?page=products">Products</a>
-					<a href="index.php?page=myaccount">My Account</a>
-                    $admin_link
-                </nav>
-                <div class="link-icons">
-                    <div class="search">
-						<i class="fas fa-search"></i>
-						<input type="text" placeholder="Search...">
-					</div>
-                    <a href="index.php?page=cart" title="Shopping Cart">
-						<i class="fas fa-shopping-cart"></i>
-						<span>$num_items_in_cart</span>
-					</a>
-                    $logout_link
-					<a class="responsive-toggle" href="#">
-						<i class="fas fa-bars"></i>
-					</a>
+                <div class="menudiv" id="menudiv">
+                    <ul class="menu">
+                        <div class="menu-link-wrapper">	
+                            <li id="menubutton1"><a href="../home/index.html">HOME</a></li>
+                            <li id="menubutton2"><a href="../commissions/commissions.html">COMMISSIONS</a></li>
+                            <li id="menubutton3"><a href="../about/about.hmtl">ABOUT</a></li>
+                            <li id="menubutton4"><a href="../contact/contact.html">CONTACT</a></li>
+                            <li id="menubutton5"><a href="" class="active">STORE</a></li>
+                        </div>
+                        <div class="link-icons">
+                            <div class="search" id="search">
+                                <i class="fas fa-search" id="searchi"></i>
+                                <input class="noDisplay" type="text" placeholder="Search..." style="display:none">
+                            </div>
+                            <a href="index.php?page=cart" title="Shopping Cart">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>$num_items_in_cart</span>
+                            </a>
+                            $logout_link
+                            <a class="responsive-toggle" href="#">
+                                <i class="fas fa-bars"></i>
+                            </a>
+                        </div>
+                    </ul>
                 </div>
             </div>
+
+            <script src="../scripts/menu-bg-color.js"></script>
         </header>
         <main>
 EOT;
@@ -88,8 +96,13 @@ $currency_code = currency_code;
 echo <<<EOT
         </main>
         <footer>
-            <div class="content-wrapper">
-                <p>&copy; $year, Shopping Cart System</p>
+            <div class="footer">
+                
+                <div class="copyright-footer">
+                
+                    <p>&copy; $year, REALM OF LOTHIREDON | ALL RIGHTS RESERVED.</p>
+                
+                </div> 
             </div>
         </footer>
         <script>

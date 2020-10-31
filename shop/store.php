@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html>
-
 <?php
 // Prevent direct access to file
 defined('shoppingcart') or exit;
@@ -10,7 +7,7 @@ $stmt->execute();
 $recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
-<?=template_header('Home')?>
+<?=template_header('Shop - Realm of Lothiredon')?>
 
 <head>
 	<script src="https://kit.fontawesome.com/1c0a337638.js" crossorigin="anonymous"></script>
@@ -113,7 +110,7 @@ $recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	<div name="top" class="section1">
 		<a id="sec1" class="smooth"></a>
 
-			<div class="menudiv" id="menudiv">
+			<!--<div class="menudiv" id="menudiv">
 				<ul class="menu">
 					<div class="menu-link-wrapper">	
 						<li id="menubutton1"><a href="../home/index.html">HOME</a></li>
@@ -126,7 +123,7 @@ $recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 						<object type="image/svg+xml" data="../img/shopping-cart.svg"></object>
 					</figure>
 				</ul>
-			</div>
+			</div>-->
 	<!--=========MENU END=========-->
 
 
@@ -191,8 +188,28 @@ $recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <div class="section2">
 	<a id="sec2" class="smooth"></a>
 
+	<div class="recentlyadded content-wrapper">
+		<h2>Recently Added Products</h2>
+		<div class="products">
+			<?php foreach ($recently_added_products as $product): ?>
+			<a href="index.php?page=product&id=<?=$product['id']?>" class="product">
+				<?php if (!empty($product['img']) && file_exists('imgs/' . $product['img'])): ?>
+				<img src="imgs/<?=$product['img']?>" width="200" height="200" alt="<?=$product['name']?>">
+				<?php endif; ?>
+				<span class="name"><?=$product['name']?></span>
+				<span class="price">
+					<?=currency_code?><?=number_format($product['price'],2)?>
+					<?php if ($product['rrp'] > 0): ?>
+					<span class="rrp"><?=currency_code?><?=number_format($product['rrp'],2)?></span>
+					<?php endif; ?>
+				</span>
+			</a>
+			<?php endforeach; ?>
+		</div>
+	</div>
+
 	<section class="gallery">
-		<div class="container">
+		<!--<div class="container">
 		<div class="toolbar">
 
 			<div class="search-wrapper">
@@ -218,13 +235,13 @@ $recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 				</li>
 			</ul>
 
-		</div>
+		</div>-->
 
 		<!--===========================-->
 		<!--=     Grid view start     =-->
 		<!--===========================-->
 
-		<ol class="image-list grid-view">
+		<!--<ol class="image-list grid-view">
 
 			<li>
 				<figure>
@@ -354,7 +371,118 @@ $recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 				</figure>
 			</li>
 
-		</ol>
+		</ol>-->
+
+		<?php
+		// Prevent direct access to file
+		defined('shoppingcart') or exit;
+		// Get all the categories from the database
+		$stmt = $pdo->query('SELECT * FROM categories');
+		$stmt->execute();
+		$categories = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		// Get the current category from the GET request, if none exists set the default selected category to: all
+		$category = isset($_GET['category']) ? $_GET['category'] : 'all';
+		$category_sql = '';
+		if ($category != 'all') {
+			$category_sql = 'JOIN products_categories pc ON pc.category_id = :category_id AND pc.product_id = p.id JOIN categories c ON c.id = pc.category_id';
+		}
+		// Get the sort from GET request, will occur if the user changes an item in the select box
+		$sort = isset($_GET['sort']) ? $_GET['sort'] : 'sort3';
+		// The amounts of products to show on each page
+		$num_products_on_each_page = 8;
+		// The current page, in the URL this will appear as index.php?page=products&p=1, index.php?page=products&p=2, etc...
+		$current_page = isset($_GET['p']) && is_numeric($_GET['p']) ? (int)$_GET['p'] : 1;
+		// Select products ordered by the date added
+		if ($sort == 'sort1') {
+			// sort1 = Alphabetical A-Z
+			$stmt = $pdo->prepare('SELECT p.* FROM products p ' . $category_sql . ' ORDER BY p.name ASC LIMIT :page,:num_products');
+		} elseif ($sort == 'sort2') {
+			// sort2 = Alphabetical Z-A
+			$stmt = $pdo->prepare('SELECT p.* FROM products p ' . $category_sql . ' ORDER BY p.name DESC LIMIT :page,:num_products');
+		} elseif ($sort == 'sort3') {
+			// sort3 = Newest
+			$stmt = $pdo->prepare('SELECT p.* FROM products p ' . $category_sql . ' ORDER BY p.date_added DESC LIMIT :page,:num_products');
+		} elseif ($sort == 'sort4') {
+			// sort4 = Oldest
+			$stmt = $pdo->prepare('SELECT p.* FROM products p ' . $category_sql . ' ORDER BY p.date_added ASC LIMIT :page,:num_products');
+		} else {
+			// No sort was specified, get the products with no sorting
+			$stmt = $pdo->prepare('SELECT p.* FROM products p ' . $category_sql . ' LIMIT :page,:num_products');
+		}
+		// bindValue will allow us to use integer in the SQL statement, we need to use for LIMIT
+		if ($category != 'all') {
+			$stmt->bindValue(':category_id', $category, PDO::PARAM_INT);
+		}
+		$stmt->bindValue(':page', ($current_page - 1) * $num_products_on_each_page, PDO::PARAM_INT);
+		$stmt->bindValue(':num_products', $num_products_on_each_page, PDO::PARAM_INT);
+		$stmt->execute();
+		// Fetch the products from the database and return the result as an Array
+		$products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		// Get the total number of products
+		$stmt = $pdo->prepare('SELECT COUNT(*) FROM products p ' . $category_sql);
+		if ($category != 'all') {
+			$stmt->bindValue(':category_id', $category, PDO::PARAM_INT);
+		}
+		$stmt->execute();
+		$total_products = $stmt->fetchColumn()
+		?>
+
+		<div class="products content-wrapper">
+
+			<h1>Products</h1>
+
+			<div class="products-header">
+				<p><?=$total_products?> Products</p>
+				<form action="" method="get" class="products-form">
+					<input type="hidden" name="page" value="products">
+					<label class="category">
+						Category
+						<select name="category">
+							<option value="all"<?=($category == 'all' ? ' selected' : '')?>>All</option>
+							<?php foreach ($categories as $c): ?>
+							<option value="<?=$c['id']?>"<?=($category == $c['id'] ? ' selected' : '')?>><?=$c['name']?></option>
+							<?php endforeach; ?>
+						</select>
+					</label>
+					<label class="sortby">
+						Sort by
+						<select name="sort">
+							<option value="sort1"<?=($sort == 'sort1' ? ' selected' : '')?>>Alphabetical A-Z</option>
+							<option value="sort2"<?=($sort == 'sort2' ? ' selected' : '')?>>Alphabetical Z-A</option>
+							<option value="sort3"<?=($sort == 'sort3' ? ' selected' : '')?>>Newest</option>
+							<option value="sort4"<?=($sort == 'sort4' ? ' selected' : '')?>>Oldest</option>
+						</select>
+					</label>
+				</form>
+			</div>
+
+			<div class="products-wrapper">
+				<?php foreach ($products as $product): ?>
+				<a href="index.php?page=product&id=<?=$product['id']?>" class="product">
+					<?php if (!empty($product['img']) && file_exists('imgs/' . $product['img'])): ?>
+					<img src="imgs/<?=$product['img']?>" width="200" height="200" alt="<?=$product['name']?>">
+					<?php endif; ?>
+					<span class="name"><?=$product['name']?></span>
+					<span class="price">
+						<?=currency_code?><?=number_format($product['price'],2)?>
+						<?php if ($product['rrp'] > 0): ?>
+						<span class="rrp"><?=currency_code?><?=number_format($product['rrp'],2)?></span>
+						<?php endif; ?>
+					</span>
+				</a>
+				<?php endforeach; ?>
+			</div>
+
+			<div class="buttons">
+				<?php if ($current_page > 1): ?>
+				<a href="index.php?page=products&p=<?=$current_page-1?>&category=<?=$category?>&sort=<?=$sort?>">Prev</a>
+				<?php endif; ?>
+				<?php if ($total_products > ($current_page * $num_products_on_each_page) - $num_products_on_each_page + count($products)): ?>
+				<a href="index.php?page=products&p=<?=$current_page+1?>&category=<?=$category?>&sort=<?=$sort?>">Next</a>
+				<?php endif; ?>
+			</div>
+
+		</div>
 
 		<!--===========================-->
 		<!--=      Grid view end      =-->
@@ -365,10 +493,5 @@ $recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 </div>
 <!--Grid script implement-->
-<script src="../scripts/grid-filter.js"></script>
-<script src="../scripts/cart-curtain.js"></script>
-<script src="../scripts/shopping-cart.js"></script>
 
-</body>
-
-</html>
+<?=template_footer()?>

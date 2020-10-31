@@ -1,8 +1,15 @@
-document.querySelector(".search i").onclick = function() {
-    this.style.display = "none";
-    this.parentElement.querySelector("input").style.display = "block";
-    this.parentElement.querySelector("input").focus();
-};
+$("#searchi").on("click", function() {
+    $(this).toggle();
+    $("#search input").toggle();
+});
+
+$("body").click(function(e) {
+    if (($(e.target).closest(".link-icons").length === 0) && ($("#searchi").is(":hidden"))) {
+        $("#searchi").toggle();
+        $("#search input").toggle();
+    }
+})
+
 document.querySelector(".search input").onkeyup = function(event) {
     if (event.keyCode === 13 && this.value.length > 0) {
         window.location.href = encodeURI("index.php?page=search&query=" + this.value);

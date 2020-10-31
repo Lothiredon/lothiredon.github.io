@@ -16,8 +16,6 @@ body {
   color: #555555;
   background-color: #FFFFFF;
   margin: 0;
-  padding-bottom: 100px;
-  /* Same height as footer */
 }
 
 h1, h2, h3, h4, h5 {
@@ -25,7 +23,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .content-wrapper {
-  width: 1050px;
+  width: 70%;
   margin: 0 auto;
 }
 
@@ -35,7 +33,6 @@ h1, h2, h3, h4, h5 {
 
 header {
   position: relative;
-  border-bottom: 1px solid #EEEEEE;
 }
 
 header .content-wrapper {
@@ -75,19 +72,19 @@ header .link-icons {
   display: flex;
   flex-grow: 1;
   flex-basis: 0;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
   position: relative;
 }
 
-header .link-icons .search i {
+header .link-icons .search i { /*Magnifying glass icon*/
   font-size: 18px;
   padding: 0 10px;
   cursor: pointer;
+  color: #FFFFFF;
 }
 
 header .link-icons .search input {
-  display: none;
   border: 0;
   border-bottom: 1px solid #EEEEEE;
   padding: 10px 0;
@@ -96,19 +93,25 @@ header .link-icons .search input {
   margin-right: 10px;
 }
 
+#searchi {
+  display: block;
+}
+
 header .link-icons .responsive-toggle {
   display: none;
 }
 
-header .link-icons a {
+header .link-icons a { /*Shopping cart icon*/
   position: relative;
   text-decoration: none;
-  color: #394352;
+  color: #FFFFFF;
   padding: 0 10px;
+  transition: color 0.4s ease-in-out;
 }
 
 header .link-icons a:hover {
-  color: #4e5c70;
+  color: #b2bfd3;
+  transition: color 0.4s ease-in-out;
 }
 
 header .link-icons a i {
@@ -118,7 +121,7 @@ header .link-icons a i {
 header .link-icons a span {
   display: inline-block;
   text-align: center;
-  background-color: #63748e;
+  background-color: #4286f4;
   border-radius: 50%;
   color: #FFFFFF;
   font-size: 12px;
@@ -126,9 +129,9 @@ header .link-icons a span {
   width: 16px;
   height: 16px;
   font-weight: bold;
-  position: absolute;
-  top: -4px;
-  right: 2px;
+  position: relative;
+  top: -8px;
+  right: 8px;
 }
 
 main .featured {
@@ -163,10 +166,10 @@ main .featured p {
 
 main .recentlyadded h2 {
   display: block;
-  font-weight: normal;
+  font-weight: bold;
   margin: 0;
   padding: 40px 0;
-  font-size: 24px;
+  font-size: 36px;
   text-align: center;
   width: 100%;
   border-bottom: 1px solid #EEEEEE;
@@ -217,52 +220,52 @@ main .recentlyadded .products .product:hover .name, main .products .products-wra
   text-decoration: underline;
 }
 
-main > .product {
+.product {
   display: flex;
   padding: 40px 0;
 }
 
-main > .product h1 {
-  font-size: 34px;
+.product h1 {
+  font-size: 16px;
   font-weight: normal;
   margin: 0;
   padding: 20px 0 10px 0;
 }
 
-main > .product .product-small-imgs img {
+.product .product-small-imgs img {
   border: 1px solid #EEEEEE;
   cursor: pointer;
   margin: 20px 12px 0 0;
 }
 
-main > .product .product-small-imgs img.selected {
+.product .product-small-imgs img.selected {
   border: 1px solid #c8c8c8;
 }
 
-main > .product .product-wrapper {
+.product .product-wrapper {
   padding-left: 15px;
 }
 
-main > .product .price {
+.product .price {
   display: block;
-  font-size: 22px;
+  font-size: 16px;
   color: #999999;
 }
 
-main > .product .rrp {
+.product .rrp {
   color: #BBBBBB;
   text-decoration: line-through;
-  font-size: 22px;
+  font-size: 16px;
   padding-left: 5px;
 }
 
-main > .product form {
+.product form {
   display: flex;
   flex-flow: column;
   margin: 40px 0;
 }
 
-main > .product form select, main > .product form input[type="number"] {
+.product form select, .product form input[type="number"] {
   width: 400px;
   padding: 10px;
   margin-bottom: 15px;
@@ -271,7 +274,7 @@ main > .product form select, main > .product form input[type="number"] {
   border-radius: 5px;
 }
 
-main > .product form input[type="submit"] {
+.product form input[type="submit"] {
   background: #4e5c70;
   border: 0;
   color: #FFFFFF;
@@ -284,36 +287,37 @@ main > .product form input[type="submit"] {
   cursor: pointer;
 }
 
-main > .product form input[type="submit"]:hover {
+.product form input[type="submit"]:hover {
   background: #434f61;
 }
 
-main > .products h1 {
+.products h1 {
   display: block;
-  font-weight: normal;
+  font-weight: bold;
   margin: 0;
-  padding: 40px 0;
-  font-size: 24px;
+  padding: 10px 0;
+  font-size: 36px;
   text-align: center;
   width: 100%;
+  border-bottom: 1px solid #EEEEEE;
 }
 
-main > .products .products-header {
+.products .products-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 40px;
+  padding: 10px 0 40px 0;
 }
 
-main > .products .products-header p {
+.products .products-header p {
   margin: 0;
 }
 
-main > .products .products-header label {
+.products .products-header label {
   padding-left: 20px;
 }
 
-main > .products .products-header select {
+.products .products-header select {
   padding: 5px;
   margin-left: 15px;
   border: 1px solid #ccc;
@@ -321,12 +325,12 @@ main > .products .products-header select {
   border-radius: 5px;
 }
 
-main > .products .buttons {
+.products .buttons {
   text-align: right;
   padding-bottom: 40px;
 }
 
-main > .products .buttons a {
+.products .buttons a {
   display: inline-block;
   text-decoration: none;
   margin-left: 5px;
@@ -339,7 +343,7 @@ main > .products .buttons a {
   border-radius: 5px;
 }
 
-main > .products .buttons a:hover {
+.products .buttons a:hover {
   background: #434f61;
 }
 
@@ -599,7 +603,6 @@ footer {
   position: absolute;
   bottom: 0;
   border-top: 1px solid #EEEEEE;
-  padding: 20px 0;
   width: 100%;
 }
 
@@ -659,38 +662,38 @@ footer {
     width: 100%;
     padding: 0 10px;
   }
-  main > .products .products-header {
+  .products .products-header {
     flex-flow: column;
   }
-  main > .products .products-header p {
+  .products .products-header p {
     padding-bottom: 10px;
   }
-  main > .products .products-header form {
+  .products .products-header form {
     display: flex;
     flex-flow: column;
   }
-  main > .products .products-header form label {
+  .products .products-header form label {
     padding-top: 15px;
   }
-  main > .product {
+  .product {
     padding: 0 10px;
     flex-flow: column;
   }
-  main > .product .product-imgs {
+  .product .product-imgs {
     padding: 0 10px;
   }
-  main > .product .product-imgs .product-img-large {
+  .product .product-imgs .product-img-large {
     width: 100%;
     height: auto;
   }
-  main > .product .product-imgs .product-small-imgs .product-img-small {
+  .product .product-imgs .product-small-imgs .product-img-small {
     width: 50px;
     height: 50px;
   }
-  main > .product form input[type="number"], main > .product form input[type="submit"] {
+  .product form input[type="number"], .product form input[type="submit"] {
     width: 100%;
   }
-  main > .product .product-wrapper {
+  .product .product-wrapper {
     padding: 0;
   }
   main .cart table input[type="number"] {
